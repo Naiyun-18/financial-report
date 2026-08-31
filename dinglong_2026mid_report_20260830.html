@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鼎龙股份(300054) 2026年中报深度分析</title>
+<style>
+  :root{
+    --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
+    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
+    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+  .wrap{max-width:980px;margin:0 auto}
+  /* 头部 */
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .hero h1{font-size:26px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{margin-top:8px;font-size:14px;opacity:.9}
+  .hero .badges{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+  .hero .badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);padding:5px 14px;border-radius:20px;font-size:13px}
+  /* 卡片 */
+  .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px}
+  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
+  /* KPI条 */
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .kpi .val{font-size:20px;font-weight:700}
+  .kpi .delta{font-size:12px;margin-top:4px}
+  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
+  /* 表格 */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fbfe}
+  .hl-cell{color:var(--blue);font-weight:700}
+  tr.hl-row{background:#eef5ff}
+  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
+  .tag-best{background:var(--green);color:#fff}
+  .tag-ok{background:var(--blue-soft);color:var(--blue)}
+  .tag-warn{background:#fff4e5;color:#b26a00}
+  /* 结论框 */
+  .verdict{background:linear-gradient(135deg,#f0fff9,#e6f7ff);border:1px solid #cfe9dd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .verdict h2{font-size:18px;color:#0c7a57;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .verdict p{font-size:14.5px;color:#274b3f}
+  /* 要点列表 */
+  ul.pts{margin:8px 0 0 20px}
+  ul.pts li{margin:7px 0;font-size:14px}
+  /* 条形图 */
+  .bar-wrap{display:flex;align-items:center;gap:10px;margin:8px 0}
+  .bar-label{width:64px;font-size:12.5px;color:var(--sub);text-align:right}
+  .bar-track{flex:1;background:#e9f0f7;border-radius:6px;height:20px;overflow:hidden}
+  .bar-fill{height:100%;background:linear-gradient(90deg,#4d8df0,#2f6fed);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;color:#fff;font-size:11.5px;font-weight:600;min-width:34px}
+  .bar-fill.green{background:linear-gradient(90deg,#38b98a,#1d9d74)}
+  .note{font-size:12px;color:var(--sub);margin-top:10px}
+  .src{font-size:11.5px;color:#8a99a8;margin-top:14px;padding-top:10px;border-top:1px dashed var(--line)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.kpi-row{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}
+  @media(max-width:520px){.kpi-row{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:20px}}
+  .biz{text-align:left;white-space:normal;max-width:190px;min-width:150px;font-size:12px;color:var(--sub)}
+  .rem{display:block;font-size:10.5px;color:#8a99a8;font-weight:400;white-space:normal;margin-top:1px}
+  .cls{margin:10px 0;padding:10px 14px;background:rgba(255,255,255,.62);border-radius:10px;border:1px solid #e2efe7}
+  .cls-h{display:inline-block;margin-bottom:6px;font-size:13px;font-weight:700}
+  .cls .cls-ul{margin:2px 0 0 20px}
+  .cls .cls-ul li{margin:4px 0;font-size:13px}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>鼎龙股份（300054.SZ）2026年中报深度分析</h1>
+    <div class="sub">报告日期：2026-08-30 ｜ 数据来源：<b>《2025年半年度、2026年半年度报告》+《2026年第一季度报告》正式财报</b></div>
+  </div>
+
+  <!-- 核心结论 -->
+  <div class="verdict">
+    <h2>🎯 一句话结论：Q2 略超预期，盈利质量同行领先</h2>
+    <div class="cls"><div class="cls-h tag-best">📈 大幅增长 / 领先</div><ul class="cls-ul"><li>归母净利 <b>5.29亿</b>，同比 <b>+70.2%</b>（超一致预期）</li><li>Q2单季归母 <b>+63.76%</b>，环比 <b>+10.97%</b></li><li>剔除出表后归母同比 <b>+74.57%</b></li><li>半导体材料毛利率 <b>71.93%</b> · 综合毛利率58.8%</li><li>净利率27.5% / ROE 9.76% 居同行前列</li></ul></div><div class="cls"><div class="cls-h tag-ok">➖ 表现平淡 / 小幅增长</div><ul class="cls-ul"><li>仅超出市场一致预期约 <b>3.7%</b>（幅度温和）</li><li>Q2单季营收同比 <b>-0.35%</b>（基本持平）</li><li>经营现金流 +29.26% · 现金含量107%（稳健非爆发）</li></ul></div><div class="cls"><div class="cls-h tag-warn">⬇ 劣势 / 待改善</div><ul class="cls-ul"><li>H1营收增速 <b>+11%</b> 相对同业偏低（传统打印耗材拖累；剔出表+54.7%，H1营收增速同行最高）</li><li>Q2单季营收环比 <b>-11.33%</b>（出表结构性影响；剔出表+18.84%，Q2营收增速同行中游）</li></ul></div>
+  </div>
+
+  <!-- 财务总览 -->
+  <div class="card">
+    <h2><span class="num">1</span>财务总览（2026H1）</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">营业收入</div><div class="val">19.2460亿</div><div class="delta up">同比 +11.15%</div></div>
+      <div class="kpi"><div class="label">归母净利润</div><div class="val">5.2944亿</div><div class="delta up">同比 +70.21%</div></div>
+      <div class="kpi"><div class="label">扣非净利润</div><div class="val">4.8468亿</div><div class="delta up">同比 +65.00%</div></div>
+      <div class="kpi"><div class="label">毛利率</div><div class="val">58.83%</div><div class="delta up">同比 +9.60pct</div></div>
+      <div class="kpi"><div class="label">净利率</div><div class="val">27.51%</div><div class="delta up">同比 +9.55pct</div></div>
+      <div class="kpi"><div class="label">ROE(加权)</div><div class="val">9.76%</div><div class="delta up">同比 +3.12pct</div></div>
+      <div class="kpi"><div class="label">资产负债率</div><div class="val">32.64%</div><div class="delta flat">+1.97pct</div></div>
+      <div class="kpi"><div class="label">经营现金流</div><div class="val">5.67亿</div><div class="delta up">同比 +29.26%</div></div>
+    </div>
+    <h3>同比对照（2025H1 → 2026H1）</h3>
+    <table>
+      <thead><tr><th>指标</th><th>2025H1</th><th>2026H1</th><th>变动</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>17.3152亿</td><td class="hl-cell">19.2460亿</td><td class="up">+11.15%</td></tr>
+        <tr class="hl-row"><td>归母净利润</td><td>3.1104亿</td><td class="hl-cell">5.2944亿</td><td class="up">+70.21%</td></tr>
+        <tr><td>扣非净利润</td><td>2.9375亿</td><td class="hl-cell">4.8468亿</td><td class="up">+65.00%</td></tr>
+        <tr><td>毛利率</td><td>49.23%</td><td class="hl-cell">58.83%</td><td class="up">+9.60pct</td></tr>
+        <tr><td>净利率</td><td>17.96%</td><td class="hl-cell">27.51%</td><td class="up">+9.55pct</td></tr>
+        <tr><td>加权ROE</td><td>6.64%</td><td class="hl-cell">9.76%</td><td class="up">+3.12pct</td></tr>
+        <tr><td>经营现金流</td><td>4.39亿</td><td class="hl-cell">5.67亿</td><td class="up">+29.26%</td></tr>
+      </tbody>
+    </table>
+    <h3>剔除出表业务后的可比口径营收</h3>
+    <div class="note warn">⚠️ 公司于2026年4月将<strong>硒鼓、墨盒终端业务</strong>（珠海名图超俊=硒鼓、北海绩迅=墨盒）剥离出表。以下为<b>剔除该出表业务后</b>的可比口径营收，反映真实主营增长。<b>中报原文：剔除出表的打印复印通用耗材终端业务后，2026H1归母净利润同比+74.57%</b>（高于未剔除口径的+70.21%）。</div>
+    <table>
+      <thead><tr><th>期间</th><th>剔除前营收</th><th>硒鼓(珠海名图)</th><th>墨盒(北海绩迅)</th><th>剔除后营收</th><th>环比</th><th>同比</th></tr></thead>
+      <tbody>
+        <tr><td>2025H1</td><td>17.32亿</td><td>≈3.24亿*</td><td>3.31亿</td><td>≈10.77亿</td><td>—</td><td>—</td></tr>
+        <tr><td>2025H2</td><td>19.28亿</td><td>≈3.10亿</td><td>3.17亿</td><td>≈13.01亿</td><td>—</td><td>—</td></tr>
+        <tr class="hl-row"><td>2026H1</td><td>19.25亿</td><td>2.59亿**</td><td>（并入）</td><td class="hl-cell">≈16.66亿</td><td class="up">+28.1%（vs 2025H2）</td><td class="up">+54.7%（vs 2025H1）</td></tr>
+      </tbody>
+    </table>
+    <div class="note"><b>数据来源与推算方式</b>：①2026H1剔除后归母净利同比+74.57%为中报原文；②2026H1剔除后营收≈16.66亿（=19.25−硒鼓墨盒仅Q1并表2.59亿）；③<b>当期环比口径：2026H1 环比上一期间2025H2 = +28.1%</b>（16.66 vs 13.01，反映当期主营持续加速）；④2025H1/H2细分营收为推算值（硒鼓按墨盒H1占全年比例51%推算）。*为推算值，**为Q1并表额。</div>
+  </div>
+
+  <!-- 季度财务总览2026Q2 -->
+  <div class="card">
+    <h2><span class="num">2</span>季度财务总览（2026Q2）</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">单季营收</div><div class="val">9.0449亿</div><div class="delta down">环比 -11.33%</div></div>
+      <div class="kpi"><div class="label">单季归母净利</div><div class="val">2.7848亿</div><div class="delta up">环比 +10.97%</div></div>
+      <div class="kpi"><div class="label">单季扣非净利</div><div class="val">2.4832亿</div><div class="delta up">环比 +5.06%</div></div>
+      <div class="kpi"><div class="label">毛利率</div><div class="val">63.21%</div><div class="delta up">环比+8.26pct</div></div>
+    </div>
+    <h3>同比 & 环比整合对照（2026Q2 单季）</h3>
+    <table>
+      <thead><tr><th>指标</th><th>同比基准<br>2025Q2</th><th>环比基准<br>2026Q1</th><th>当期<br>2026Q2</th><th class="up">同比</th><th class="up">环比</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>9.0765亿</td><td>10.2010亿</td><td class="hl-cell">9.0449亿</td><td class="down">-0.35%</td><td class="down">-11.33%</td></tr>
+        <tr class="hl-row"><td>归母净利润</td><td>1.7005亿</td><td>2.5096亿</td><td class="hl-cell">2.7848亿</td><td class="up">+63.76%</td><td class="up">+10.97%</td></tr>
+        <tr><td>扣非净利润</td><td>1.5887亿</td><td>2.3636亿</td><td class="hl-cell">2.4832亿</td><td class="up">+56.30%</td><td class="up">+5.06%</td></tr>
+        <tr><td>毛利率</td><td>49.61%</td><td>54.95%</td><td class="hl-cell">63.21%</td><td class="up">+13.6pct</td><td class="up">+8.26pct</td></tr>
+        <tr><td>净利率</td><td>18.73%</td><td>24.60%</td><td class="hl-cell">30.79%</td><td class="up">+12.1pct</td><td class="up">+6.19pct</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:8px;font-size:12px">注：同比 = 2026Q2 较 2025Q2；环比 = 2026Q2 较 2026Q1。毛利率/净利率变动以 pct（百分点）计。</div>
+    <h3 style="margin-top:20px">剔除出表业务后的可比口径环比（2026Q1 → 2026Q2）</h3>
+    <div class="note warn" style="font-size:12px">⚠️ 公司于2026年4月将<b>打印复印通用耗材终端业务（硒鼓、墨盒）</b>剥离出表（珠海名图超俊/北海绩迅不再并表）。为反映真实主营（半导体材料等）环比趋势，以下将2026Q1中<b>仅并表一季度的硒鼓墨盒业务</b>剔除后对比。</div>
+    <table>
+      <thead><tr><th>指标</th><th>2026Q1<br>(剔除出表)</th><th>2026Q2<br>(已无出表)</th><th>环比</th><th>未剔除口径对比</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>营业收入</td><td>7.611亿</td><td class="hl-cell">9.045亿</td><td class="up">+18.84% ✅</td><td class="down">-11.33%</td></tr>
+        <tr class="hl-row"><td>归母净利润</td><td>2.5021亿</td><td class="hl-cell">2.7848亿</td><td class="up">+11.30% ✅</td><td class="up">+10.97%</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:8px;font-size:12px"><b>解读</b>：剔除并表一季度的低毛利硒鼓墨盒业务（Q1并表收入2.59亿、H1归母终止经营净利仅约75万元，对净利影响极小）后，<b>Q2营收环比由此前的-11.33%逆转为+18.84%</b>，表明当期半导体材料等核心主营仍在加速放量，营收下滑仅为出表结构性拖累；归母净利环比+11.30%与未剔除口径基本一致，印证出表业务利润贡献可忽略。<b>数据来源：2026Q1并表收入2.59亿及H1归母终止经营净利747,370.37元均取自《2026年半年度报告》"终止经营"附注。</b></div>
+    <h3>Q2 关键解读</h3>
+    <ul class="pts">
+      <li>📍 营收同比-0.35%基本持平，但<b>归母净利同比+63.76%</b>、扣非+56.30%，净利率同比跳升12.1pct 至<b>30.79%</b>。</li>
+      <li>📍 归母净利<b>环比+10.97%</b>（2.51→2.78亿），盈利逐季抬升未现回落；毛利率环比<b>+8.26pct至63.21%</b>，为核心亮点。</li>
+      <li>📍 营收环比-11.33% 主要系2026年4月<b>硒鼓、墨盒终端业务剥离出表</b>影响，属业务结构调整而非景气下行。</li>
+      <li>📍 盈利高增核心在于<b>半导体材料毛利率71.93%+低毛利硒鼓出表</b>，综合毛利率大幅抬升（2026H1为58.83%）。</li>
+    </ul>
+    <h3>H1 完成全年进度</h3>
+    <div class="bar-wrap"><div class="bar-label">营收进度</div><div class="bar-track"><div class="bar-fill" style="width:49%">49%</div></div></div>
+    <div class="bar-wrap"><div class="bar-label">净利进度</div><div class="bar-track"><div class="bar-fill green" style="width:76%">76%</div></div></div>
+    <div class="note">以2025全年（营收39亿/净利7.0亿）为基准，H1净利已完成76%，盈利进度明显领先。</div>
+  </div>
+
+  <!-- 业务板块财务分析 -->
+  <div class="card">
+    <h2><span class="num">3</span>业务板块财务分析（2026H1 · 分板块）</h2>
+    <h3>① 2026H1 分业务板块 营收 / 毛利率 / 营收同比</h3>
+    <table>
+      <thead><tr><th>业务板块</th><th>营收(亿)</th><th>占比</th><th>毛利率</th><th>营收同比</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><b>半导体材料</b><br><span style="font-size:11px;color:#888">CMP抛光垫/液/清洗液/YPI/PSPI/TFE-INK/临时键合胶/封装PI/晶圆光刻胶/芯片</span></td><td class="hl-cell">12.6247</td><td>65.6%</td><td class="hl-cell">71.93%</td><td class="up">+33.87%</td></tr>
+        <tr><td>打印复印通用耗材<br><span style="font-size:11px;color:#888">碳粉/显影辊/载体/硒鼓/墨盒</span></td><td>4.1025</td><td>21.3%</td><td>29.46%</td><td class="down">-47.35%</td></tr>
+        <tr><td>新能源材料及其他<br><span style="font-size:11px;color:#888">皓飞新材(锂电辅材)等</span></td><td>2.5188</td><td>13.1%</td><td>41.02%</td><td class="up">+2631.52%</td></tr>
+        <tr><td><b>合计</b></td><td><b>19.2460</b></td><td>100%</td><td>58.83%</td><td class="up">+11.15%</td></tr>
+      </tbody>
+    </table>
+    <h3>② 细分业务 2026H1 营收与同比</h3>
+    <table>
+      <thead><tr><th>细分业务</th><th>2026H1 营收</th><th>同比</th><th>关键动因</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>CMP抛光垫</td><td>7.45亿</td><td class="up">+56.83%</td><td>国产龙头，6月月销首破5万片</td></tr>
+        <tr><td>CMP抛光液+清洗液</td><td>1.93亿</td><td class="up">+63.02%</td><td>大硅片精抛液、氧化铈/TSV/SiC新品放量</td></tr>
+        <tr><td>半导体显示材料(YPI/PSPI/TFE)</td><td>2.36亿</td><td class="down">-12.73%</td><td>下游稼动率不足，市占率仍提升</td></tr>
+        <tr><td>高端晶圆光刻胶/先进封装</td><td>批量交付</td><td>—</td><td>累计40余款布局，ArF/KrF批量订单增长</td></tr>
+        <tr><td>新能源材料(皓飞·3月起并表)</td><td>2.45亿</td><td class="up">+60.14%</td><td>国内头部动力/储能电池稳定供货</td></tr>
+        <tr><td>打印复印通用耗材(合计)</td><td>4.10亿</td><td class="down">-47.35%</td><td>硒鼓墨盒4月剥离出表</td></tr>
+      </tbody>
+    </table>
+    <h3>③ 2026Q2 主要细分业务营收环比（Q1→Q2）</h3>
+    <table>
+      <thead><tr><th>细分业务</th><th>2026Q1</th><th>2026Q2</th><th>营收环比</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>CMP抛光垫</td><td>3.76亿</td><td>3.69亿</td><td class="down">-1.86%</td></tr>
+        <tr><td>CMP抛光液+清洗液</td><td>0.85亿</td><td>1.08亿</td><td class="up">+27.33%</td></tr>
+        <tr><td>半导体显示材料</td><td>1.27亿</td><td>1.09亿</td><td class="down">-14.2%</td></tr>
+        <tr><td>新能源材料(皓飞·并表口径)</td><td>1.57亿</td><td>0.88亿</td><td class="down">-43.9%*</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:8px;font-size:12px"><b>关于归母净利润</b>：<b>财报未按业务板块披露归母净利润</b>（半导体主要子公司鼎汇微电子、柔显科技净利因商业秘密豁免披露），故无法拆分各板块净利润，合并口径H1归母净利 5.29 亿（同比+70.21%）。*新能源Q1含并表层数差异（皓飞3月起并表），环比不具严格可比性。数据来源：《鼎龙股份2026年半年度报告》分产品表及经营讨论、《2026年第一季度报告》经营讨论；同比基期与《2025年半年度报告》半导体板块9.43亿/耗材7.79亿交叉验证一致。</div>
+  </div>
+
+  <!-- 超预期判断 -->
+  <div class="card">
+    <h2><span class="num">4</span>是否超预期？——小幅超预期 ✅</h2>
+    <table>
+      <thead><tr><th>口径</th><th>预期值</th><th>实际值</th><th>超预期幅度</th></tr></thead>
+      <tbody>
+        <tr><td>市场整体一致预期</td><td>≈5.10亿（国泰君安）</td><td class="hl-cell">5.29亿</td><td class="up">+3.7% ✅</td></tr>
+        <tr><td>中金公司此前预期</td><td>≈5.00亿</td><td class="hl-cell">5.29亿</td><td class="up">+5.8% ✅</td></tr>
+        <tr><td>毛利率预期</td><td>≈56%</td><td class="hl-cell">58.83%</td><td class="up">+2.8pct ✅</td></tr>
+      </tbody>
+    </table>
+    <h3>超预期动因</h3>
+    <ul class="pts">
+      <li>📍 <b>毛利率超预期</b>：58.83%（2026Q2单季达63.21%、半导体材料71.93%），CMP抛光垫进口替代加速 + 光刻胶/PSPI 结构优化 + 低毛利硒鼓出表。</li>
+      <li>📍 <b>现金流同步向好</b>：经营现金流5.67亿(+29.26%)、现金含量107%，利润质量高。</li>
+      <li>📍 <b>但营收增速偏弱</b>（+11.15%，Q2单季-0.35%），主要受硒鼓墨盒剥离出表+传统耗材业务拖累，为不超预期的部分。</li>
+    </ul>
+    <div class="note">券商观点：国泰君安“业绩超预期，半导体材料平台化龙头地位强化”，中金“半导体材料景气高企，净利润超预期，维持目标价85元”，均维持增持/买入评级。</div>
+  </div>
+
+  <!-- 同行对比 -->
+  <div class="card">
+    <h2><span class="num">5</span>同行业对比（2026H1 · 半导体材料板块）</h2>
+    <h3>5.1 2026H1 核心财务对比（含主营业务、扣非）</h3>
+    <table>
+      <thead><tr><th>公司</th><th>主营业务（半导体材料定位）</th><th>营收(亿)</th><th>营收增速</th><th>归母净利(亿)</th><th>净利增速</th><th>扣非净利(亿)</th><th>扣非增速</th><th>毛利率</th><th>净利率</th><th>ROE</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><b>鼎龙股份</b></td><td class="biz">打印耗材+半导体材料平台（CMP/光刻胶/先进封装）</td><td>19.25<span class="rem">剔出表≈16.66</span></td><td class="up">+11.2%<span class="rem">剔出表同比+54.7%</span></td><td class="hl-cell">5.29<span class="rem">净利受出表影响≈忽略</span></td><td class="up">+70.2%<span class="rem">剔出表+74.57%</span></td><td>4.85</td><td class="up">+65.0%</td><td>58.83%</td><td>27.5%</td><td>9.76%</td></tr>
+        <tr><td>雅克科技</td><td class="biz">前驱体/SOD（薄膜沉积卡脖子）+面板胶</td><td>45.13</td><td class="up">+5.1%</td><td>5.61</td><td class="up">+7.3%</td><td>5.3</td><td class="up">+0.7%</td><td>29.87%</td><td>12.4%</td><td>7.07%</td></tr>
+        <tr><td>安集科技</td><td class="biz">CMP抛光液+功能性湿电子化学品</td><td>15.26</td><td class="up">+33.7%</td><td>5.32</td><td class="up">+41.6%</td><td>4.26</td><td class="up">+19.3%</td><td>55.63%</td><td>34.9%</td><td>12.70%</td></tr>
+        <tr><td>飞凯材料</td><td class="biz">先进封装胶/塑封料/临时键合+封装电镀液</td><td>17.22</td><td class="up">+17.8%</td><td>2.67</td><td class="up">+23.2%</td><td>2.6</td><td class="up">+47.2%</td><td>40.74%</td><td>15.5%</td><td>5.27%</td></tr>
+        <tr><td>华特气体</td><td class="biz">电子特气（气体）</td><td>8.72</td><td class="up">+29.0%</td><td>0.93</td><td class="up">+19.2%</td><td>0.9</td><td class="up">+19.3%</td><td>30.09%</td><td>10.7%</td><td>3.97%</td></tr>
+        <tr><td>晶瑞电材</td><td class="biz">高纯湿化学品+i/g线光刻胶</td><td>9.49</td><td class="up">+23.6%</td><td>0.49</td><td class="down">-29.5%</td><td>0.45</td><td class="up">+36.5%</td><td>23.57%</td><td>5.2%</td><td>1.83%</td></tr>
+        <tr><td>江化微</td><td class="biz">超高纯湿化学品+光刻胶配套液（不碰主胶）</td><td>6.8</td><td class="up">+17.2%</td><td>0.47</td><td class="down">-2.4%</td><td>0.43</td><td class="down">-2.6%</td><td>24.70%</td><td>6.9%</td><td>2.37%</td></tr>
+        <tr><td>彤程新材</td><td class="biz">橡胶助剂+光刻胶/面板胶</td><td>21.36</td><td class="up">+29.1%</td><td>3.89</td><td class="up">+10.9%</td><td>3.61</td><td class="up">+10.8%</td><td>23.05%</td><td>18.2%</td><td>9.28%</td></tr>
+        <tr><td>南大光电</td><td class="biz">电子特气（MO源/磷烷砷烷）+前驱体+ArF光刻胶</td><td>13.68</td><td class="up">+11.4%</td><td>2.56</td><td class="up">+23.1%</td><td>2.21</td><td class="up">+36.4%</td><td>40.55%</td><td>18.7%</td><td>7.28%</td></tr>
+      </tbody>
+    </table>
+    <div class="note">主营业务为各公司半导体材料相关业务定位；财务数据均为同花顺问财 2026H1 实测，扣非=扣非归母净利润。鼎龙行内'剔出表'为公司2026年4月剥离硒鼓/墨盒出表业务后的可比口径（出表对净利润影响仅约75万元，故净利/扣非值基本不变、仅调整增速口径）。</div>
+
+    <h3>5.2 净利率横向对比（归母净利/营收，柱状图）</h3>
+    <div class="bar-wrap"><div class="bar-label">安集</div><div class="bar-track"><div class="bar-fill" style="width:100%">34.9%</div></div></div>
+    <div class="bar-wrap"><div class="bar-label">鼎龙</div><div class="bar-track"><div class="bar-fill green" style="width:79%">27.5%</div></div></div>
+    <div class="bar-wrap"><div class="bar-label">南大</div><div class="bar-track"><div class="bar-fill" style="width:54%">18.7%</div></div></div>
+    <div class="bar-wrap"><div class="bar-label">彤程</div><div class="bar-track"><div class="bar-fill" style="width:52%">18.2%</div></div></div>
+    <div class="bar-wrap"><div class="bar-label">雅克</div><div class="bar-track"><div class="bar-fill" style="width:36%">12.4%</div></div></div>
+
+    <h3>5.3 2026Q2 单季对比与环比</h3>
+    <table>
+      <thead><tr><th>公司</th><th>Q2营收(亿)</th><th>营收环比</th><th>Q2归母(亿)</th><th>归母环比</th><th>Q2扣非(亿)</th><th>扣非环比</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><b>鼎龙股份</b></td><td>9.04</td><td class="down">-11.3%<span class="rem">剔出表+18.84%</span></td><td>2.78</td><td class="up">+11.0%<span class="rem">剔出表+11.30%</span></td><td>2.48</td><td class="up">+5.1%</td></tr>
+        <tr><td>雅克科技</td><td>25.40</td><td class="up">+28.8%</td><td>2.94</td><td class="up">+10.3%</td><td>2.86</td><td class="up">+16.8%</td></tr>
+        <tr><td>安集科技</td><td>8.02</td><td class="up">+10.8%</td><td>3.24</td><td class="up">+56.1%</td><td>2.29</td><td class="up">+16.4%</td></tr>
+        <tr><td>飞凯材料</td><td>8.50</td><td class="down">-2.6%</td><td>1.36</td><td class="up">+3.6%</td><td>1.25</td><td class="down">-7.8%</td></tr>
+        <tr><td>华特气体</td><td>4.88</td><td class="up">+27.1%</td><td>0.59</td><td class="up">+74.0%</td><td>0.57</td><td class="up">+74.5%</td></tr>
+        <tr><td>晶瑞电材</td><td>5.30</td><td class="up">+26.3%</td><td>0.42</td><td class="up">+534.5%</td><td>0.38</td><td class="up">+456.5%</td></tr>
+        <tr><td>江化微</td><td>3.58</td><td class="up">+11.3%</td><td>0.18</td><td class="down">-36.9%</td><td>0.16</td><td class="down">-39.2%</td></tr>
+        <tr><td>彤程新材</td><td>10.87</td><td class="up">+3.7%</td><td>2.07</td><td class="up">+13.4%</td><td>1.84</td><td class="up">+4.0%</td></tr>
+        <tr><td>南大光电</td><td>7.07</td><td class="up">+6.8%</td><td>1.32</td><td class="up">+6.0%</td><td>1.16</td><td class="up">+11.0%</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Q2单季 = 2026H1累计 − 2026Q1；环比 = Q2/Q1−1。鼎龙'剔出表'=剔除Q1仅并表一季度的硒鼓/墨盒出表业务后的可比口径，剔除后营收环比由-11.3%逆转为+18.84%，归母环比+11.30%；未剔除口径营收下滑仅为出表结构性拖累，真实半导体材料主营仍在加速放量。</div>
+
+    <h3>5.4 竞争力点评</h3>
+    <ul class="pts">
+      <li><span class="tag tag-best">毛利率第一</span> 58.83%居同行之首（高于安集55.63%、南大40.55%），其中<b>半导体材料毛利率71.93%</b>（含CMP/光刻胶）。</li>
+      <li><span class="tag tag-ok">扣非高增</span> 扣非净利4.85亿/+65.0%，增速显著领先可比龙头（雅克+0.7%、安集+19.3%、彤程+10.8%），反映<b>真实主业盈利的高质量增长</b>，而非依赖非经常性损益。</li>
+      <li><span class="tag tag-ok">盈利质量前列</span> 净利率27.5%居行业第二（仅次安集34.9%）；ROE 9.76%，高于雅克(7.07%)、南大(7.28%)、华特(3.97%)等，仅次安集(12.70%)。</li>
+      <li><span class="tag tag-warn">营收增速偏低</span> +11.2%逊于安集(+33.7%)、华特(+29.0%)、彤程(+29.1%)、晶瑞(+23.6%)，传统打印耗材业务仍是拖累项。</li>
+    </ul>
+  </div>
+  <!-- 现金流与风险 -->
+  <div class="card">
+    <h2><span class="num">6</span>现金流与风险提示</h2>
+    <table>
+      <thead><tr><th>项目</th><th>2026H1</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>经营现金流净额</td><td>5.67亿</td><td class="up">同比+29.26%，现金含量107%，盈利质量优 ✅</td></tr>
+        <tr><td>应收账款</td><td>10.13亿</td><td>占营收约53%，比例可控</td></tr>
+        <tr><td>资产负债率</td><td>32.64%</td><td>财务杠杆稳健，无明显偿债风险</td></tr>
+        <tr><td>研发投入</td><td>2.96亿</td><td>占营收15.39%，同比+18.69%，加码投入</td></tr>
+      </tbody>
+    </table>
+    <h3>风险提示</h3>
+    <ul class="pts">
+      <li>⚡ 营收增速仅+11.15%，半导体材料高增长被传统耗材（打印耗材板块-47.35%）部分对冲。</li>
+      <li>⚡ 应收账款10.13亿规模仍大，关注回款节奏；经营现金流改善但需延续。</li>
+      <li>⚡ 晶圆光刻胶、先进封装材料尚处放量初期未盈利，短期摊薄净利。</li>
+      <li>⚡ 半导体材料国产替代进度、下游晶圆厂资本开支波动为关键变量。</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">7</span>综合研判（投资视角）</h2>
+    <table>
+      <thead><tr><th>维度</th><th>评价</th></tr></thead>
+      <tbody>
+        <tr><td>业绩成长性</td><td class="up">H1净利+70.21%，Q2净利同比+63.76%、环比+10.97%逐季抬升，成长性优 ✅</td></tr>
+        <tr><td>盈利质量</td><td class="up">毛利率/净利率/ROE全线第一梯队，质量最优 ✅</td></tr>
+        <tr><td>是否超预期</td><td class="up">小幅超预期约3.7%，毛利率(58.83%)为核心超预期项 ✅</td></tr>
+        <tr><td>营收弹性</td><td class="down">营收仅+11.15%，弱于同业，结构性短板 ⚠️</td></tr>
+        <tr><td>现金流</td><td class="up">经营现金流5.67亿(+29.26%)、现金含量107%，质量优 ✅</td></tr>
+      </tbody>
+    </table>
+    <div class="note" style="margin-top:14px">
+      <b>结论：</b>鼎龙2026中报属于<b>利润超预期、质量领先、现金流强劲、营收偏平</b>的类型。作为半导体材料平台化龙头，
+      净利率27.5%、加权ROE 9.76%、半导体材料毛利率71.93%均处同业第一梯队，符合中期成长逻辑；短期关注点仅剩营收弹性。
+      剔除出表终端业务后H1归母同比+74.57%。券商目标价85—88元区间，维持增持/买入。
+    </div>
+  </div>
+
+  <div class="src">
+    数据来源：<b>《鼎龙股份2026年半年度报告》</b>（正式财报，含主要会计数据/利润表/资产负债表/现金流量表/分产品毛利率/经营讨论）
+    + <b>《鼎龙股份2026年第一季度报告》</b>（正式财报）。Q2单季＝H1−Q1（正式财报精确核算，问财单季口径交叉验证一致）。
+    半导体材料毛利率71.93%取自中报“占比10%以上产品或服务”表（含CMP抛光垫/抛光液/清洗液/YPI/PSPI/临时键合胶/封装PI/晶圆光刻胶/芯片）。
+    同行对比部分公司数据来自券商研报。本报告仅供研究参考，不构成任何投资建议。
+  </div>
+
+</div>
+</body>
+</html>
