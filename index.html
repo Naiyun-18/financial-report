@@ -3,251 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>澜起科技(688008) 2026年中报深度分析</title>
+<title>Financial Reports ｜ 财报分析报告库</title>
 <style>
   :root{
     --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
-    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
-    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+    --blue:#2f6fed; --blue-strong:#1b4fd0; --blue-soft:#e7f0ff;
+    --red:#e5533d; --green:#1d9d74; --line:#e3eaf2;
+    --shadow:0 4px 18px rgba(31,55,90,.08);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
-  .wrap{max-width:980px;margin:0 auto}
-  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .wrap{max-width:1020px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:30px 32px;margin-bottom:22px;box-shadow:var(--shadow)}
   .hero h1{font-size:26px;font-weight:700;letter-spacing:.5px}
   .hero .sub{margin-top:8px;font-size:13.5px;opacity:.92}
+  .hero .tagline{margin-top:14px;display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:20px;font-size:12px}
   .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
-  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2{font-size:17px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
   .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
-  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
-  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
-  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
-  .kpi .val{font-size:19px;font-weight:700}
-  .kpi .delta{font-size:12px;margin-top:4px}
-  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
-  th:first-child,td:first-child{text-align:left}
-  tbody tr:hover{background:#f8fbfe}
-  .hl-cell{color:var(--blue);font-weight:700}
-  tr.hl-row{background:#eef5ff}
-  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
-  .tag-best{background:var(--green);color:#fff}
-  .tag-ok{background:var(--blue-soft);color:var(--blue)}
-  .tag-warn{background:#fff4e5;color:#b26a00}
-  .verdict{background:linear-gradient(135deg,#f0fff9,#e6f7ff);border:1px solid #cfe9dd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
-  .verdict h2{font-size:18px;color:#0c7a57;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-  .cls{margin:9px 0;padding:10px 14px;background:rgba(255,255,255,.62);border-radius:10px;border:1px solid #e2efe7}
-  .cls-h{display:inline-block;margin-bottom:6px;font-size:13px;font-weight:700}
-  .cls .cls-ul{margin:2px 0 0 20px}
-  .cls .cls-ul li{margin:4px 0;font-size:13px}
-  ul.pts{margin:8px 0 0 20px}
-  ul.pts li{margin:7px 0;font-size:14px}
-  .note{font-size:12px;color:var(--sub);margin-top:10px}
-  .note.warn{color:#b26a00;background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:8px 10px}
-  .src{font-size:11.5px;color:#8a99a8;margin-top:16px;padding-top:10px;border-top:1px dashed var(--line)}
-  .biz{text-align:left;white-space:normal;max-width:200px;min-width:150px;font-size:12px;color:var(--sub)}
-  .rem{display:block;font-size:10.5px;color:#8a99a8;font-weight:400;white-space:normal;margin-top:1px}
-  @media(max-width:720px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.kpi-row{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:20px}}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .rep{background:#f7fafd;border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;transition:.2s}
+  .rep:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+  .rep .ctg{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;align-self:flex-start}
+  .ctg-mid{background:var(--blue-soft);color:var(--blue)}
+  .ctg-new{background:#fff4e5;color:#b26a00;margin-left:6px}
+  .rep h3{font-size:16px;font-weight:700;margin:10px 0 4px}
+  .rep .co{font-size:12.5px;color:var(--sub)}
+  .rep .dt{font-size:12px;color:var(--sub);margin-top:6px}
+  .rep .desc{font-size:12.5px;color:var(--sub);margin-top:8px;min-height:38px}
+  .rep a.link{margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:600;font-size:13.5px;text-decoration:none}
+  .rep a.link:hover{color:var(--blue-strong);text-decoration:underline}
+  .note{font-size:12.5px;color:var(--sub);margin-top:10px}
+  .note b{color:var(--ink)}
+  .footer{margin-top:8px;font-size:12px;color:#8a99a8;text-align:center;padding:14px 0 4px}
+  @media(max-width:520px){.hero h1{font-size:20px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <div class="hero">
-    <h1>澜起科技（688008.SH）2026年中报深度分析</h1>
-    <div class="sub">报告日期：2026-09-01（更新：同行业对比新增兆易创新）｜ 数据来源：<b>《2025年半年度、2026年半年度报告》+《2026年第一季度报告》正式财报</b>（同行业可比公司为公开财报/问财口径）</div>
+    <h1>📊 Financial Reports ｜ 财报分析报告库</h1>
+    <div class="sub">上市公司（中报 / 年报）深度分析报告 · 数据来源：上市公司正式财报 + 券商研报预期（问财口径）</div>
+    <div class="tagline">点击下方报告卡片，即可在线查看完整分析报告</div>
   </div>
 
-  <!-- 一句话结论 -->
-  <div class="verdict">
-    <h2>🎯 一句话结论：AI 互连龙头，利润含金量待辨</h2>
-    <div class="cls"><div class="cls-h tag-best">📈 大幅增长 / 领先</div><ul class="cls-ul">
-      <li>归母净利 <b>19.97亿</b>，同比 <b>+72.33%</b></li>
-      <li>营收 <b>33.35亿</b>，同比 <b>+26.66%</b>；毛利率升至 <b>65.3%</b>（+4.87pct）</li>
-      <li>Q2单季营收 <b>18.75亿</b>、归母 <b>11.50亿</b>均创单季历史新高</li>
-      <li>四款互连新品（MRCD/MDB、PCIe Retimer、CKD、CXL MXC）合计 +80.7%</li>
-      <li>资产负债率 <b>7.5%</b>，货币资金 151 亿，财务极稳健</li>
-    </ul></div>
-    <div class="cls"><div class="cls-h tag-ok">➖ 表现平淡 / 需关注</div><ul class="cls-ul">
-      <li>扣非净利 <b>13.22亿</b>，同比 <b>+21.17%</b>（显著低于归母增速）</li>
-      <li>利润高增主要靠 <b>投资收益/公允价值 +6.82亿</b>（+5939.4%）拉动</li>
-      <li>汇兑损失 <b>1.74亿</b> 侵蚀利润</li>
-    </ul></div>
-    <div class="cls"><div class="cls-h tag-warn">⬇ 劣势 / 待改善</div><ul class="cls-ul">
-      <li>扣非口径盈利含金量 <b>偏低</b>（归母19.97 vs 扣非13.22，差6.75亿非经常损益）</li>
-      <li>津逮CPU产品线体量仍小（2.20亿、占比6.6%）</li>
-      <li>高度依赖 AI 服务器资本开支与 DDR5 渗透节奏</li>
-    </ul></div>
-  </div>
-
-  <!-- 1 财务总览 -->
   <div class="card">
-    <h2><span class="num">1</span>财务总览（2026H1）</h2>
-    <div class="kpi-row">
-      <div class="kpi"><div class="label">营业收入</div><div class="val">33.35亿</div><div class="delta up">同比 +26.66%</div></div>
-      <div class="kpi"><div class="label">归母净利</div><div class="val">19.97亿</div><div class="delta up">同比 +72.33%</div></div>
-      <div class="kpi"><div class="label">扣非净利</div><div class="val">13.22亿</div><div class="delta up">同比 +21.17%</div></div>
-      <div class="kpi"><div class="label">经营现金流</div><div class="val">13.28亿</div><div class="delta up">同比 +25.44%</div></div>
-    </div>
-    <h3>主要会计数据（2026H1 vs 2025H1）</h3>
-    <table>
-      <thead><tr><th>指标</th><th>2026H1</th><th>2025H1</th><th>同比/变动</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>营业收入</td><td>33.35亿</td><td>26.33亿</td><td class="up">+26.66%</td></tr>
-        <tr class="hl-row"><td>归属于上市公司股东的净利润</td><td class="hl-cell">19.97亿</td><td>11.59亿</td><td class="up">+72.33%</td></tr>
-        <tr><td>扣非归母净利润</td><td>13.22亿</td><td>10.91亿</td><td class="up">+21.17%</td></tr>
-        <tr><td>毛利率</td><td class="hl-cell">65.3%</td><td>60.44%</td><td class="up">+4.87pct</td></tr>
-        <tr><td>净利率（归母/营收）</td><td class="hl-cell">59.9%</td><td>44.0%</td><td class="up">+15.9pct</td></tr>
-        <tr><td>加权平均ROE</td><td class="hl-cell">10.72%</td><td>9.70%</td><td class="up">+1.02pct</td></tr>
-        <tr><td>扣非加权 ROE</td><td>7.10%</td><td>9.14%</td><td class="down">-2.04pct</td></tr>
-        <tr><td>基本每股收益（元）</td><td>1.69</td><td>1.02</td><td class="up">+65.69%</td></tr>
-        <tr><td>经营活动现金流净额</td><td>13.28亿</td><td>10.59亿</td><td class="up">+25.44%</td></tr>
-        <tr><td>研发投入占比</td><td>13.58%</td><td>13.56%</td><td class="flat">+0.02pct</td></tr>
-      </tbody>
-    </table>
-    <div class="note">剔除股份支付费用（1.91亿、计入经常性损益）后，2026H1归母净利 <b>21.80亿（+63.6%）</b>，扣非净利 <b>15.05亿（+19.0%）</b>。</div>
+    <h2><span class="num">1</span>最新财报分析报告</h2>
+    <div class="grid" id="reportGrid"><!-- 动态渲染 --></div>
   </div>
 
-  <!-- 2 季度总览 -->
-  <div class="card">
-    <h2><span class="num">2</span>季度总览（2026Q2 单季）</h2>
-    <div class="kpi-row">
-      <div class="kpi"><div class="label">单季营收</div><div class="val">18.75亿</div><div class="delta up">环比 +28.3%</div></div>
-      <div class="kpi"><div class="label">单季归母净利</div><div class="val">11.50亿</div><div class="delta up">环比 +35.7%</div></div>
-      <div class="kpi"><div class="label">单季扣非净利</div><div class="val">7.18亿</div><div class="delta up">环比 +18.9%</div></div>
-      <div class="kpi"><div class="label">单季毛利率</div><div class="val">67.4%</div><div class="delta flat">环比 -2.4pct</div></div>
-    </div>
-    <h3>同比 & 环比整合对照（2026Q2 单季）</h3>
-    <table>
-      <thead><tr><th>指标</th><th>同比基准<br>2025Q2</th><th>环比基准<br>2026Q1</th><th>当期<br>2026Q2</th><th class="up">同比</th><th class="up">环比</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入</td><td>14.11亿</td><td>14.61亿</td><td class="hl-cell">18.75亿</td><td class="up">+32.8%</td><td class="up">+28.3%</td></tr>
-        <tr class="hl-row"><td>归母净利润</td><td>6.34亿</td><td>8.47亿</td><td class="hl-cell">11.50亿</td><td class="up">+81.5%</td><td class="up">+35.7%</td></tr>
-        <tr><td>扣非净利润</td><td>5.89亿</td><td>6.04亿</td><td class="hl-cell">7.18亿</td><td class="up">+21.9%</td><td class="up">+18.9%</td></tr>
-        <tr><td>毛利率</td><td>64.2%</td><td>69.8%</td><td class="hl-cell">67.4%</td><td class="up">+3.2pct</td><td class="down">-2.4pct</td></tr>
-        <tr><td>净利率（归母/营收）</td><td>44.9%</td><td>58.0%</td><td class="hl-cell">61.3%</td><td class="up">+16.4pct</td><td class="up">+3.3pct</td></tr>
-      </tbody>
-    </table>
-    <div class="note">Q2单季 = 2026H1 − 2026Q1（扣非）；营收/归母/毛利率为公司财报直接披露。2026Q2 营收、互连类芯片收入、归母净利、剔除股份支付后归母净利均创单季历史新高。</div>
-  </div>
-
-  <!-- 3 业务板块 -->
-  <div class="card">
-    <h2><span class="num">3</span>业务板块财务分析（分板块）</h2>
-    <table>
-      <thead><tr><th>业务板块</th><th>2026H1收入(亿)</th><th>同比</th><th>收入占比</th><th>毛利率</th><th>Q2单季收入(亿)</th><th>同比</th><th>环比</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td><b>互连类芯片</b></td><td class="hl-cell">31.11</td><td class="up">+26.4%</td><td class="hl-cell">93.3%</td><td class="hl-cell">69.3%（+4.95pct）</td><td>16.94</td><td class="up">+28.2%</td><td class="up">+19.5%</td></tr>
-        <tr><td>　其中：四款互连新品*</td><td>5.38</td><td class="up">+80.7%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-        <tr><td>津逮®产品线（服务器CPU）</td><td>2.20</td><td class="up">+31.2%</td><td>6.6%</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-      </tbody>
-    </table>
-    <div class="note">*四款互连类新产品 = MRCD/MDB（内存）、PCIe Retimer、CKD（时钟）、CXL MXC 芯片，合计收入 5.38 亿、同比 +80.7%，为第二曲线引擎。互连类芯片毛利率随 DDR5 新子代 RCD 及新品占比提升而走高。</div>
-  </div>
-
-    <!-- 4 预期对比 -->
-  <div class="card">
-    <h2><span class="num">4</span>预期对比（研报业绩预期 vs 实际财报）</h2>
-    <h3>券商一致业绩预期（盈利预测 / 评级）</h3>
-    <table>
-      <thead><tr><th>券商</th><th>报告日期</th><th>评级</th><th>2026E归母(亿)</th><th>2027E归母(亿)</th><th>2028E归母(亿)</th><th>对应PE</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>开源证券（上调后）</td><td>2026-08-30</td><td>买入</td><td class="hl-cell">38.76</td><td>49.09</td><td>63.72</td><td>67.1 / 53.0 / 40.8</td></tr>
-        <tr><td>开源证券（原预测）</td><td>—</td><td>买入</td><td>35.77</td><td>47.81</td><td>60.55</td><td>—</td></tr>
-        <tr><td>国海证券</td><td>2026-05-24</td><td>买入</td><td>34.26</td><td>54.23</td><td>75.73</td><td>—</td></tr>
-        <tr><td>国海证券</td><td>2026-04-29</td><td>买入</td><td>34.86</td><td>44.43</td><td>60.64</td><td>—</td></tr>
-        <tr class="hl-row"><td><b>一致预期（区间中值）</b></td><td>—</td><td><b>买入</b></td><td class="hl-cell">~36.5</td><td>~49</td><td>~63.7</td><td>—</td></tr>
-      </tbody>
-    </table>
-    <h3>研报业绩预期 vs 实际财报业绩</h3>
-    <table>
-      <thead><tr><th>对比项</th><th>研报业绩预期</th><th>实际财报（2026H1）</th><th>对比结论</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>归母净利润</td><td>2026E ~36.5亿<br>（区间 34.3~38.8）</td><td>19.97亿（+72.3%）</td><td class="up">H1 已完成全年预期中值约 55%</td></tr>
-        <tr><td>营收</td><td>研报多随 AI 互连高景气维持高增预测</td><td>33.35亿（+26.7%）</td><td class="up">H1 增速与预期方向一致</td></tr>
-        <tr><td>评级 / 预期方向</td><td>主流“买入”，H1 披露后<b>上调</b>全年预期（开源 35.77→38.76）</td><td>Q2 创新高、毛利率 65.3%</td><td class="up">H1 实际表现推动全年预期上调</td></tr>
-        <tr><td>估值水平</td><td>2026E PE 约 67 倍（开源，对应当前股价）</td><td>—</td><td class="down">估值不低，对高增长依赖较强</td></tr>
-      </tbody>
-    </table>
-    <div class="note">研报业绩预期来源：同花顺问财研报库（开源证券 2026-08-30、国海证券 2026-04/05）。一致预期取多家券商盈利预测的区间中线。实际财报数据来自澜起《2026年半年度报告》。</div>
-    <div class="note">补充（公司回馈/指引，来自正式财报）：2026中期拟每10股派2.00元（预计派息2.42亿），常态化中期分红已启动；2026下半年重点研发 PCIe 7.0 Retimer、PCIe Switch、高速以太网 PHY。</div>
-  </div>
-
-  <!-- 5 同行业对比 -->
-  <div class="card">
-    <h2><span class="num">5</span>同行业对比（2026H1 · 存储/内存配套板块）</h2>
-    <h3>5.1 2026H1 核心财务对比（含扣非）</h3>
-    <table>
-      <thead><tr><th>公司</th><th>主营业务</th><th>营收(亿)</th><th>营收同比</th><th>归母(亿)</th><th>归母同比</th><th>扣非(亿)</th><th>扣非同比</th><th>毛利率</th><th>净利率</th><th>ROE</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td><b>澜起科技</b></td><td class="biz">内存接口芯片+互连芯片（DDR5 RCD、PCIe Retimer、CXL MXC）</td><td>33.35</td><td class="up">+26.7%</td><td class="hl-cell">19.97</td><td class="up">+72.3%</td><td class="hl-cell">13.22</td><td class="up">+21.2%</td><td>65.3%</td><td class="hl-cell">59.9%</td><td>10.72%</td></tr>
-        <tr><td>兆易创新<span class="rem">本次新增</span></td><td class="biz">存储芯片（NOR Flash、DRAM）+MCU 微控制器</td><td class="hl-cell">115.66</td><td class="up">+178.7%</td><td class="hl-cell">68.57</td><td class="up">+1091.5%</td><td class="hl-cell">48.83</td><td class="up">+796.9%</td><td>63.1%</td><td>59.5%</td><td class="hl-cell">23.13%</td></tr>
-        <tr><td>聚辰股份</td><td class="biz">DDR5内存模组配套（SPD/EEPROM）</td><td>6.02</td><td class="up">+4.7%</td><td>5.25</td><td class="up">+156.1%</td><td>0.93</td><td class="down">-47.3%</td><td>51.5%</td><td>87.2%*</td><td>18.21%</td></tr>
-        <tr><td>东芯股份</td><td class="biz">存储芯片（NAND/NOR/DRAM）</td><td>14.97</td><td class="up">+336.4%</td><td>6.59</td><td class="up">+694.1%</td><td>6.36</td><td class="up">+602.2%</td><td>67.7%</td><td>44.0%</td><td>17.36%</td></tr>
-      </tbody>
-    </table>
-    <div class="note">澜起数据来自正式财报；兆易、聚辰、东芯为公开财报（问财口径，2026H1）。*聚辰净利率极高系归母利润含大额非经常性损益（其扣非仅0.93亿，不可比）。ROE 为加权 ROE。</div>
-    <h3>5.2 2026Q2 单季对比与环比</h3>
-    <table>
-      <thead><tr><th>公司</th><th>Q2营收(亿)</th><th>营收环比</th><th>Q2归母(亿)</th><th>归母环比</th><th>Q2扣非(亿)</th><th>扣非环比</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td><b>澜起科技</b></td><td>18.75</td><td class="up">+28.3%</td><td>11.50</td><td class="up">+35.7%</td><td>7.18</td><td class="up">+18.9%</td></tr>
-        <tr><td>兆易创新<span class="rem">本次新增</span></td><td class="hl-cell">73.78</td><td class="up">+76.2%</td><td class="hl-cell">53.96</td><td class="up">+269.2%</td><td class="hl-cell">34.73</td><td class="up">+146.3%</td></tr>
-        <tr><td>聚辰股份</td><td>3.22</td><td class="up">+15.0%</td><td>4.94</td><td class="up">+1503%</td><td>0.67</td><td class="up">+147.2%</td></tr>
-        <tr><td>东芯股份</td><td>10.18</td><td class="up">+112.3%</td><td>5.21</td><td class="up">+276.7%</td><td>5.04</td><td class="up">+282.0%</td></tr>
-      </tbody>
-    </table>
-    <ul class="pts">
-      <li><span class="tag tag-warn">体量 / 弹性最大</span> 新增可比公司兆易创新体量居首（H1 营收 115.66 亿），在存储涨价周期中弹性最大：营收 +178.7%、归母 +1091.5%、扣非 +796.9%，ROE 23.13% 为同业最高；Q2 环比亦最强（营收 +76.2%、归母 +269.2%）。</li>
-      <li><span class="tag tag-best">盈利质量最稳</span> 澜起是四家中"归母+扣非"双正且可持续、增速真实稳健（扣非+21.2%）的公司；聚辰归母暴增但扣非-47%，利润主要靠非经常损益。</li>
-      <li><span class="tag tag-ok">成长路径清晰</span> 澜起互连新品（MRCD/MDB、PCIe Retimer、CKD、CXL MXC）+80.7%，AI 互连第二曲线明确；兆易/东芯受益存储周期回暖弹性大但基数低或波动高。</li>
-      <li><span class="tag tag-warn">结构提示</span> 澜起 Q2 营收/归母创单季新高、环比加速（+28.3%/+35.7%），高确定性成长；若与兆易对比，则以"互连高毛利龙头稳健" vs "存储涨价周期进攻"两种属性看待，景气阶段各有侧重。</li>
-    </ul>
-  </div>
-
-  <!-- 6 现金流与风险 -->
-  <div class="card">
-    <h2><span class="num">6</span>现金流与风险提示</h2>
-    <table>
-      <thead><tr><th>项目</th><th>2026H1</th><th>解读</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>经营现金流净额</td><td>13.28亿</td><td class="up">同比+25.44%，运营稳健</td></tr>
-        <tr><td>投资现金流净额</td><td>-16.52亿</td><td>投资支付的现金增加（非经常性）</td></tr>
-        <tr><td>筹资现金流净额</td><td>+72.22亿</td><td>收到 H 股募集资金</td></tr>
-        <tr><td>货币资金</td><td>151.10亿</td><td>占总资产 65.19%，现金储备极充沛</td></tr>
-        <tr><td>资产负债率</td><td>7.5%</td><td>财务杠杆极低，资产结构健康</td></tr>
-      </tbody>
-    </table>
-    <h3>风险提示</h3>
-    <ul class="pts">
-      <li>⚡ <b>盈利含金量</b>：归母19.97亿中约6.75亿来自非经常损益（投资收益/公允价值+6.82亿），扣非仅13.22亿，需以扣非衡量真实主业盈利。</li>
-      <li>⚡ <b>投资收益依赖</b>：公允价值及投资收益同比+5939.4%，若市场波动将放大利润波动。</li>
-      <li>⚡ <b>汇率风险</b>：人民币升值致汇兑损失1.74亿（上年仅0.07亿），对利润形成负向拖累。</li>
-      <li>⚡ <b>技术与竞争</b>：芯片研发周期长、迭代快，DDR5 新标准与竞品（Rambus 等）节奏为关键变量；对 AI 服务器资本开支、DDR5 渗透高度敏感。</li>
-      <li>⚡ <b>业务结构</b>：津逮CPU体量小（占比6.6%），收入仍高度集中于互连类芯片。</li>
-    </ul>
-  </div>
-
-  <!-- 7 综合研判 -->
-  <div class="card">
-    <h2><span class="num">7</span>综合研判</h2>
-    <ul class="pts">
-      <li>📍 <b>成长性</b>：营收+26.7%、归母+72.3%、Q2创新高，AI 互连景气度高企；四款新品+80.7%打开第二增长曲线，成长确定性行业领先。</li>
-      <li>📍 <b>盈利质量</b>：毛利率65.3%（+4.87pct）持续优化，但利润高增速主要来自投资收益，<b>真实主业扣非增速为+21.2%</b>，两者差异是评估估值时必须拆分的关键。</li>
-      <li>📍 <b>财务健康</b>：资产负债率7.5%、货币资金151亿、H 股募资到账，资产负债表极强，支撑持续高研发投入。</li>
-      <li>📍 <b>估值视角</b>：若以归母净利看，PE 偏低具吸引力；若以扣非净利看，估值则不便宜。宜以"扣非+剔除股份支付"口径作为主导估值基准。</li>
-      <li>📍 <b>结论</b>：AI 服务器互连高确定龙头，基本面强劲；唯投资看重扣非口径的盈利真实性与估值匹配度。</li>
-    </ul>
-  </div>
-
-  <div class="src">
-    <b>数据来源</b>：①澜起科技《2026年半年度报告》②《2026年第一季度报告》③《2025年半年度报告》（正式财报）；④可比公司（兆易创新、聚辰股份、东芯股份）2026H1 数据为同花顺问财（公开财报）口径，其中兆易 Q2 单季由 H1−Q1（问财口径）推算；⑤预期对比采用券商研报业绩预期（同花顺问财研报库）。本报告财务数据均以正式财报为准，Q2单季由 H1−Q1 及财报披露口径推算。
-  </div>
+  <div class="footer">Financial Reports · GitHub Pages 报告库 ｜ 新报告将在此持续更新</div>
 
 </div>
+
+<script>
+// ===== 报告清单（新增报告时在此追加一条即可，无需改动页面结构） =====
+const REPORTS = [
+  {
+    company: "澜起科技",
+    code: "688008.SH",
+    type: "2026年中报",
+    date: "2026-09-01",
+    url: "lanqi_2026mid_report_20260901.html",
+    isNew: true,
+    desc: "AI 互连龙头，归母 +72.3% 创新高；同行业对比涵盖兆易创新、聚辰、东芯，并补充毛利率/ROE 维度。"
+  },
+  {
+    company: "鼎龙股份",
+    code: "300054.SZ",
+    type: "2026年中报",
+    date: "2026-08-30",
+    url: "dinglong_2026mid_report_20260830.html",
+    isNew: false,
+    desc: "半导体材料平台型公司，剔除出表业务后的可比口径营收/净利环比分析。"
+  }
+];
+
+// 渲染
+const grid = document.getElementById('reportGrid');
+grid.innerHTML = REPORTS.map(r =>
+  `<div class="rep">
+     <div><span class="ctg ctg-mid">${r.type}</span>${r.isNew ? '<span class="ctg ctg-new">最新</span>' : ''}</div>
+     <h3>${r.company}</h3>
+     <div class="co">${r.code} · ${r.date}</div>
+     <div class="desc">${r.desc}</div>
+     <a class="link" href="${r.url}" target="_blank">查看报告 →</a>
+   </div>`
+).join('');
+</script>
 </body>
 </html>
