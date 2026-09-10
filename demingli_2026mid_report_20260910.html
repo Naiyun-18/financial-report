@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德明利(001309) 2026年中报深度分析</title>
+<style>
+  :root{
+    --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
+    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
+    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+  .wrap{max-width:980px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .hero h1{font-size:26px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{margin-top:8px;font-size:13.5px;opacity:.92}
+  .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
+  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .kpi .val{font-size:18px;font-weight:700}
+  .kpi .delta{font-size:12px;margin-top:4px}
+  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fbfe}
+  .hl-cell{color:var(--blue);font-weight:700}
+  tr.hl-row{background:#eef5ff}
+  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
+  .tag-best{background:var(--green);color:#fff}
+  .tag-ok{background:var(--blue-soft);color:var(--blue)}
+  .tag-warn{background:#fff4e5;color:#b26a00}
+  .verdict{background:linear-gradient(135deg,#f0fff9,#e6f7ff);border:1px solid #cfe9dd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .verdict h2{font-size:18px;color:#0c7a57;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .cls{margin:9px 0;padding:10px 14px;background:rgba(255,255,255,.62);border-radius:10px;border:1px solid #e2efe7}
+  .cls-h{display:inline-block;margin-bottom:6px;font-size:13px;font-weight:700}
+  .cls .cls-ul{margin:2px 0 0 20px}
+  .cls .cls-ul li{margin:4px 0;font-size:13px}
+  ul.pts{margin:8px 0 0 20px}
+  ul.pts li{margin:7px 0;font-size:14px}
+  .note{font-size:12px;color:var(--sub);margin-top:10px}
+  .note.warn{color:#b26a00;background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:8px 10px}
+  .src{font-size:11.5px;color:#8a99a8;margin-top:16px;padding-top:10px;border-top:1px dashed var(--line)}
+  .biz{text-align:left;white-space:normal;max-width:210px;min-width:150px;font-size:12px;color:var(--sub)}
+  .rem{display:block;font-size:10.5px;color:#8a99a8;font-weight:400;white-space:normal;margin-top:1px}
+  @media(max-width:720px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.kpi-row{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>德明利（001309.SZ）2026年中报深度分析</h1>
+    <div class="sub">报告日期：2026-09-10 ｜ 数据来源：<b>《2026年半年度报告》+《2026年第一季度报告》+《2025年半年度报告》正式财报</b>（同行业可比公司为公开财报/问财口径）</div>
+  </div>
+
+  <!-- 一句话结论 -->
+  <div class="verdict">
+    <h2>🎯 一句话结论：存储量价齐升驱动业绩爆发式扭亏创历史新高，但 Q2 盈利动能回落 + 高库存高杠杆构成隐忧</h2>
+    <div class="cls"><div class="cls-h tag-best">📈 大幅增长 / 领先</div><ul class="cls-ul">
+      <li>营收 <b>169.11亿</b>，同比 <b>+311.55%</b>；归母净利 <b>60.17亿</b>，去年同期 -1.18 亿实现<b>扭亏为盈</b>（+5201.60%）</li>
+      <li>扣非归母 <b>59.66亿</b>，占归母 99%，盈利含金量高；毛利率升至 <b>47.12%</b>（上年约 5%）</li>
+      <li>加权 ROE <b>95.11%</b>（上年 -4.85%），居存储同业之首；2026Q1 归母 33.46 亿创单季历史新高</li>
+      <li>嵌入式存储毛利率 <b>62.99%</b>、固态硬盘同比 <b>+422.62%</b>，产品结构持续升级</li>
+    </ul></div>
+    <div class="cls"><div class="cls-h tag-ok">➖ 表现平淡 / 需关注</div><ul class="cls-ul">
+      <li>Q2 单季归母 <b>26.71亿</b>，环比 <b>-20.2%</b>，为存储同业中唯一 Q2 归母环比下滑者</li>
+      <li>毛利率由 Q1 <b>57.42%</b> 回落至 H1 <b>47.12%</b>（Q2 约 39%），盈利能力阶段性走弱</li>
+      <li>经营现金流 <b>-67.36亿</b>，上年同期 -5.90 亿，大幅恶化</li>
+    </ul></div>
+    <div class="cls"><div class="cls-h tag-warn">⬇ 劣势 / 待改善</div><ul class="cls-ul">
+      <li>存货 <b>214.12亿</b>（占资产 65%、约127%半年营收）创历史新高，同比 <b>+361%</b></li>
+      <li>存货周转天数 <b>291天</b>（上年 213天）恶化；存货为应收账款约 <b>5.8倍</b>，资金大量占压</li>
+      <li>资产负债率 <b>70.34%</b>，短期借款 77.75亿 + 长期借款 66.80亿，高杠杆备货</li>
+    </ul></div>
+  </div>
+
+  <!-- 1 财务总览 -->
+  <div class="card">
+    <h2><span class="num">1</span>财务总览（2026H1）</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">营业收入</div><div class="val">169.11亿</div><div class="delta up">同比 +311.55%</div></div>
+      <div class="kpi"><div class="label">归母净利</div><div class="val">60.17亿</div><div class="delta up">扭亏为盈</div></div>
+      <div class="kpi"><div class="label">扣非净利</div><div class="val">59.66亿</div><div class="delta up">占归母 99%</div></div>
+      <div class="kpi"><div class="label">经营现金流</div><div class="val">-67.36亿</div><div class="delta down">上年 -5.90亿</div></div>
+    </div>
+    <h3>主要会计数据（2026H1 vs 2025H1）</h3>
+    <table>
+      <thead><tr><th>指标</th><th>2026H1</th><th>2025H1</th><th>同比/变动</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>营业收入</td><td class="hl-cell">169.11亿</td><td>41.09亿</td><td class="up">+311.55%</td></tr>
+        <tr class="hl-row"><td>归属于上市公司股东的净利润</td><td class="hl-cell">60.17亿</td><td>-1.18亿</td><td class="up">扭亏为盈（+5201.60%）</td></tr>
+        <tr><td>扣非归母净利润</td><td class="hl-cell">59.66亿</td><td>-1.22亿</td><td class="up">+4975.97%</td></tr>
+        <tr><td>剔除股份支付后净利</td><td>61.78亿</td><td>-0.93亿</td><td class="up">+6740.87%</td></tr>
+        <tr><td>毛利率</td><td class="hl-cell">47.12%</td><td>约5.03%</td><td class="up">+42.09pct</td></tr>
+        <tr><td>净利率（归母/营收）</td><td class="hl-cell">35.58%</td><td>-2.87%</td><td class="up">+38.45pct</td></tr>
+        <tr><td>加权平均ROE</td><td class="hl-cell">95.11%</td><td>-4.85%</td><td class="up">+99.96pct</td></tr>
+        <tr><td>基本每股收益（元）</td><td>26.76</td><td>-0.53</td><td class="up">+5149.06%</td></tr>
+        <tr><td>经营活动现金流净额</td><td>-67.36亿</td><td>-5.90亿</td><td class="down">-1041.54%</td></tr>
+        <tr><td>研发投入</td><td>3.43亿</td><td>1.15亿</td><td class="up">+197.10%</td></tr>
+        <tr><td>总资产 / 归母净资产</td><td>329.69 / 97.78亿</td><td>较上年末 +203.85% / +199.07%</td><td class="up">规模大幅扩张</td></tr>
+        <tr><td>资产负债率</td><td>70.34%</td><td>上年末 69.87%</td><td class="up">+0.47pct</td></tr>
+      </tbody>
+    </table>
+    <div class="note">非经常性损益合计约 0.51 亿元（占归母不足 1%），主要系公允价值变动收益 0.28 亿（联芸科技股价波动）与资产减值 -0.42 亿（存货跌价）相抵，盈利为典型<b>主业驱动</b>。爆发式增长主要源于 AI 服务器/数据中心需求驱动存储量价齐升，叠加前期低成本原材料战略储备兑现。</div>
+  </div>
+
+  <!-- 2 季度总览 -->
+  <div class="card">
+    <h2><span class="num">2</span>季度总览（2026Q2 单季）</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">单季营收</div><div class="val">93.73亿</div><div class="delta up">环比 +24.3%</div></div>
+      <div class="kpi"><div class="label">单季归母净利</div><div class="val">26.71亿</div><div class="delta down">环比 -20.2%</div></div>
+      <div class="kpi"><div class="label">单季扣非净利</div><div class="val">26.32亿</div><div class="delta down">环比 -21.1%</div></div>
+      <div class="kpi"><div class="label">单季毛利率</div><div class="val">约38.9%</div><div class="delta down">Q1 57.42%</div></div>
+    </div>
+    <h3>季度数据对照（2026Q2 单季 = H1 − Q1）</h3>
+    <table>
+      <thead><tr><th>指标</th><th>同比基准<br>2025Q2</th><th>环比基准<br>2026Q1</th><th>当期<br>2026Q2</th><th class="up">同比</th><th class="up">环比</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入</td><td>28.57亿</td><td>75.38亿</td><td class="hl-cell">93.73亿</td><td class="up">+228.1%</td><td class="up">+24.3%</td></tr>
+        <tr class="hl-row"><td>归母净利润</td><td>-0.49亿</td><td>33.46亿</td><td class="hl-cell">26.71亿</td><td class="up">扭亏</td><td class="down">-20.2%</td></tr>
+        <tr><td>扣非净利润</td><td>-0.47亿</td><td>33.34亿</td><td class="hl-cell">26.32亿</td><td class="up">扭亏</td><td class="down">-21.1%</td></tr>
+        <tr><td>毛利率</td><td>—</td><td>57.42%</td><td>约38.9%</td><td>—</td><td class="down">-18.5pct</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Q2单季 = 2026H1 − 2026Q1（数据均为正式财报口径）。Q2 营收环比 +24.3% 继续放量，但<b>归母环比 -20.2%、毛利率由 Q1 约 57% 回落至 Q2 约 39%</b>：主因前期低价战略储备库存消耗、成本结转上升，以及产品结构（SSD/内存条占比提升、嵌入高端占比相对下降）变化。Q2 盈利动能较 Q1 放缓，为存储同业中唯一归母环比下滑者。<span class="rem">2025Q2 = 2025H1 − 2025Q1（2025Q1 营收12.52亿、归母-0.69亿、扣非-0.75亿，来自2026Q1报告上年同期）。2025Q2营收28.57 = 41.09−12.52、归母-0.49 = -1.18−(-0.69)、扣非-0.47 = -1.22−(-0.75)。</span></div>
+  </div>
+
+  <!-- 3 业务板块 -->
+  <div class="card">
+    <h2><span class="num">3</span>业务板块财务分析（分产品 / 分地区）</h2>
+    <table>
+      <thead><tr><th>维度</th><th>收入(亿)</th><th>同比</th><th>占比</th><th>毛利率</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><b>存储行业（合计）</b></td><td class="hl-cell">169.11</td><td class="up">+311.55%</td><td class="hl-cell">100%</td><td class="hl-cell">47.12%</td></tr>
+        <tr><td>固态硬盘类（SSD）</td><td>80.20</td><td class="up">+422.62%</td><td class="hl-cell">47.42%</td><td>39.90%</td></tr>
+        <tr><td>嵌入式存储类</td><td>55.92</td><td class="up">+228.98%</td><td>33.07%</td><td class="hl-cell">62.99%</td></tr>
+        <tr><td>内存条类</td><td>25.19</td><td class="up">+645.59%</td><td>14.90%</td><td>38.47%</td></tr>
+        <tr><td>移动存储类</td><td>7.05</td><td class="up">+31.44%</td><td>4.17%</td><td>36.36%</td></tr>
+        <tr><td>其他</td><td>0.75</td><td>—</td><td>0.44%</td><td>—</td></tr>
+        <tr><td>其中：外销</td><td>109.91</td><td class="up">+300.12%</td><td class="hl-cell">65.00%</td><td>44.66%</td></tr>
+        <tr><td>其中：内销</td><td>59.19</td><td class="up">+334.60%</td><td>35.00%</td><td>51.71%</td></tr>
+      </tbody>
+    </table>
+    <div class="note">公司为存储模组与品牌商，业务高度集中于存储行业（100%）。<b>固态硬盘（SSD）为第一大板块</b>（占 47.42%、同比 +422.62%），企业级 SSD 放量为核心引擎；<b>嵌入式存储毛利率最高（62.99%）</b>，自研主控 + LDPC 算法等技术构建高毛利壁垒。外销占比 65% 且增速快。</div>
+  </div>
+
+  <!-- 4 存货分析 -->
+  <div class="card">
+    <h2><span class="num">4</span>存货分析（2026H1）</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">期末存货</div><div class="val">214.12亿</div><div class="delta up">同比 +361%</div></div>
+      <div class="kpi"><div class="label">存货/营收</div><div class="val">126.6%</div><div class="delta up">存货已超营收</div></div>
+      <div class="kpi"><div class="label">周转率(H1)</div><div class="val">0.63次</div><div class="delta down">上年0.86次</div></div>
+      <div class="kpi"><div class="label">周转天数</div><div class="val">291天</div><div class="delta down">上年213天</div></div>
+    </div>
+    <h3>存货余额变动轨迹（亿元）</h3>
+    <table>
+      <thead><tr><th>时点</th><th>存货</th><th>环比/同比</th><th>单季净增</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>2026H1末（06-30）</td><td class="hl-cell">214.12</td><td class="up">较2025H1末 +361.2%</td><td>Q2 +92.20</td></tr>
+        <tr><td>2026Q1末（03-31）</td><td>121.92</td><td class="up">较2025年末 +72.7%</td><td>Q1 +51.34</td></tr>
+        <tr><td>2025年末（12-31）</td><td>70.58</td><td class="up">较2025H1末 +52.0%</td><td>—</td></tr>
+        <tr><td>2025H1末（06-30）</td><td>46.43</td><td class="up">较2024年末 +4.7%</td><td>—</td></tr>
+        <tr><td>2024年末（12-31）</td><td>44.36</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="note">存货占总资产 64.95%；约合 <b>近 7 个月的销售额</b>（存货/半年营收 126.6%），属存储模组商在景气上行期的<b>激进战略备货</b>。其中原材料及半成品占 81.77%（175.09 亿），主要为满足企业级存储备货与产能保障而加大晶圆采购。</div>
+    <h3>库存周转指标</h3>
+    <table>
+      <thead><tr><th>指标</th><th>2026H1</th><th>2025H1</th><th>变动</th></tr></thead>
+      <tbody>
+        <tr><td>营业收入（亿）</td><td>169.11</td><td>41.09</td><td class="up">+311.55%</td></tr>
+        <tr><td>营业成本（亿）</td><td>89.42</td><td>39.02</td><td class="up">+129.13%</td></tr>
+        <tr class="hl-row"><td>存货周转率（次）</td><td class="hl-cell">0.63</td><td>0.86</td><td class="down">-0.23次</td></tr>
+        <tr class="hl-row"><td>存货周转天数（天）</td><td class="hl-cell">291</td><td>213</td><td class="down">+78天</td></tr>
+        <tr><td>存货/营收</td><td class="hl-cell">126.6%</td><td>113.0%</td><td class="up">+13.6pct</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><span class="tag tag-warn">备货大幅超前、周转恶化</span> 存货同比 <b>+361%</b>（远超营收 +311%基数的绝对扩张，单季净增 Q1+51.3 亿、Q2+92.2 亿加速）；周转天数 213天→<b>291天</b>、周转率 0.86→0.63 次，均差于上年同期。</li>
+      <li><span class="tag tag-ok">景气上行期的进攻性备货</span> 存储供需紧张、价格上行背景下，公司加大晶圆/半成品备货以锁定低成本库存、保障企业级产品放量与产能爬坡，属周期上行期主动选择。</li>
+      <li><span class="tag tag-warn">经营性现金流大幅转负、依赖举债</span> 备货激增导致经营现金流 <b>-67.36亿</b>（上年 -5.90亿）；资金缺口靠融资弥补，短期借款 34.72→77.75亿、长期借款 9.52→66.80亿，筹资净流入 +101.31 亿，资产负债率升至 70.34%。</li>
+      <li><span class="tag tag-warn">跌价/减值风险</span> 存货 214.12 亿约为应收账款（36.69亿）的 <b>5.8 倍</b>，资金大量占压于库存。2026H1 存货跌价计提比例降至 <b>0.19%</b>（2025H1 为 1.24%），已计提存货减值 0.42 亿；若存储价格见顶回落，高价库存将面临集中跌价/减值损失，为最大风险点。</li>
+    </ul>
+  </div>
+
+  <!-- 5 预期对比 -->
+  <div class="card">
+    <h2><span class="num">5</span>预期对比（研报业绩预期 vs 实际财报）</h2>
+    <h3>券商业绩预期（盈利预测 / 评级）</h3>
+    <table>
+      <thead><tr><th>券商</th><th>报告日期</th><th>评级</th><th>2026E营收(亿)</th><th>2026E归母(亿)</th><th>对应PE(2026E)</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>财信证券（周剑）</td><td>2026-05-07</td><td>买入</td><td class="hl-cell">304.45</td><td class="hl-cell">143.10</td><td>约9x</td></tr>
+        <tr><td>国信证券（叶子）</td><td>2026-04-21</td><td>优于大市</td><td>317.74</td><td class="hl-cell">88.80</td><td>约13.1x</td></tr>
+      </tbody>
+    </table>
+    <h3>研报业绩预期 vs 实际财报业绩</h3>
+    <table>
+      <thead><tr><th>对比项</th><th>研报业绩预期</th><th>实际财报（2026H1）</th><th>对比结论</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>归母净利润</td><td>2026E 财信 143.10亿 / 国信 88.80亿（分歧较大）</td><td>60.17亿（扭亏，+5201.60%）</td><td class="up">H1 完成财信约42%、国信约68%</td></tr>
+        <tr><td>营收</td><td>2026E 304.45亿 / 317.74亿</td><td>169.11亿（+311.55%）</td><td class="up">H1 完成全年约55%</td></tr>
+        <tr><td>评级 / 方向</td><td>主流"买入 / 优于大市"</td><td>毛利率 47.12%、净利率 35.58%、ROE 95.11%</td><td class="up">基本面符合卖方积极展望</td></tr>
+        <tr><td>盈利节奏</td><td>Q1 预期乐观、全年高增长</td><td>Q2 归母环比 -20.2%、毛利率回落</td><td class="down">H2 需存储价格与毛利回升支撑</td></tr>
+      </tbody>
+    </table>
+    <div class="note">研报业绩预期来源：同花顺问财研报库。两家券商对 2026E 归母预测分歧显著（88.8亿~143.1亿），反映高波动存储周期下预测难度大。H1 实际 60.17 亿更接近国信预测轨迹；财信 143 亿需 H2 归母再翻倍（约 83 亿）方能实现。当前股价 419.45 元（2026-09-10）。</div>
+  </div>
+
+  <!-- 6 同行业对比 -->
+  <div class="card">
+    <h2><span class="num">6</span>同行业对比（2026H1 · 存储板块）</h2>
+    <h3>6.1 2026H1 核心财务对比（含扣非）</h3>
+    <table>
+      <thead><tr><th>公司</th><th>主营业务</th><th>营收(亿)</th><th>营收同比</th><th>归母(亿)</th><th>归母同比</th><th>扣非(亿)</th><th>扣非同比</th><th>毛利率</th><th>净利率</th><th>ROE</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><b>德明利</b></td><td class="biz">存储模组与主控（SSD/嵌入式/内存条/移动存储）</td><td class="hl-cell">169.11</td><td class="up">+311.55%</td><td class="hl-cell">60.17</td><td class="up">扭亏</td><td class="hl-cell">59.66</td><td class="up">+4976%</td><td class="hl-cell">47.12%</td><td>35.58%</td><td class="hl-cell">95.11%</td></tr>
+        <tr><td>江波龙</td><td class="biz">存储模组与品牌（企业级/嵌入式/消费级）</td><td>240.88</td><td class="up">+136.3%</td><td>105.77</td><td class="up">扭亏</td><td>100.47</td><td class="up">+31096%</td><td>58.90%</td><td>44.49%</td><td>79.03%</td></tr>
+        <tr><td>佰维存储</td><td class="biz">存储模组/嵌入式存储</td><td>155.75</td><td class="up">+298.1%</td><td>71.66</td><td class="up">+3273%</td><td>66.33</td><td class="up">+2963%</td><td>54.81%</td><td>45.89%</td><td>78.69%</td></tr>
+        <tr><td>兆易创新</td><td class="biz">存储芯片（NOR/DRAM）+MCU</td><td>115.66</td><td class="up">+178.7%</td><td>68.57</td><td class="up">+1091.5%</td><td>48.83</td><td class="up">+796.9%</td><td>63.13%</td><td>59.53%</td><td>23.13%</td></tr>
+        <tr><td>朗科科技</td><td class="biz">存储产品（U盘/SSD/内存）品牌商</td><td>9.66</td><td class="up">+101.76%</td><td>0.95</td><td class="up">+632.4%</td><td>0.97</td><td class="up">扭亏</td><td>19.99%</td><td>9.99%</td><td>8.69%</td></tr>
+      </tbody>
+    </table>
+    <div class="note">德明利数据来自正式财报；其余公司为公开财报（问财口径，2026H1）。ROE 为加权 ROE。模组商三强（德明利/江波龙/佰维）在涨价上行期营收与净利弹性最大，其中德明利 <b>H1 ROE 95.11% 居同业之首</b>；但 H1 毛利率 47.12%、净利率 35.58% 显著低于江波龙（58.9%/44.5%）与佰维（54.8%/45.9%），盈利能力在同业中相对偏弱。</div>
+    <h3>6.2 2026Q2 单季对比与环比</h3>
+    <table>
+      <thead><tr><th>公司</th><th>Q2营收(亿)</th><th>营收环比</th><th>Q2归母(亿)</th><th>归母环比</th><th>Q2扣非(亿)</th><th>扣非环比</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td><b>德明利</b></td><td class="hl-cell">93.73</td><td class="up">+24.3%</td><td class="hl-cell">26.71</td><td class="down">-20.2%</td><td class="hl-cell">26.32</td><td class="down">-21.1%</td></tr>
+        <tr><td>江波龙</td><td>141.79</td><td class="up">+43.1%</td><td>67.15</td><td class="up">+73.9%</td><td>61.05</td><td class="up">+54.8%</td></tr>
+        <tr><td>佰维存储</td><td>87.61</td><td class="up">+28.6%</td><td>42.67</td><td class="up">+47.2%</td><td>38.17</td><td class="up">+35.5%</td></tr>
+        <tr><td>兆易创新</td><td>73.78</td><td class="up">+76.2%</td><td>53.96</td><td class="up">+269.3%</td><td>34.73</td><td class="up">+146.3%</td></tr>
+        <tr><td>朗科科技</td><td>4.80</td><td class="down">-1.2%</td><td>0.13</td><td class="down">-84.1%</td><td>0.15</td><td class="down">-82.3%</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><span class="tag tag-best">H1 ROE / 营收增速居首</span> 德明利 H1 营收同比 +311.55%、加权 ROE 95.11% 均在存储同业中领先，体现低基数下的极致弹性与高资本回报。</li>
+      <li><span class="tag tag-warn">Q2 盈利动能独弱</span> Q2 归母环比 -20.2%、扣非 -21.1%，为同业中<b>唯一 Q2 环比下滑</b>者；对比江波龙（+73.9%）、佰维（+47.2%）、兆易（+269.3%）Q2 延续高增，反映德明利 Q2 毛利率回落后盈利弹性减弱。</li>
+      <li><span class="tag tag-warn">盈利能力居同业中后</span> H1 毛利率 47.12%、净利率 35.58%，显著低于江波龙/佰维/兆易；毛利端缺乏芯片原厂（兆易 63.1%）与头部模组商（江波龙 58.9%）的议价优势，增长更依赖上游价格与自研主控放量。</li>
+      <li><span class="tag tag-ok">盈利含金量高</span> 扣非占归母 99%（59.66/60.17），非经常损益影响极小；存货/应收比率高（5.8倍）的资金占用与经营现金流大幅为负是主要财务质量隐忧。</li>
+    </ul>
+  </div>
+
+  <!-- 7 现金流与风险 -->
+  <div class="card">
+    <h2><span class="num">7</span>现金流与风险提示</h2>
+    <table>
+      <thead><tr><th>项目</th><th>2026H1</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>经营现金流净额</td><td>-67.36亿</td><td class="down">上年 -5.90 亿，主因存货备货激增、购买商品支付现金大增</td></tr>
+        <tr><td>投资现金流净额</td><td>-2.84亿</td><td>定期存款到期收回 + 购建长期资产</td></tr>
+        <tr><td>筹资现金流净额</td><td>+101.31亿</td><td class="up">借款大增（短期 34.72→77.75亿、长期 9.52→66.80亿）</td></tr>
+        <tr><td>短期借款</td><td>77.75亿</td><td>较年初 34.72 亿增约 124%</td></tr>
+        <tr><td>长期借款</td><td>66.80亿</td><td>较年初 9.52 亿大增约 6 倍</td></tr>
+        <tr><td>资产负债率</td><td>70.34%</td><td>高杠杆备货，财务负担上行</td></tr>
+      </tbody>
+    </table>
+    <h3>风险提示</h3>
+    <ul class="pts">
+      <li>⚡ <b>高库存水位 + 周期反转风险</b>：存货 214.12 亿（占总资产 65%、约127%半年营收），周转天数 291 天（上年 213 天）恶化。若存储价格见顶回落，高价库存面临<u>集中跌价/减值</u>损失（本期已计提 0.42 亿，计提比例仅 0.19%）。</li>
+      <li>⚡ <b>经营现金流大幅为负、依赖高杠杆</b>：经营现金流 -67.36 亿靠融资支撑（短期+长期借款约 144.6 亿、资产负债率 70.34%），盈利兑现为现金需待库存去化，现金流质量待观察。</li>
+      <li>⚡ <b>Q2 盈利能力回落</b>：毛利率由 Q1 57.42% 回落至 Q2 约 39%、归母环比 -20.2%，若下半年存储价格走平或回落，前期低价库存红利递减，盈利能力或进一步承压。</li>
+      <li>⚡ <b>存储周期依赖</b>：营收 100% 集中于存储产品，对行业价格/供需高度敏感；外销占比 65%，亦受汇率与地缘贸易影响。</li>
+    </ul>
+  </div>
+
+  <!-- 8 综合研判 -->
+  <div class="card">
+    <h2><span class="num">8</span>综合研判</h2>
+    <ul class="pts">
+      <li>📍 <b>成长性</b>：营收 +311.55%、归母扭亏为盈至 60.17 亿、H1 ROE 95.11%，存储量价齐升 + 企业级/自研主控放量，成长爆发力居存储板块前列；Q2 营收环比 +24.3% 继续放量。</li>
+      <li>📍 <b>盈利质量</b>：毛利率 47.12%、净利率 35.58%、扣非占归母 99%，主业驱动、含金量高；但 Q2 毛利率显著回落（约 57%→39%），盈利动能较 Q1 放缓，为最大环比隐忧。</li>
+      <li>📍 <b>业务结构</b>：SSD 为第一大板块（占 47.42%、+422.62%），企业级存储放量为核心引擎；嵌入式存储毛利率最高（62.99%）；外销占 65%、内销毛利率更高（51.71%）。</li>
+      <li>📍 <b>核心隐忧</b>：存货 214.12 亿创新高（同比 +361%）、周转天数 291 天；经营现金流 -67.36 亿、短期+长期借款约 144.6 亿、资产负债率 70.34%，高库存高杠杆且 Q2 盈利回落，风险收益比随价格高位上行逐步变差。</li>
+      <li>📍 <b>估值</b>：研报 2026E 归母预测分歧较大（财信 143.1 亿 vs 国信 88.8 亿）；H1 已实现 60.17 亿，更接近国信轨迹（完成 68%）。当前股价 419.45 元，估值对 H2 存储价格与毛利率回升依赖较强。</li>
+      <li>📍 <b>操作视角</b>：短期业绩弹性与成长趋势占优，但需以<u>存储价格、Q2 毛利率能否回升、库存去化进度</u>为核心跟踪指标；Q2 归母环比下滑 + 高库存高杠杆，决定后续需更谨慎对待周期高位兑现，重点观察下半年企业级放量与毛利企稳信号。</li>
+    </ul>
+  </div>
+
+  <div class="src">数据说明：报告主体财务数据均来自德明利《2026年半年度报告》《2026年第一季度报告》《2025年半年度报告》正式财报。同行业可比公司数据为公开财报（问财口径，2026H1）。研报预期来源为同花顺问财研报库。Q2单季、2025Q2单季均为本期/上年同期报表数据推算。</div>
+
+</div>
+</body>
+</html>
