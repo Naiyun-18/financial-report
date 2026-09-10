@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>存储三傻 2026年中报存货对比分析</title>
+<style>
+  :root{
+    --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
+    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
+    --amber:#b26a00; --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+  .wrap{max-width:1020px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#1b4fd0,#7a1fbf);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .hero h1{font-size:25px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{margin-top:8px;font-size:13.5px;opacity:.92}
+  .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
+  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .kpi .val{font-size:17px;font-weight:700}
+  .kpi .delta{font-size:12px;margin-top:4px}
+  .kpi .hl{color:var(--blue)}
+  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fbfe}
+  td.best{color:var(--green);font-weight:700}
+  td.worst{color:var(--red);font-weight:700}
+  .hl-cell{color:var(--blue);font-weight:700}
+  tr.hl-row{background:#eef5ff}
+  tr.jjl{background:#f0f7ff}
+  tr.dml{background:#fdf2ec}
+  tr.bw{background:#eefaf3}
+  .legend{font-size:11.5px;color:var(--sub);margin-bottom:8px}
+  .legend span.d{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 12px;vertical-align:middle}
+  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
+  .tag-best{background:var(--green);color:#fff}
+  .tag-ok{background:var(--blue-soft);color:var(--blue)}
+  .tag-warn{background:#fff4e5;color:#b26a00}
+  .verdict{background:linear-gradient(135deg,#f4f0ff,#e6f7ff);border:1px solid #d8d0f0;border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .verdict h2{font-size:18px;color:#4a2fa8;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .find{margin:9px 0;padding:10px 14px;background:rgba(255,255,255,.66);border-radius:10px;border:1px solid #e0e6f2}
+  .find .f-title{font-weight:700;font-size:13.5px;margin-bottom:4px}
+  .find ul{margin:2px 0 0 20px}
+  .find ul li{margin:4px 0;font-size:13px}
+  ul.pts{margin:8px 0 0 20px}
+  ul.pts li{margin:7px 0;font-size:14px}
+  .note{font-size:12px;color:var(--sub);margin-top:10px}
+  .src{font-size:11.5px;color:#8a99a8;margin-top:16px;padding-top:10px;border-top:1px dashed var(--line)}
+  .bar{display:inline-block;height:13px;border-radius:3px;vertical-align:middle;margin-right:6px}
+  @media(max-width:720px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.kpi-row{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>存储三傻 · 2026年中报存货对比分析</h1>
+    <div class="sub">报告日期：2026-09-10 ｜ 对比标的：江波龙（301308）· 德明利（001309）· 佰维存储（688525）｜ 数据来源：三家公司《2026年半年度报告》《2026年第一季度报告》《2025年半年度报告》正式财报（问财口径核对）</div>
+  </div>
+
+  <!-- 一句话结论 -->
+  <div class="verdict">
+    <h2>🎯 一句话结论：三傻同步疯狂备货，期末存货均超半年营收、周转天数全线恶化，高库存+高杠杆+现金流转负是共性隐忧；德明利最激进（增速最快、杠杆最高），江波龙绝对规模最大但现金流缺口最小，佰维相对最克制</h2>
+    <div class="find"><div class="f-title">📌 核心发现一：三家存货均创历史新高，且都进入"存货 > 半年营收"的激进区间</div>
+      <ul>
+        <li>江波龙 <b>257.77亿</b>（＝半年营收 107.0%）｜ 德明利 <b>214.12亿</b>（＝126.6%）｜ 佰维 <b>181.68亿</b>（＝116.7%）</li>
+        <li>绝对规模：江波龙 > 德明利 > 佰维；同比增长：<b>德明利 +361.2%</b> > 佰维 +314.6% > 江波龙 +219.2%</li>
+      </ul>
+    </div>
+    <div class="find"><div class="f-title">📌 核心发现二：备货全线加速，Q2 单季净增普遍大于 Q1</div>
+      <ul>
+        <li>单季净增（Q1 → Q2）：江波龙 +62.8 → +78.2亿｜德明利 +51.3 → <b>+92.2亿</b>（加速最猛）｜佰维 +42.0 → +61.0亿</li>
+        <li>三家均判断存储景气延续、以锁价锁量备战；德明利 Q2 补库力度尤大</li>
+      </ul>
+    </div>
+    <div class="find"><div class="f-title">📌 核心发现三：周转与现金流同步承压，风险随价格高位上行不断积聚</div>
+      <ul>
+        <li>周转天数全线恶化：江波龙 161→<b>341天</b>（+180天）｜佰维 203→<b>337天</b>（+134天）｜德明利 213→<b>291天</b>（+78天）</li>
+        <li>经营现金流均为负：德明利 <b>-67.36亿</b> > 佰维 -62.61亿 > 江波龙 -31.51亿；资产负债率德明利 70.34% 最高</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1 存货规模与增速 -->
+  <div class="card">
+    <h2><span class="num">1</span>存货规模与增速对比</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">期末存货</div><div class="val">257.77亿</div><div class="delta hl">江波龙（最大）</div></div>
+      <div class="kpi"><div class="label">同比增速最快</div><div class="val">+361.2%</div><div class="delta hl">德明利</div></div>
+      <div class="kpi"><div class="label">备货最克制</div><div class="val">181.68亿</div><div class="delta hl">佰维（同比+314.6%）</div></div>
+      <div class="kpi"><div class="label">三家合计</div><div class="val">653.57亿</div><div class="delta">均为半年报历史新高</div></div>
+    </div>
+    <h3>1.1 期末存货余额与增速（2026H1）</h3>
+    <table>
+      <thead><tr><th>公司</th><th>期末存货(亿)</th><th>较2025H1同比</th><th>较2025年末</th><th>占总资产</th><th>排序</th></tr></thead>
+      <tbody>
+        <tr class="jjl"><td><b>江波龙</b></td><td class="hl-cell">257.77</td><td class="up">+219.2%</td><td class="up">+120.7%</td><td>60.12%</td><td>规模最大</td></tr>
+        <tr class="dml"><td><b>德明利</b></td><td class="hl-cell">214.12</td><td class="worst">+361.2%</td><td class="up">+203.4%</td><td class="worst">64.95%</td><td>增速最快</td></tr>
+        <tr class="bw"><td><b>佰维存储</b></td><td class="hl-cell">181.68</td><td class="up">+314.6%</td><td class="up">+130.9%</td><td>54.48%</td><td>相对克制</td></tr>
+      </tbody>
+    </table>
+    <div class="note">三家期末存货同比均增长 2~3.6 倍，远超同期营收增速（江波龙 +136%、德明利 +311%、佰维 +298%），为<b>明显的超前/跨周期备货</b>。德明利同比 +361% 且较年初翻 3 倍，是三者中补库最激进的；佰维绝对规模与占比最低、相对最克制。</div>
+  </div>
+
+  <!-- 2 备货节奏 -->
+  <div class="card">
+    <h2><span class="num">2</span>备货节奏：单季净增对比</h2>
+    <h3>存货余额变动轨迹（亿元）</h3>
+    <table>
+      <thead><tr><th>时点</th><th>江波龙</th><th>德明利</th><th>佰维存储</th></tr></thead>
+      <tbody>
+        <tr><td>2024年末</td><td>78.33</td><td>44.36</td><td>35.37</td></tr>
+        <tr><td>2025H1末</td><td>80.76</td><td>46.43</td><td>43.82</td></tr>
+        <tr><td>2025年末</td><td>116.78</td><td>70.58</td><td>78.68</td></tr>
+        <tr><td>2026Q1末</td><td>179.61</td><td>121.92</td><td>120.69</td></tr>
+        <tr class="hl-row"><td><b>2026H1末</b></td><td class="hl-cell">257.77</td><td class="hl-cell">214.12</td><td class="hl-cell">181.68</td></tr>
+      </tbody>
+    </table>
+    <h3>单季净增（亿元）</h3>
+    <table>
+      <thead><tr><th>公司</th><th>Q1 净增(亿)</th><th>Q2 净增(亿)</th><th>节奏</th></tr></thead>
+      <tbody>
+        <tr class="jjl"><td><b>江波龙</b></td><td>+62.83</td><td>+78.16</td><td class="up">加速</td></tr>
+        <tr class="dml"><td><b>德明利</b></td><td>+51.34</td><td class="worst">+92.20</td><td class="worst">加速最猛（Q2≈1.8×Q1）</td></tr>
+        <tr class="bw"><td><b>佰维存储</b></td><td>+42.01</td><td>+60.99</td><td class="up">加速</td></tr>
+      </tbody>
+    </table>
+    <div class="note">三家 Q2 单季净增均进一步放大，普遍将 Q1 增幅再放大 1.2~1.8 倍。其中德明利 Q2 单季净增 92.2 亿为三傻之最（占其期末存货 43%），补库最凶；佰维虽绝对额最小但环比也在加速。普遍判断存储价格上行为主旋律，提前锁定晶圆产能与成本。</div>
+  </div>
+
+  <!-- 3 结构占比 -->
+  <div class="card">
+    <h2><span class="num">3</span>存货结构占比对比（/营收 · /总资产 · /应收）</h2>
+    <table>
+      <thead><tr><th>指标</th><th>江波龙</th><th>德明利</th><th>佰维存储</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>存货 / 半年营收</td><td class="hl-cell">107.0%</td><td class="worst">126.6%</td><td class="hl-cell">116.7%</td><td>＞100%＝已超半年营收</td></tr>
+        <tr><td>存货 / 总资产</td><td>60.12%</td><td class="worst">64.95%</td><td>54.48%</td><td>德明利资产最重仓于存货</td></tr>
+        <tr><td>存货 / 应收账款</td><td class="worst">5.9倍</td><td>5.8倍</td><td>4.3倍</td><td>资金占压于库存的程度</td></tr>
+        <tr><td>（参考）营业成本(亿)</td><td>99.00</td><td>89.42</td><td>70.38</td><td>成本口径用于周转计算</td></tr>
+        <tr><td>（参考）毛利率</td><td>58.90%</td><td>47.12%</td><td>54.81%</td><td>高毛利→成本低→周转口径偏慢</td></tr>
+      </tbody>
+    </table>
+    <div class="note">以<b>营收口径</b>衡量备货超前程度：<b>德明利 > 佰维 > 江波龙</b>，三家存货均超半年营收，反映存储模组商在本轮周期上行期的一致进攻性。存货/应收方面三傻均达 4~6 倍，大量营运资金沉淀于库存。</div>
+  </div>
+
+  <!-- 4 周转效率 -->
+  <div class="card">
+    <h2><span class="num">4</span>存货周转效率对比</h2>
+    <table>
+      <thead><tr><th>公司</th><th>2026H1<br>周转率(次)</th><th>2025H1<br>周转率(次)</th><th>2026H1<br>周转天数(天)</th><th>2025H1<br>周转天数(天)</th><th>天数变动</th></tr></thead>
+      <tbody>
+        <tr class="jjl"><td><b>江波龙</b></td><td>0.53</td><td>1.12</td><td class="worst">341</td><td>161</td><td class="worst">+180天</td></tr>
+        <tr class="bw"><td><b>佰维存储</b></td><td>0.54</td><td>0.90</td><td>337</td><td>203</td><td class="down">+134天</td></tr>
+        <tr class="dml"><td><b>德明利</b></td><td>0.63</td><td>0.86</td><td>291</td><td>212</td><td class="down">+79天</td></tr>
+      </tbody>
+    </table>
+    <div class="note">周转天数（平均存货 ÷ 营业成本 × 182.5天）显示<b>三家全线恶化</b>：江波龙 161→341 天恶化最剧（+180天），佰维 +134 天、德明利 +78 天。<b>口径提示</b>：江波龙毛利率最高（58.9%），营业成本/营收占比低（41%），使得成本口径的周转天数偏长；但即便用营收口径，江波龙存货占营收 107% 仍属高位，其备货同样激进。</div>
+  </div>
+
+  <!-- 5 跌价风险 -->
+  <div class="card">
+    <h2><span class="num">5</span>跌价与减值风险对比</h2>
+    <table>
+      <thead><tr><th>公司</th><th>本期计提减值(亿)</th><th>计提/存货</th><th>风险提示</th></tr></thead>
+      <tbody>
+        <tr class="jjl"><td><b>江波龙</b></td><td>1.27</td><td class="worst">0.49%</td><td>计提比例最高，高价库存敞口大</td></tr>
+        <tr class="dml"><td><b>德明利</b></td><td>0.42</td><td>0.19%</td><td>计提比例低，存货中原材料/半成品占 81.8%</td></tr>
+        <tr class="bw"><td><b>佰维存储</b></td><td>0.36</td><td>0.20%</td><td>计提比例低，含长期锁量采购协议</td></tr>
+      </tbody>
+    </table>
+    <div class="note.warn" style="background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:8px 10px;color:#b26a00;font-size:12px">⚡ <b>共性风险</b>：三家期末存货均已达到"超过半年营收 + 占总资产 54%~65%"的高水位，而跌价计提比例仅 0.19%~0.49%。若存储价格上涨周期见顶回落，高价库存将面临集中的<b>跌价/减值</b>损失，是本轮高备货模式下最大的共同隐患。</div>
+  </div>
+
+  <!-- 6 现金流与杠杆联动 -->
+  <div class="card">
+    <h2><span class="num">6</span>存货 · 现金流 · 杠杆联动分析</h2>
+    <table>
+      <thead><tr><th>指标</th><th>江波龙</th><th>德明利</th><th>佰维存储</th></tr></thead>
+      <tbody>
+        <tr><td>经营现金流(亿)</td><td class="down">-31.51</td><td class="worst">-67.36</td><td class="down">-62.61</td></tr>
+        <tr><td>存货较2025年末净增(亿)</td><td>+140.99</td><td>+143.54</td><td>+103.00</td></tr>
+        <tr><td>现金流缺口 vs 存货净增</td><td class="best">占比约-22%</td><td class="worst">占比约-47%</td><td class="down">占比约-61%</td></tr>
+        <tr><td>短期借款(亿)</td><td>—</td><td>77.75</td><td>65.05</td></tr>
+        <tr><td>长期借款(亿)</td><td>104.93</td><td>66.80</td><td>86.46</td></tr>
+        <tr><td>资产负债率</td><td>56.13%</td><td class="worst">70.34%</td><td>61.64%</td></tr>
+      </tbody>
+    </table>
+    <div class="note">三傻的经营现金流全部为负，且净流出规模与存货净增高度相关。其中<b>江波龙经营现金流缺口相对最小</b>（-31.51亿，约为其存货净增的 22%），主要靠占用上游应付账款腾挪资金，杠杆率（56.13%）三傻中最低；<b>德明利杠杆最高（70.34%）且现金流缺口较大（-67.36亿）</b>，财务状况相对最紧；佰维现金流缺口占存货净增约 61%、杠杆 61.64% 居中。高存货 + 举债补血是三傻在景气高位的共同财务特征。</div>
+  </div>
+
+  <!-- 7 综合研判 -->
+  <div class="card">
+    <h2><span class="num">7</span>存储三傻存货综合研判与排序</h2>
+    <table>
+      <thead><tr><th>维度</th><th>江波龙</th><th>德明利</th><th>佰维存储</th></tr></thead>
+      <tbody>
+        <tr><td>存货规模</td><td class="best">最大（257.77亿）</td><td>中（214.12亿）</td><td>小（181.68亿）</td></tr>
+        <tr><td>补库激进度（同比）</td><td>居中（+219%）</td><td class="worst">最激进（+361%）</td><td class="best">较克制（+314%）</td></tr>
+        <tr><td>备货超前度（存量比/营收）</td><td class="best">最低（107.0%）</td><td class="worst">最高（126.6%）</td><td>居中（116.7%）</td></tr>
+        <tr><td>周转效率</td><td class="worst">最慢（341天/恶化+180）</td><td class="best">最快（291天/+78）</td><td>居中（337天/+134）</td></tr>
+        <tr><td>跌价计提比例</td><td class="worst">最高（0.49%）</td><td>低（0.19%）</td><td>低（0.20%）</td></tr>
+        <tr><td>现金流缺口</td><td class="best">最小（-31.5亿）</td><td class="worst">最大（-67.4亿）</td><td>中（-62.6亿）</td></tr>
+        <tr><td>资产负债率</td><td class="best">最低（56.13%）</td><td class="worst">最高（70.34%）</td><td>居中（61.64%）</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li>📍 <b>江波龙 · 规模最重、腾挪最稳</b>：绝对存货最大且周转天数恶化最剧（+180天），但在三傻中备货超前度（107%）、杠杆（56.13%）、现金流缺口（-31.5亿）均相对最优，靠占用上游应对补库，财务弹性最强；计提比例 0.49% 亦最高，风控较审慎。</li>
+      <li>📍 <b>德明利 · 最激进、杠杆最高</b>：同比 +361%、Q2 单季净增 92 亿、存货占营收 126.6% & 占总资产 64.95% 均为三傻之最，同时资产负债率 70.34%、经营现金流 -67.4 亿缺口最大。高弹性伴随最高周期反转风险，是其三家中财务最紧、风险敞口最大的一家。</li>
+      <li>📍 <b>佰维 · 相对克制、结构均衡</b>：绝对规模与占比三傻中最低、补库节奏相对温和，存货/应收比（4.3倍）最低；但周转天数亦恶化至 337 天，且带长期采购锁量（约 33.6 亿美元）放大价格下行时成本压力，风险居中。</li>
+      <li>📍 <b>共同结论</b>：三傻当前均处于"备货远超前于营收、周转全线转慢、现金流转负、高杠杆运行"的周期高位状态，本质是<b>赌存储价格延续上行</b>。景气上行期盈利弹性最大，但一旦价格见顶，巨额高价库存的减值冲击将同步放大——高库存是三家最需盯防的共同变量。</li>
+    </ul>
+  </div>
+
+  <div class="src">数据说明：本报告全部数据严格取自 financial-report 仓库中江波龙、德明利、佰维存储三份《2026年中报深度分析报告》的存货分析模块（该三份报告数据均来自各家《2026年半年度报告》《2026年第一季度报告》《2025年半年度报告》正式财报）。周转天数/周转率、存货占营收与总资产、存货/应收账款、存货跌价计提、经营现金流及资产负债率等均为三份报告原值口径；「较2025年末」「单季净增」由仓库报告内存货轨迹数据推算。未采用任何外部联网数据，保证与各公司财报分析报告口径一致。</div>
+
+</div>
+</body>
+</html>
