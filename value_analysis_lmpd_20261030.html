@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>澜起/兆易/普冉 个股价值分析报告（2026三季报）</title>
+<style>
+  :root{
+    --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
+    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74; --orange:#e8912d;
+    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+  .wrap{max-width:1000px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:26px 30px;margin-bottom:20px;box-shadow:var(--shadow)}
+  .hero h1{font-size:24px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{margin-top:8px;font-size:13px;opacity:.92}
+  .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .card h2{font-size:17px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fbfe}
+  .hl-cell{color:var(--blue);font-weight:700}
+  tr.hl-row{background:#eef5ff}
+  .up{color:var(--red)}.down{color:var(--green)}
+  .verdict{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12.5px;font-weight:600;text-align:center}
+  .v-cheap{background:#e7f6ef;color:#0c7a57}
+  .v-fair{background:#fff4e5;color:#b26a00}
+  .v-pricy{background:#fdeaea;color:#c0392b}
+  .kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:8px}
+  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:10px;padding:11px;text-align:center}
+  .kpi .label{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+  .kpi .val{font-size:16px;font-weight:700}
+  .kpi .sub2{font-size:11px;color:var(--sub);margin-top:2px}
+  h3{font-size:14.5px;font-weight:600;margin:16px 0 8px;color:var(--blue)}
+  ul.pts{margin:6px 0 0 20px}
+  ul.pts li{margin:6px 0;font-size:13.5px}
+  .eq{display:inline-block;margin-right:6px;font-size:12px;font-weight:700;padding:1px 8px;border-radius:10px}
+  .eq-buy{background:#e7f6ef;color:#0c7a57}
+  .eq-hold{background:#fff4e5;color:#b26a00}
+  .src{font-size:11.5px;color:#8a99a8;margin-top:14px;padding-top:10px;border-top:1px dashed var(--line)}
+  .note{font-size:12px;color:var(--sub);background:#f7fafd;border:1px solid var(--line);border-radius:8px;padding:8px 11px;margin-top:10px}
+  @media(max-width:680px){.kpi-row{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:19px}}
+
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2px 0}
+  table.compact{font-size:12.5px}
+  table.compact th,table.compact td{padding:7px 8px}
+  table.compact td.c-span{white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <h1>澜起科技 / 兆易创新 / 普冉股份 / 鼎龙股份 — 个股价值分析报告</h1>
+    <div class="sub">分析日期：2026-10-30 ｜ 财务数据来源：《2026年三季度报告》正式财报 + 同花顺问财（估值/历史PE）；近五年窗口：2021-10-08 至 2026-10-30</div>
+  </div>
+
+  <!-- 主汇总表 -->
+  <div class="card">
+    <h2><span class="num">①</span>四股价值维度汇总表（核心交付）</h2>
+        <div class="table-scroll">
+    <table class="compact">
+      <thead><tr>
+        <th>公司</th><th>当前股价<br>(元)</th><th>总市值<br>(亿)</th><th>TTM<br>股息率</th><th>单季加权ROE<br>(Q3)</th><th>加权平均ROE<br>(2026前三季)</th><th>五年Z值<br>(PE TTM)</th><th>五年分位<br>(PE TTM)</th><th>五年PE区间跨度<br>(最低~最高 / 倍数)</th><th>评价</th><th>分析日期</th>
+      </tr></thead>
+      <tbody>
+        <tr class="hl-row">
+          <td><b>澜起科技</b><br><span style="font-size:11px;color:#5b6b7b">688008</span></td>
+          <td>162.05</td><td>1995.11</td><td>0.50%</td><td>5.65%</td><td>16.33%</td><td>-1.08</td><td>9.6%</td><td class="c-span">37.0~145.5x · <b>3.9倍</b></td><td><span class="verdict v-cheap">价值型低估 · 高确定性</span></td><td>2026-10-30</td>
+        </tr>
+        <tr>
+          <td><b>兆易创新</b><br><span style="font-size:11px;color:#5b6b7b">603986</span></td>
+          <td>264.04</td><td>1871.56</td><td>0.35%</td><td>7.35%</td><td>22.15%</td><td>-1.07</td><td>0.0%</td><td class="c-span">15.97~372.4x · <b>23.3倍</b></td><td><span class="verdict v-cheap">显著低估 · 五年最低估值</span></td><td>2026-10-30</td>
+        </tr>
+        <tr>
+          <td><b>普冉股份</b><br><span style="font-size:11px;color:#5b6b7b">688766</span></td>
+          <td>257.84</td><td>384.10</td><td>0.09%</td><td>19.84%</td><td>48.49%</td><td>-0.60</td><td>15.0%</td><td class="c-span">22.4~789.7x · <b>35.2倍</b></td><td><span class="verdict v-fair">成长与估值匹配 · 高ROE</span></td><td>2026-10-30</td>
+        </tr>
+        <tr>
+          <td><b>鼎龙股份</b><br><span style="font-size:11px;color:#5b6b7b">300054</span></td>
+          <td>54.44</td><td>523.03</td><td>0.27%</td><td>6.06%</td><td>14.98%</td><td>-1.12</td><td>18.4%</td><td class="c-span">41.99~119.37x · <b>2.8倍</b></td><td><span class="verdict v-cheap">五年低位 · 盈利加速兑现</span></td><td>2026-10-30</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <ul class="pts">
+      <li><b>五年Z值</b>：当前 PE(TTM) 相对近五年均值偏离的标准差数；负值表示低于五年历史均值。</li>
+      <li><b>五年分位</b>：当前 PE(TTM) 在近五年全部交易日中的百分位；数值越低代表估值越便宜。</li>
+      <li><b>三股五年Z值均为负、分位均处历史低位</b>——三者的核心差异不在"贵/便宜"方向，而在<u>ROE（盈利质量）与增速驱动</u>的质地分层。</li>
+    </ul>
+  </div>
+
+  <!-- 澜起 -->
+  <div class="card">
+    <h2><span class="num">②</span>澜起科技（688008）— AI互连龙头</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">当前股价</div><div class="val">162.05元</div><div class="sub2">总市值 1995.11亿</div></div>
+      <div class="kpi"><div class="label">TTM股息率</div><div class="val">0.50%</div><div class="sub2">2025年度分红口径</div></div>
+      <div class="kpi"><div class="label">单季加权ROE</div><div class="val">5.65%</div><div class="sub2">2026Q3本报告期</div></div>
+      <div class="kpi"><div class="label">加权ROE</div><div class="val">16.33%</div><div class="sub2">2026前三季·同比+2.73pct</div></div>
+      <div class="kpi"><div class="label">PE/PB</div><div class="val">51.5x / 8.93</div><div class="sub2">动态PE约45.8x</div></div>
+    </div>
+    <table>
+      <thead><tr><th>估值位置指标</th><th>当前</th><th>五年均值</th><th>五年中位</th><th>五年最低~最高</th><th>五年Z值</th><th>五年分位</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>PE(TTM)</td><td class="hl-cell">51.5x</td><td>78.5x</td><td>70.8x</td><td>37.0x~145.5x</td><td>-1.08</td><td>9.6%</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><b>2026三季报核心</b>：营收54.14亿（+33.4%）、归母32.37亿（<b>+98.3%</b>）、扣非23.27亿（+58.6%）、ROE 16.33%；Q3单季营收/归母/扣非均创单季新高，扣非环比+39.8%，互连类毛利率68.4%（环比+0.9pct）。</li>
+      <li><b>估值判断</b>：当前PE 51.5x处近五年<b>9.6%分位</b>（低于五年内90%历史估值）、Z值-1.08——五年均值78.5x的大幅回落主要消化了2021-2023景气顶部的估值泡沫；Q4在手订单25.0~27.9亿、全年归母有望44.8亿（超一致预期上限约10%），对应动态PE约45.8x、前三季年化约46x。</li>
+      <li><b>综合评价</b>：<span class="eq eq-buy">价值型低估</span> 高确定成长的AI互连龙头，估值回到五年低位、盈利加速兑现；股息率虽低（高增长留存），但<u>低估值+订单锁定</u>的安全边际在成长股中最优。风险：动态PE仍高于板块（存储原厂约13x），依赖Q4订单兑现与AI资本开支延续。</li>
+    </ul>
+  </div>
+
+  <!-- 兆易 -->
+  <div class="card">
+    <h2><span class="num">③</span>兆易创新（603986）— 存储原厂龙头</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">当前股价</div><div class="val">264.04元</div><div class="sub2">总市值 1871.56亿</div></div>
+      <div class="kpi"><div class="label">TTM股息率</div><div class="val">0.35%</div><div class="sub2">2025年度分红口径</div></div>
+      <div class="kpi"><div class="label">单季加权ROE</div><div class="val">7.35%</div><div class="sub2">2026Q3本报告期</div></div>
+      <div class="kpi"><div class="label">加权ROE</div><div class="val">22.15%</div><div class="sub2">2026前三季</div></div>
+      <div class="kpi"><div class="label">PE/PB</div><div class="val">15.98x / 2.42</div><div class="sub2">动态PE约12.6x</div></div>
+    </div>
+    <table>
+      <thead><tr><th>估值位置指标</th><th>当前</th><th>五年均值</th><th>五年中位</th><th>五年最低~最高</th><th>五年Z值</th><th>五年分位</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>PE(TTM)</td><td class="hl-cell">15.98x</td><td>94.6x</td><td>72.1x</td><td>15.97x~372.4x</td><td>-1.07</td><td>0.0%</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><b>2026三季报核心</b>：营收202.97亿（<b>+197.1%</b>）、归母110.66亿（<b>+921.5%</b>）、扣非94.34亿（+796.9%）、ROE 22.15%；Q3单季营收87.32亿（环比+18.3%）、扣非45.51亿（环比+31.1%），随存储涨价周期量价齐升。</li>
+      <li><b>估值判断</b>：当前PE 15.98x为<b>近五年历史最低（0.0%分位）</b>、Z值-1.07——五年均值94.6x畸高系2021年高景气顶部PE+2022-2024亏损/微利期稀释；涨价上行周期中EPS暴增使静态PE失真，动态PE仅12.6x、PB 2.42x，绝对估值最低。</li>
+      <li><b>综合评价</b>：<span class="eq eq-buy">显著低估</span> 存储涨价周期的最大原厂弹性受益者，ROE 22.15%、动态PE 12.6x、PB 2.42x的估值水平与周期景气匹配度高；股息率0.35%偏低。<u>但需警惕周期属性</u>——五年PE波动区间15.97x~372.4x（跨度23倍）说明业绩周期性极强，2027年若存储价格回落，低PE的"低"需以周期顶部盈利为基准审视。</li>
+    </ul>
+  </div>
+
+  <!-- 普冉 -->
+  <div class="card">
+    <h2><span class="num">④</span>普冉股份（688766）— 存储+AI高弹性</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">当前股价</div><div class="val">257.84元</div><div class="sub2">总市值 384.10亿</div></div>
+      <div class="kpi"><div class="label">TTM股息率</div><div class="val">0.09%</div><div class="sub2">2025年度分红口径</div></div>
+      <div class="kpi"><div class="label">单季加权ROE</div><div class="val">19.84%</div><div class="sub2">2026Q3本报告期</div></div>
+      <div class="kpi"><div class="label">加权ROE</div><div class="val">48.49%</div><div class="sub2">2026前三季·同比+45.85pct</div></div>
+      <div class="kpi"><div class="label">PE/PB</div><div class="val">22.51x / 9.59</div><div class="sub2">动态PE约18.5x</div></div>
+    </div>
+    <table>
+      <thead><tr><th>估值位置指标</th><th>当前</th><th>五年均值(剔负)</th><th>五年中位(剔负)</th><th>五年最低~最高</th><th>五年Z值</th><th>五年分位</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>PE(TTM)</td><td class="hl-cell">22.51x</td><td>111.0x</td><td>48.6x</td><td>22.4x~789.7x</td><td>-0.60</td><td>15.0%</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><b>2026三季报核心</b>：营收70.10亿（<b>+389.1%</b>）、归母15.55亿（+2533.2%）、扣非15.45亿（<b>+4065.7%</b>）、ROE <b>48.49%</b>；Q3环比+26.4%连续三季加速，扣非/归母=99.3%盈利最纯净；SHM 2D NAND并表贡献前三季营收43.85亿。</li>
+      <li><b>估值判断</b>：当前PE 22.51x处五年15.0%分位（全样本口径）、剔非正样本0.1%分位、Z值-0.60——五年均值111x畸高系上市初期高估值＋2022-2024亏损期（183个交易日PE为负）稀释；动态PE约18.5x对应前三季ROE 48.49%，PB 9.59x为三股最高（重资产偏轻但市价含成长溢价）。</li>
+      <li><b>综合评价</b>：<span class="eq eq-hold">成长与估值匹配</span> 三股中ROE最高（48.49%）估值最低（动态PE 18.5x），若完成SHM剩余49%收购，归母增厚年化约12.5亿、备考估值进一步下移——弹性与重估空间兼具。<u>风险与澜起/兆易截然相反地集中在周期性与并表依赖</u>：2D NAND涨价持续性是生命线（存货25.54亿+应收15.67亿双高敞口），且归母现被SHM 49%少数股东摊薄，需等待收购落地兑现归母弹性。</li>
+    </ul>
+  </div>
+
+  <!-- 鼎龙 -->
+  <div class="card">
+    <h2><span class="num">⑤</span>鼎龙股份（300054）— 半导体材料平台龙头</h2>
+    <div class="kpi-row">
+      <div class="kpi"><div class="label">当前股价</div><div class="val">54.44元</div><div class="sub2">总市值 523.03亿</div></div>
+      <div class="kpi"><div class="label">TTM股息率</div><div class="val">0.27%</div><div class="sub2">2025年度分红口径</div></div>
+      <div class="kpi"><div class="label">单季加权ROE</div><div class="val">6.06%</div><div class="sub2">2026Q3本报告期</div></div>
+      <div class="kpi"><div class="label">加权ROE</div><div class="val">14.98%</div><div class="sub2">2026前三季·同比+4.18pct</div></div>
+      <div class="kpi"><div class="label">PE/PB</div><div class="val">49.5x / 8.85</div><div class="sub2">动态PE约45.8x</div></div>
+    </div>
+    <table>
+      <thead><tr><th>估值位置指标</th><th>当前</th><th>五年均值</th><th>五年中位</th><th>五年最低~最高</th><th>五年Z值</th><th>五年分位</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>PE(TTM)</td><td class="hl-cell">49.5x</td><td>65.9x</td><td>62.5x</td><td>41.99x~119.37x</td><td>-1.12</td><td>18.4%</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><b>2026三季报核心</b>：前三季营收29.13亿（+7.97%）、归母8.52亿（<b>+64.00%</b>）、扣非7.91亿（+60.01%）、加权ROE 14.98%；Q3单季归母3.22亿创历史新高（环比+15.78%）、营收环比+9.28%（出表出清后真实加速）、毛利率62.31%（同比+8.6pct）。</li>
+      <li><b>估值判断</b>：当前PE 49.5x处近五年<b>18.4%分位</b>、Z值-1.12（四股中最负）——低于五年均值1.1个标准差；五年区间41.99~119.37x跨度仅2.8倍，为四股中最收敛（估值波动小、平台型属性强）。前三季归母已完成券商全年预测（11.0亿）的77.4%，全年11.5亿+概率高，对应2026E约45x。</li>
+      <li><b>综合评价</b>：<span class="eq eq-buy">五年低位 · 盈利加速兑现</span> 半导体材料平台型龙头（CMP抛光垫/液+光刻胶+先进封装），Q3营收利润双环比双位数加速为可比公司最强；扣非/归母95.1%、现金含量110%、存货零压力，盈利质量优。风险：营收同比+2.26%仍温和（出表高基数），PE绝对值49.5x高于兆易/普冉，依赖国产替代与晶圆厂资本开支延续。</li>
+    </ul>
+  </div>
+
+  <!-- 横向总结 -->
+  <div class="card">
+    <h2><span class="num">⑥</span>横向量化评价与投资启示</h2>
+    <table class="wide">
+      <thead><tr><th>公司</th><th>当前股价(元)</th><th>TTM股息率</th><th>单季加权ROE</th><th>加权ROE</th><th>五年Z值</th><th>五年分位</th><th>一句话评价</th></tr></thead>
+      <tbody>
+        <tr class="hl-row"><td>澜起科技</td><td>162.05</td><td>0.50%</td><td>5.65%</td><td>16.33%</td><td>-1.08</td><td>9.6%</td><td>低估值+订单锁定，价值型低估，确定性最优</td></tr>
+        <tr><td>兆易创新</td><td>264.04</td><td>0.35%</td><td>7.35%</td><td>22.15%</td><td>-1.07</td><td>0.0%</td><td>五年最低估值，动态PE 12.6x，周期弹性大但周期性风险高</td></tr>
+        <tr><td>普冉股份</td><td>257.84</td><td>0.09%</td><td>19.84%</td><td>48.49%</td><td>-0.60</td><td>15.0%</td><td>最高ROE最低估值，成长质量佳，依赖涨价周期与并购落地</td></tr>
+        <tr><td>鼎龙股份</td><td>54.44</td><td>0.27%</td><td>6.06%</td><td>14.98%</td><td>-1.12</td><td>18.4%</td><td>Z值最负+分位18.4%，Q3环比同行最强，平台龙头盈利加速兑现</td></tr>
+      </tbody>
+    </table>
+    <ul class="pts">
+      <li><b>估值绝对水位</b>：按动态PE排序，兆易（12.6x）&lt; 普冉（18.5x）&lt; 鼎龙（45.8x）≈澜起（45.8x）；按ROE质量排序，普冉（48.49%）&gt; 兆易（22.15%）&gt; 澜起（16.33%）&gt; 鼎龙（14.98%）。</li>
+      <li><b>分位解读</b>：四股五年PE分位均处于历史偏低区（0%~18.4%），主因当前处"盈利上行+估值收敛"阶段——EPS在涨价周期中快速抬升，而市场未充分上修PE，形成低估值表象。</li>
+      <li><b>风格定位</b>：澜起=成长价值型（低估值+高确定性）；兆易=周期价值型（绝对估值最低但周期性最强）；普冉=成长弹性型（高ROE+并购重估期权）；鼎龙=平台成长型（五年估值低位+盈利加速兑现，区间跨度2.8倍最收敛）。</li>
+      <li><b>风险提示</b>：四股盈利高度依赖存储/AI/半导体材料景气周期；股息率均偏低（0.09%~0.50%）不构成收益保护；五年Z值/分位基于PE(TTM)近五年历史（2021-10至2026-10），周期股用PE绝对值衡量"贵贱"存在失真，须结合ROE、订单、涨价持续性综合判断，不构成投资建议。</li>
+    </ul>
+  </div>
+
+  <div class="src">数据来源：①四家公司《2026年第三季度报告》正式财报（营业收入/归母/扣非/加权ROE）；②当前股价、总市值、股息率、PE/PB为同花顺问财（2026-10-30收盘）；③五年Z值与分位基于问财"市盈率(pe,ttm)"日频数据（2021-10-08 至 2026-10-30，各1225个交易日）自行计算：Z值 =（当前PE − 五年剔非正均值）/标准差；分位 = 当前PE在五年样本中的百分位。TTM股息率基于最近披露分红年度（2025年度）口径。分析日期：2026-10-30。</div>
+
+</div>
+</body>
+</html>
