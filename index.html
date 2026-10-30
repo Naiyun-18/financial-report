@@ -23,6 +23,7 @@
   .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
   .rep{background:#f7fafd;border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;transition:.2s}
+  .rep-highlight{background:#fff6d9;border:1px solid #f2d98a;box-shadow:0 4px 16px rgba(240,200,100,.22)}
   .rep:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
   .rep .ctg{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;align-self:flex-start}
   .ctg-mid{background:var(--blue-soft);color:var(--blue)}
@@ -61,12 +62,22 @@
 // ===== 报告清单（新增报告时在此追加一条即可，无需改动页面结构） =====
 const REPORTS = [
   {
+    company: "澜起/兆易/普冉·价值分析",
+    code: "688008/603986/688766",
+    type: "个股价值分析报告(2026三季报)",
+    date: "2026-10-30",
+    url: "value_analysis_lmp_20261030.html",
+    isNew: true,
+    highlight: true,
+    desc: "三股价值维度汇总：澜起五年PE分位9.6%(价值型低估·高确定性)、兆易0.0%(显著低估五年最低·动态PE12.6x)、普冉15.0%(高ROE48.49%·成长匹配)；含TTM股息率/单季加权ROE/五年PE Z值与区间跨度，数据取自2026三季报正式财报+问财五年PE序列。"
+  },
+  {
     company: "兆易创新",
     code: "603986.SH",
     type: "2026年三季报",
     date: "2026-10-29",
     url: "zhaoyi_2026q3_report_20261029.html",
-    isNew: true,
+    isNew: false,
     desc: "Q3单季营收87.32亿、扣非45.51亿、毛利率70.3%均创历史新高；归母环比-22%为证券投资摆动（扣非环比+31%加速）；存货62.92亿、合同负债环比+173%；澜起/普冉/江波龙三季报已全对比。"
   },
   {
@@ -137,7 +148,7 @@ const REPORTS = [
 // 渲染
 const grid = document.getElementById('reportGrid');
 grid.innerHTML = REPORTS.map(r =>
-  `<div class="rep">
+  `<div class="rep${r.highlight ? ' rep-highlight' : ''}">
      <div><span class="ctg ctg-mid">${r.type}</span>${r.isNew ? '<span class="ctg ctg-new">最新</span>' : ''}</div>
      <h3>${r.company}</h3>
      <div class="co">${r.code} · ${r.date}</div>
