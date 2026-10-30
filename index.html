@@ -62,12 +62,27 @@
 // ===== 报告清单（新增报告时在此追加一条即可，无需改动页面结构） =====
 const REPORTS = [
   {
+    company: "光刻胶标的·四股三季报",
+    code: "晶瑞300655 / 彤程603650 / 上海新阳300236 / 南大光电300346",
+    type: "2026年三季报·光刻胶专题",
+    date: "2026-10-30",
+    isNew: true,
+    highlight: true,
+    links: [
+      { name: "晶瑞电材", url: "jingrui_2026q3_report_20261030_v2.html" },
+      { name: "彤程新材", url: "tongcheng_2026q3_report_20261030_v2.html" },
+      { name: "上海新阳", url: "shanghaixinyang_2026q3_report_20261030_v2.html" },
+      { name: "南大光电", url: "nandaguangdian_2026q3_report_20261030.html" }
+    ],
+    desc: "光刻胶产业链四标的2026三季报深度分析（财报分析skill标准结构）：晶瑞电材(高纯化学品+光刻胶放量/扣非+80.63%)、彤程新材(电子材料利润+292.74%/KrF市占10%+)、上海新阳(营收+33.02%居10家第一/TSV电镀液卡位AI先进封装/光刻胶+27%)、南大光电(前驱体毛利率60.13%/ArF光刻胶产业化)。均含板块毛利率、环比归因、同行业对比10家等模块。"
+  },
+  {
     company: "AI周期推演：鼎龙/兆易/澜起",
     code: "300054.SZ/603986.SH/688008.SH",
     type: "AI周期推演专题报告(2026-10-30)",
     date: "2026-10-30",
     url: "ai_cycle_impact_3stocks_20261030.html",
-    isNew: true,
+    isNew: false,
     highlight: true,
     desc: "基于《全球云厂商与存储厂商业绩趋势匹配性及AI泡沫风险评估》推演三股未来股价与估值影响：2027再融资墙+2028供给拐点两大风险窗口；兆易末端直接暴露(0%分位低PE陷阱)、澜起51.5x对资本开支指引最敏感、鼎龙间接暴露最免疫；含暴露度映射/三情景推演/时间线监测信号。"
   },
@@ -181,7 +196,9 @@ grid.innerHTML = REPORTS.map(r =>
      <h3>${r.company}</h3>
      <div class="co">${r.code} · ${r.date}</div>
      <div class="desc">${r.desc}</div>
-     <a class="link" href="${r.url}" target="_blank">查看报告 →</a>
+     ${r.links
+       ? `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">${r.links.map(l => `<a class="link" style="margin-top:0" href="${l.url}" target="_blank">${l.name} →</a>`).join('')}</div>`
+       : `<a class="link" href="${r.url}" target="_blank">查看报告 →</a>`}
    </div>`
 ).join('');
 </script>
