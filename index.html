@@ -3,331 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>兆易创新(603986) 2026年三季报深度分析</title>
+<title>Financial Reports ｜ 财报分析报告库</title>
 <style>
   :root{
     --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
-    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
-    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+    --blue:#2f6fed; --blue-strong:#1b4fd0; --blue-soft:#e7f0ff;
+    --red:#e5533d; --green:#1d9d74; --line:#e3eaf2;
+    --shadow:0 4px 18px rgba(31,55,90,.08);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
-  .wrap{max-width:980px;margin:0 auto}
-  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .wrap{max-width:1020px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:30px 32px;margin-bottom:22px;box-shadow:var(--shadow)}
   .hero h1{font-size:26px;font-weight:700;letter-spacing:.5px}
   .hero .sub{margin-top:8px;font-size:13.5px;opacity:.92}
+  .hero .tagline{margin-top:14px;display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:20px;font-size:12px}
   .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
-  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2{font-size:17px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
   .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
-  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
-  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
-  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
-  .kpi .val{font-size:18px;font-weight:700}
-  .kpi .delta{font-size:12px;margin-top:4px}
-  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
-  th:first-child,td:first-child{text-align:left}
-  tbody tr:hover{background:#f8fbfe}
-  .hl-cell{color:var(--blue);font-weight:700}
-  table.wide th,table.wide td{white-space:normal;word-break:break-word;vertical-align:top;text-align:left}
-  table.wide th{font-weight:600}
-  tr.hl-row{background:#eef5ff}
-  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
-  .tag-best{background:var(--green);color:#fff}
-  .tag-ok{background:var(--blue-soft);color:var(--blue)}
-  .tag-warn{background:#fff4e5;color:#b26a00}
-  .verdict{background:linear-gradient(135deg,#f0fff9,#e6f7ff);border:1px solid #cfe9dd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
-  .verdict h2{font-size:18px;color:#0c7a57;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-  .cls{margin:9px 0;padding:10px 14px;background:rgba(255,255,255,.62);border-radius:10px;border:1px solid #e2efe7}
-  .cls-h{display:inline-block;margin-bottom:6px;font-size:13px;font-weight:700}
-  .cls .cls-ul{margin:2px 0 0 20px}
-  .cls .cls-ul li{margin:4px 0;font-size:13px}
-  ul.pts{margin:8px 0 0 20px}
-  ul.pts li{margin:7px 0;font-size:14px}
-  .note{font-size:12px;color:var(--sub);margin-top:10px}
-  .note.warn{color:#b26a00;background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:8px 10px}
-  .src{font-size:11.5px;color:#8a99a8;margin-top:16px;padding-top:10px;border-top:1px dashed var(--line)}
-  .biz{text-align:left;white-space:normal;max-width:200px;min-width:150px;font-size:12px;color:var(--sub)}
-  .rem{display:block;font-size:10.5px;color:#8a99a8;font-weight:400;white-space:normal;margin-top:1px}
-  @media(max-width:720px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.kpi-row{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:20px}}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+  .rep{background:#f7fafd;border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;display:flex;flex-direction:column;transition:.2s}
+  .rep:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--blue)}
+  .rep .ctg{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;align-self:flex-start}
+  .ctg-mid{background:var(--blue-soft);color:var(--blue)}
+  .ctg-new{background:#fff4e5;color:#b26a00;margin-left:6px}
+  .rep h3{font-size:16px;font-weight:700;margin:10px 0 4px}
+  .rep .co{font-size:12.5px;color:var(--sub)}
+  .rep .dt{font-size:12px;color:var(--sub);margin-top:6px}
+  .rep .desc{font-size:12.5px;color:var(--sub);margin-top:8px;min-height:38px}
+  .rep a.link{margin-top:14px;display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:600;font-size:13.5px;text-decoration:none}
+  .rep a.link:hover{color:var(--blue-strong);text-decoration:underline}
+  .note{font-size:12.5px;color:var(--sub);margin-top:10px}
+  .note b{color:var(--ink)}
+  .footer{margin-top:8px;font-size:12px;color:#8a99a8;text-align:center;padding:14px 0 4px}
+  @media(max-width:520px){.hero h1{font-size:20px}.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <div class="hero">
-    <h1>兆易创新（603986.SH）2026年三季报深度分析</h1>
-    <div class="sub">报告日期：2026-10-29 ｜ 数据来源：<b>《2026年第三季度报告》+《2026年半年度报告》《2026年第一季度报告》正式财报</b>（同行业可比公司为公开财报/问财口径；预期对比采用券商研报，来源同花顺问财研报库）</div>
+    <h1>📊 Financial Reports ｜ 财报分析报告库</h1>
+    <div class="sub">上市公司（中报 / 年报）深度分析报告 · 数据来源：上市公司正式财报 + 券商研报预期（问财口径）</div>
+    <div class="tagline">点击下方报告卡片，即可在线查看完整分析报告</div>
   </div>
 
-  <!-- 一句话结论 -->
-  <div class="verdict">
-    <h2>🎯 一句话结论：主业扣非环比+31%再加速，归母环比-22%只是证券投资的"数字摆动"</h2>
-    <div class="cls"><div class="cls-h tag-best">📈 大幅增长 / 领先</div><ul class="cls-ul">
-      <li>Q3单季营收 <b>87.32亿</b>（环比 <b>+18.3%</b>、同比 <b>+225.7%</b>），连续3个季度创单季新高</li>
-      <li>Q3单季<b>扣非净利 45.51亿</b>，环比 <b>+31.1%</b>，真实主业继续加速；单季毛利率 <b>70.3%</b>（环比+3.7pct）创历史新高</li>
-      <li>前三季度归母 <b>110.66亿</b>（+921.5%）、扣非 <b>94.34亿</b>（+805.3%）、经营现金流 <b>101.24亿</b>（+463.8%）</li>
-      <li>合同负债 <b>12.36亿</b>（较Q2末 <b>+173%</b>）、存货单季净增 <b>21.08亿</b> 备货，Q4订单与收入支撑充足</li>
-      <li>货币资金 <b>188.60亿</b>、资产负债率 <b>12.0%</b>，H股募资+业绩增厚下资产负债表极强</li>
-    </ul></div>
-    <div class="cls"><div class="cls-h tag-ok">➖ 表现平淡 / 需关注</div><ul class="cls-ul">
-      <li>Q3单季归母 <b>42.09亿，环比 -22.0%</b>：完全由非经常项摆动造成（Q3单季公允价值变动 <b>-3.50亿</b> vs 上半年累计 <b>+22.28亿</b>），主业并未走弱</li>
-      <li>存货 <b>62.92亿</b> 创历史新高（同比+145.1%），周转天数升至 <b>184天</b>（上年同期158天），营运资本进一步压向库存</li>
-      <li>财务费用前三季度 <b>3.31亿</b>（上年同期为收益1.68亿），汇兑扰动持续</li>
-    </ul></div>
-    <div class="cls"><div class="cls-h tag-warn">⬇ 劣势 / 待改善</div><ul class="cls-ul">
-      <li>利润表与资产端双重绑定存储周期：证券投资+存货合计影响巨大，景气反转时弹性反噬</li>
-      <li>模组商（佰维Q3营收环比 <b>-29.9%</b>、归母环比 <b>-62.5%</b>）已现环比走弱，行业涨价红利边际变化信号需警惕</li>
-      <li>其他权益工具投资 <b>517.65亿</b>（占总资产59%），公允价值波动通过其他综合收益放大净资产波动</li>
-    </ul></div>
-  </div>
-
-  <!-- 1 财务总览 -->
   <div class="card">
-    <h2><span class="num">1</span>财务总览（2026年前三季度）</h2>
-    <div class="kpi-row">
-      <div class="kpi"><div class="label">营业收入</div><div class="val">202.97亿</div><div class="delta up">同比 +197.1%</div></div>
-      <div class="kpi"><div class="label">归母净利</div><div class="val">110.66亿</div><div class="delta up">同比 +921.5%</div></div>
-      <div class="kpi"><div class="label">扣非净利</div><div class="val">94.34亿</div><div class="delta up">同比 +805.3%</div></div>
-      <div class="kpi"><div class="label">经营现金流</div><div class="val">101.24亿</div><div class="delta up">同比 +463.8%</div></div>
-    </div>
-    <h3>主要会计数据（2026年前三季度 vs 2025年前三季度）</h3>
-    <table>
-      <thead><tr><th>指标</th><th>2026年1-9月</th><th>2025年1-9月</th><th>同比/变动</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>营业收入</td><td>202.97亿</td><td>68.32亿</td><td class="up">+197.1%</td></tr>
-        <tr class="hl-row"><td>归属于上市公司股东的净利润</td><td class="hl-cell">110.66亿</td><td>10.83亿</td><td class="up">+921.5%</td></tr>
-        <tr><td>扣非归母净利润</td><td class="hl-cell">94.34亿</td><td>10.42亿</td><td class="up">+805.3%</td></tr>
-        <tr><td>利润总额</td><td>124.08亿</td><td>11.24亿</td><td class="up">+1004.2%</td></tr>
-        <tr><td>毛利率</td><td class="hl-cell">66.2%</td><td>38.6%</td><td class="up">+27.6pct</td></tr>
-        <tr><td>净利率（归母/营收）</td><td class="hl-cell">54.5%</td><td>15.9%</td><td class="up">+38.6pct</td></tr>
-        <tr><td>加权平均ROE</td><td class="hl-cell">22.15%</td><td>6.30%</td><td class="up">+15.85pct</td></tr>
-        <tr><td>基本每股收益（元）</td><td>15.83</td><td>1.64</td><td class="up">+865.2%</td></tr>
-        <tr><td>经营活动现金流净额</td><td>101.24亿</td><td>17.96亿</td><td class="up">+463.8%</td></tr>
-        <tr><td>研发费用</td><td>12.06亿</td><td>8.60亿</td><td class="up">+40.2%</td></tr>
-        <tr><td>研发费用/营收</td><td>5.9%</td><td>12.6%</td><td class="down">-6.7pct</td></tr>
-      </tbody>
-    </table>
-    <div class="note">总资产 <b>876.55亿</b>（较2025年末 +309.7%）、归母净资产 <b>768.29亿</b>（+304.2%），主因：①业绩增厚；②其他权益工具投资公允价值大幅上升（其他综合收益前三季度 +429.4亿）；③H股上市募资。Q3末股东总数 428,827 户（A股428,825 + H股2），朱一明持股4.92%为第一大股东，HKSCC NOMINEES（4.72%）与香港中央结算（4.71%）分列二三，葛卫东+王萍一致行动人合计持股3.56%。</div>
+    <h2><span class="num">1</span>最新财报分析报告</h2>
+    <div class="grid" id="reportGrid"><!-- 动态渲染 --></div>
   </div>
 
-  <!-- 2 季度总览（重点：Q3环比） -->
-  <div class="card">
-    <h2><span class="num">2</span>季度总览（2026Q3 单季 · 环比重点）</h2>
-    <div class="kpi-row">
-      <div class="kpi"><div class="label">单季营收</div><div class="val">87.32亿</div><div class="delta up">环比 +18.3%</div></div>
-      <div class="kpi"><div class="label">单季归母净利</div><div class="val">42.09亿</div><div class="delta down">环比 -22.0%</div></div>
-      <div class="kpi"><div class="label">单季扣非净利</div><div class="val">45.51亿</div><div class="delta up">环比 +31.1%</div></div>
-      <div class="kpi"><div class="label">单季毛利率</div><div class="val">70.3%</div><div class="delta up">环比 +3.7pct</div></div>
-    </div>
-    <h3>同比 &amp; 环比整合对照（2026Q3 单季）</h3>
-    <table>
-      <thead><tr><th>指标</th><th>同比基准 2025Q3</th><th>环比基准 2026Q2</th><th>当期 2026Q3</th><th>同比</th><th>环比</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>营业收入</td><td>26.81亿</td><td>73.78亿</td><td class="hl-cell">87.32亿</td><td class="up">+225.7%</td><td class="up">+18.3%</td></tr>
-        <tr class="hl-row"><td>归母净利润</td><td>5.08亿</td><td>53.96亿</td><td class="hl-cell">42.09亿</td><td class="up">+728.9%</td><td class="down">-22.0%</td></tr>
-        <tr class="hl-row"><td>扣非净利润</td><td>4.98亿</td><td>34.73亿</td><td class="hl-cell">45.51亿</td><td class="up">+814.4%</td><td class="up">+31.1%</td></tr>
-        <tr><td>毛利率</td><td>—</td><td>66.6%</td><td class="hl-cell">70.3%</td><td>—</td><td class="up">+3.7pct</td></tr>
-        <tr><td>经营现金流净额</td><td>8.36亿</td><td>42.65亿</td><td>40.76亿</td><td class="up">+386.5%</td><td class="down">-4.4%</td></tr>
-        <tr><td>基本每股收益（元）</td><td>0.76</td><td>7.74</td><td>6.00</td><td class="up">+689.5%</td><td class="down">-22.5%</td></tr>
-        <tr><td>单季加权ROE</td><td>—</td><td>—</td><td>7.35%</td><td>+4.52pct</td><td>—</td></tr>
-      </tbody>
-    </table>
-    <h3>单季营收/扣非/归母轨迹（2026年逐季）</h3>
-    <table>
-      <thead><tr><th>单季</th><th>营收(亿)</th><th>营收环比</th><th>扣非(亿)</th><th>扣非环比</th><th>归母(亿)</th><th>归母环比</th><th>毛利率</th></tr></thead>
-      <tbody>
-        <tr><td>2026Q1</td><td>41.88</td><td>—</td><td>14.10</td><td>—</td><td>14.61</td><td>—</td><td>57.1%</td></tr>
-        <tr><td>2026Q2</td><td>73.78</td><td class="up">+76.2%</td><td>34.73</td><td class="up">+146.3%</td><td>53.96</td><td class="up">+269.2%</td><td>66.6%</td></tr>
-        <tr class="hl-row"><td>2026Q3</td><td class="hl-cell">87.32</td><td class="up">+18.3%</td><td class="hl-cell">45.51</td><td class="up">+31.1%</td><td class="hl-cell">42.09</td><td class="down">-22.0%</td><td class="hl-cell">70.3%</td></tr>
-      </tbody>
-    </table>
-    <ul class="pts">
-      <li><b>营收连续3季环比创新高</b>：41.88 → 73.78 → 87.32亿，Q3环比+18.3%虽较Q2的+76.2%放缓，但在高基数上仍保持双位数增长，存储供给紧张下量价齐升延续。</li>
-      <li><b>归母环比-22%是"假摔"</b>：Q3单季非经常性损益为 <b>-3.42亿</b>（其中公允价值变动损益 -3.53亿），而Q2单季非经常性损益为 <b>+19.23亿</b>（上半年公允价值变动+22.28亿）。一正一负摆动22.65亿，完全解释了归母环比降幅；<b>主业口径（扣非）环比+31.1%实际在加速</b>。</li>
-      <li><b>毛利率三连跳</b>：57.1% → 66.6% → 70.3%，逐季抬升创历史新高，印证存储涨价红利持续兑现且产品结构优化。</li>
-      <li><b>扣非净利率52.1%</b>（45.51/87.32），单季盈利能力处于A股半导体公司最顶尖水平。</li>
-    </ul>
-    <div class="note">Q3单季 = 前三季度 − 上半年（均为正式财报口径）；2025Q3单季 = 2025年前三季度 − 2025H1。Q3单季经营现金流40.76亿（Q1 17.83亿、Q2 42.65亿），连续两季站稳40亿+。</div>
-  </div>
-
-  <!-- 3 业务板块 -->
-  <div class="card">
-    <h2><span class="num">3</span>业务板块分析（三季报口径说明 + 结构推断）</h2>
-    <h3>三季报未披露分板块收入，以下为财报官方表述 + 中报结构推断</h3>
-    <table>
-      <thead><tr><th>业务板块</th><th>2026H1收入(亿)</th><th>H1同比</th><th>H1收入占比</th><th>H1毛利率</th><th>Q3推断</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>存储芯片</td><td>98.27</td><td class="up">+245.4%</td><td>85.0%</td><td>67.6%</td><td class="hl-cell">量价齐升延续，占比与毛利率大概率进一步上行</td></tr>
-        <tr><td>微控制器（MCU）</td><td>14.30</td><td class="up">+49.1%</td><td>12.4%</td><td>38.5%</td><td>财报明示"多个业务产品线持续发力、出货规模较好增长"</td></tr>
-        <tr><td>模拟产品</td><td>1.91</td><td class="up">+25.2%</td><td>1.6%</td><td>40.5%</td><td>平稳</td></tr>
-        <tr><td>传感器</td><td>1.00</td><td class="down">-48.1%</td><td>0.9%</td><td>19.6%</td><td>消费电子承压，预计仍为拖累项</td></tr>
-      </tbody>
-    </table>
-    <ul class="pts">
-      <li><b>财报官方变动原因</b>：报告期内存储芯片行业供给紧张，公司存储芯片产品量价齐升，存储业务持续向好；MCU等多个业务产品线持续发力，产品出货规模实现较好增长。</li>
-      <li><b>Q3毛利率70.3%（环比+3.7pct）</b>：在MCU毛利率温和上行背景下，毛利率跳升主要由存储（中报67.6%）量价结构驱动，推断存储Q3毛利率已升至70%+。</li>
-      <li><b>供应链信号（券商预测，非季报披露）</b>：公司与长鑫科技全年关联采购额57.11亿、2026年上半年为19.86亿，取自华兴证券研报（2026-09-14，据半年报关联交易披露测算），属券商预测值，三季报正文未披露此项。该节奏暗示下半年采购大幅加速，与Q3存货净增21.08亿相互印证，为Q4出货备货。</li>
-    </ul>
-    <div class="note">分板块数据以2026年中报为准（三季报不披露分部数据）；Q3推断基于财报变动原因、毛利率轨迹与产业链信息，仅供参考。</div>
-  </div>
-
-  <!-- 4 存货分析 -->
-  <div class="card">
-    <h2><span class="num">4</span>存货分析（2026Q3）</h2>
-    <div class="kpi-row">
-      <div class="kpi"><div class="label">期末存货</div><div class="val">62.92亿</div><div class="delta up">同比 +145.1%</div></div>
-      <div class="kpi"><div class="label">Q3单季净增</div><div class="val">+21.08亿</div><div class="delta up">环比多增13.25亿</div></div>
-      <div class="kpi"><div class="label">存货/前三季营收</div><div class="val">31.0%</div><div class="delta up">同比 -6.6pct</div></div>
-      <div class="kpi"><div class="label">周转天数(前三季)</div><div class="val">184天</div><div class="delta down">同比 +26天</div></div>
-    </div>
-    <h3>存货余额变动轨迹（亿元）</h3>
-    <table>
-      <thead><tr><th>时点</th><th>存货</th><th>较上年同期</th><th>单季净增</th></tr></thead>
-      <tbody>
-        <tr><td>2025年末（12-31）</td><td>30.66</td><td>—</td><td>—</td></tr>
-        <tr><td>2026Q1末（03-31）</td><td>34.01</td><td>—</td><td>+3.35</td></tr>
-        <tr><td>2026H1末（06-30）</td><td>41.84</td><td>+74.3%</td><td>+7.83</td></tr>
-        <tr class="hl-row"><td>2026Q3末（09-30）</td><td class="hl-cell">62.92</td><td class="up">+145.1%</td><td class="hl-cell">+21.08</td></tr>
-      </tbody>
-    </table>
-    <h3>库存周转指标（前三季度口径）</h3>
-    <table>
-      <thead><tr><th>指标</th><th>2026年1-9月</th><th>2025年1-9月</th><th>变动</th></tr></thead>
-      <tbody>
-        <tr><td>营业收入（亿）</td><td>202.97</td><td>68.32</td><td class="up">+197.1%</td></tr>
-        <tr><td>营业成本（亿）</td><td>68.55</td><td>41.95</td><td class="up">+63.4%</td></tr>
-        <tr><td>平均存货（亿）</td><td>46.79</td><td>24.57</td><td>+90.4%</td></tr>
-        <tr><td>存货周转率（次）</td><td>1.46</td><td>1.71</td><td class="down">-0.25次</td></tr>
-        <tr><td>存货周转天数（天）</td><td>184</td><td>158</td><td class="down">+26天</td></tr>
-        <tr><td>期末存货/累计营收</td><td>31.0%</td><td>37.6%</td><td class="up">-6.6pct</td></tr>
-      </tbody>
-    </table>
-    <ul class="pts">
-      <li><b>主动备货力度空前</b>：Q3单季净增21.08亿（Q1 +3.35亿、Q2 +7.83亿），为历史最大单季补库，与"存储供给紧张、锁料保供"的行业环境及长鑫关联采购加速一致；叠加存储涨价带来的存货重估，账面水位被动抬升。</li>
-      <li><b>周转天数上升但性质健康</b>：184天（同比+26天）主因期末大额备货推高平均存货；存货/累计营收占比31.0%反而同比下降6.6pct，单位收入对应的库存占用在下降，属"越卖越顺"而非滞销。</li>
-      <li><b>资金占压与减值风险</b>：存货62.92亿约为应收账款（6.00亿）的 <b>10.5倍</b>，营运资本高度压在库存；若存储价格见顶回落，高价库存将面临跌价/减值风险（前三季度资产减值损失1.12亿，Q3单季0.43亿，目前尚属温和）。</li>
-      <li><b>应收账款环比+37.6%</b>（4.36→6.00亿），增速低于营收，回款质量仍优；合同负债12.36亿（环比+173%）显示下游预付锁货意愿强烈，对Q4收入形成强支撑。</li>
-    </ul>
-  </div>
-
-  <!-- 5 预期对比 -->
-  <div class="card">
-    <h2><span class="num">5</span>预期对比（券商研报预期 vs 实际财报）</h2>
-    <h3>券商盈利预测 / 评级 / 目标价（均为2026年中报后发布）</h3>
-    <table>
-      <thead><tr><th>券商</th><th>报告日期</th><th>评级</th><th>2026E归母(亿)</th><th>2027E归母(亿)</th><th>目标价</th></tr></thead>
-      <tbody>
-        <tr><td>野村东方国际</td><td>2026-08-21</td><td>增持</td><td>≈102（EPS 14.61元）</td><td>—</td><td>730元</td></tr>
-        <tr><td>国盛证券</td><td>2026-08-21</td><td>买入</td><td>120</td><td>178</td><td>—</td></tr>
-        <tr><td>华兴证券</td><td>2026-09-14</td><td>买入</td><td>≈125（EPS 17.76元）</td><td>≈150（EPS 21.32元）</td><td>640元</td></tr>
-        <tr><td>华泰证券</td><td>2026-08-21</td><td>买入</td><td>161</td><td>179</td><td>—</td></tr>
-        <tr class="hl-row"><td>一致预期（区间）</td><td>—</td><td>增持/买入</td><td class="hl-cell">102~161（中值≈120）</td><td>150~179</td><td>640~730元</td></tr>
-      </tbody>
-    </table>
-    <h3>研报预期 vs 三季报实际</h3>
-    <table class="wide">
-      <thead><tr><th>对比项</th><th>研报预期（2026E）</th><th>实际（2026前三季度）</th><th>对比结论</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>归母净利润</td><td>102~161亿（中值≈120亿）</td><td class="hl-cell">110.66亿</td><td>前三季度已完成全年中值的 <b>92%</b>；Q4归母即使环比持平（≈42亿），全年即达 <b>153亿</b>，触及区间上限</td></tr>
-        <tr><td>扣非净利润</td><td>（归母口径为主）</td><td>94.34亿</td><td>Q4扣非环比持平即达 <b>140亿</b>，主业兑现度极高</td></tr>
-        <tr><td>营业收入</td><td>241.5亿（国盛）~ 298亿（华泰）</td><td>202.97亿</td><td>已完成 <b>68%~84%</b>；Q4环比持平即达290亿，接近华泰上限</td></tr>
-        <tr><td>毛利率</td><td>60.6%（华泰上调后）</td><td>66.2%（Q3单季70.3%）</td><td class="up">持续超预期</td></tr>
-        <tr><td>目标价 / 估值</td><td>640~730元</td><td>现价275.99元（10-29收盘，总市值≈1943亿）</td><td>隐含上行空间 <b>132%~164%</b>；以前三季EPS 15.83元年化（≈21.8元）计，动态PE仅 <b>≈12.7x</b></td></tr>
-      </tbody>
-    </table>
-    <ul class="pts">
-      <li><b>业绩兑现节奏大幅跑赢预期</b>：中报后券商已集体大幅上调（野村归母上调124%、华兴EPS上调249%），而Q3扣非环比+31.1%显示上调后的预测仍偏保守。</li>
-      <li><b>三季报后新研报尚未发布</b>（三季报2026-10-29披露），预计将迎来新一轮上调潮；本表预期锚为中报后研报。</li>
-      <li><b>估值提示</b>：当前市值对应2026E一致预期中值PE约16x、对应前三季年化EPS约12.7x，处于存储高景气兑现期的偏低水平；但需注意归母口径含证券投资损益扰动，稳健估值宜以扣非为基准。</li>
-    </ul>
-    <div class="note">研报业绩预期来源：同花顺问财研报库（野村东方国际2026-08-21、华泰证券2026-08-21、国盛证券2026-08-21、华兴证券2026-09-14）。实际财报数据来自兆易创新《2026年第三季度报告》。</div>
-  </div>
-
-  <!-- 6 同行业对比 -->
-  <div class="card">
-    <h2><span class="num">6</span>同行业对比（2026Q3 · 存储/内存配套板块）</h2>
-    <h3>6.1 2026Q3 单季对比与环比（重点）</h3>
-    <table>
-      <thead><tr><th>公司</th><th>Q3营收(亿)</th><th>营收环比</th><th>Q3归母(亿)</th><th>归母环比</th><th>Q3扣非(亿)</th><th>扣非环比</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>兆易创新</td><td class="hl-cell">87.32</td><td class="up">+18.3%</td><td class="hl-cell">42.09</td><td class="down">-22.0%*</td><td class="hl-cell">45.51</td><td class="up">+31.1%</td></tr>
-        <tr><td>江波龙</td><td>146.30</td><td class="up">+3.2%</td><td>37.45</td><td class="down">-44.2%</td><td>41.63</td><td class="down">-31.8%</td></tr>
-        <tr><td>德明利</td><td>116.44</td><td class="up">+24.2%</td><td>27.29</td><td class="up">+2.2%</td><td>27.26</td><td class="up">+3.6%</td></tr>
-        <tr><td>佰维存储</td><td>61.42</td><td class="down">-29.9%</td><td>16.02</td><td class="down">-62.5%</td><td>18.34</td><td class="down">-52.0%</td></tr>
-        <tr><td>北京君正</td><td>31.45</td><td class="up">+31.2%</td><td>14.18</td><td class="up">+61.3%</td><td>14.29</td><td class="up">+67.3%</td></tr>
-        <tr><td>普冉股份</td><td>30.51</td><td class="up">+21.4%</td><td>7.28</td><td class="up">+26.4%</td><td>7.20</td><td class="up">+25.2%</td></tr>
-        <tr><td>澜起科技</td><td>20.79</td><td class="up">+10.9%</td><td>12.40</td><td class="up">+7.8%</td><td>10.05</td><td class="up">+40.0%</td></tr>
-        <tr><td>东芯股份</td><td>17.95</td><td class="up">+76.3%</td><td>8.30</td><td class="up">+59.3%</td><td>8.16</td><td class="up">+61.9%</td></tr>
-        <tr><td>聚辰股份</td><td>4.51</td><td class="up">+40.1%</td><td>-0.39</td><td class="down">转亏*</td><td>1.41</td><td class="up">+110.4%</td></tr>
-      </tbody>
-    </table>
-    <div class="note">Q3单季 = 2026年前三季度 − 2026H1（问财口径，正式财报数据）。*兆易归母环比-22.0%系证券投资公允价值摆动（扣非为+31.1%）；*聚辰Q3归母转亏系H1大额非经常收益（公允价值）回吐，扣非口径仍+110%。澜起/普冉/江波龙三季报已于2026-10-29前披露。</div>
-    <h3>6.2 2026年前三季度累计对比</h3>
-    <table>
-      <thead><tr><th>公司</th><th>主营业务</th><th>营收(亿)</th><th>营收同比</th><th>归母(亿)</th><th>归母同比</th><th>扣非(亿)</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>兆易创新</td><td class="biz">存储芯片（NOR Flash、DRAM）+MCU</td><td class="hl-cell">202.97</td><td class="up">+197.1%</td><td class="hl-cell">110.66</td><td class="up">+921.5%</td><td class="hl-cell">94.34</td></tr>
-        <tr><td>江波龙</td><td class="biz">存储模组与品牌（FORESEE / 雷克沙）</td><td>387.18</td><td class="up">+131.4%</td><td>143.22</td><td class="up">+1909.7%</td><td>142.10</td></tr>
-        <tr><td>德明利</td><td class="biz">存储模组/主控（嵌入式、移动、固态）</td><td>285.55</td><td class="up">+328.8%</td><td>87.46</td><td class="up">+32400%</td><td>86.92</td></tr>
-        <tr><td>佰维存储</td><td class="biz">存储模组/嵌入式存储（模组、eMMC/UFS）</td><td>217.17</td><td class="up">+230.3%</td><td>87.68</td><td class="up">+28728%</td><td>84.67</td></tr>
-        <tr><td>北京君正</td><td class="biz">车规存储（SRAM/DRAM/NOR）+处理器</td><td>71.02</td><td class="up">+106.7%</td><td>26.16</td><td class="up">+922.9%</td><td>25.95</td></tr>
-        <tr><td>普冉股份</td><td class="biz">NOR Flash / EEPROM + MCU 微控制器</td><td>70.10</td><td class="up">+389.1%</td><td>15.55</td><td class="up">+2533.2%</td><td>15.45</td></tr>
-        <tr><td>澜起科技</td><td class="biz">内存接口芯片+互连芯片（DDR5 RCD、PCIe Retimer、CXL MXC）</td><td>54.14</td><td class="up">+33.4%</td><td>32.37</td><td class="up">+98.3%</td><td>23.27</td></tr>
-        <tr><td>东芯股份</td><td class="biz">存储芯片（NAND/NOR/DRAM）</td><td>32.92</td><td class="up">+475.0%</td><td>14.89</td><td class="up">+1118.8%</td><td>14.52</td></tr>
-        <tr><td>聚辰股份</td><td class="biz">DDR5内存模组配套（SPD/EEPROM）</td><td>10.53</td><td class="up">+12.8%</td><td>4.86</td><td class="up">+51.9%</td><td>2.34</td></tr>
-      </tbody>
-    </table>
-    <ul class="pts">
-      <li><b>原厂 vs 模组商Q3明显分化</b>：芯片原厂（兆易+18.3%、君正+31.2%、东芯+76.3%、普冉+21.4%、澜起+10.9%）Q3营收继续环比增长；而模组商全面走弱——佰维营收环比 <b>-29.9%</b>、扣非 <b>-52.0%</b>，江波龙营收环比仅+3.2%但归母 <b>-44.2%</b>、扣非 <b>-31.8%</b>，德明利归母环比仅+2.2%——涨价红利正从模组环节向原厂转移，模组商高价库存成本压力开始显现。</li>
-      <li><b>兆易Q3扣非45.51亿居板块单季之首</b>：高于江波龙（41.63亿）、澜起（10.05亿）、德明利（27.26亿）、佰维（18.34亿）；环比 +31.1% 在头部大市值公司中最快（澜起+40.0%、东芯+61.9%弹性更高但体量小）。</li>
-      <li><b>累计口径</b>：江波龙（143.22亿）仍为板块归母第一，兆易前三季度归母110.66亿反超德明利（87.46亿）、佰维（87.68亿）居第二；但在芯片原厂口径中（高于澜起32.37亿、君正26.16亿、普冉15.55亿、东芯14.89亿）兆易盈利规模居首，原厂龙头地位强化。营收202.97亿低于江波龙/德明利/佰维三大模组商，但原厂口径（高毛利、轻资产）盈利质量显著更优。</li>
-      <li><b>聚辰信号</b>：归母Q3转亏（证券投资公允价值回吐）与兆易Q3公允价值-3.5亿同源——存储产业链公司的证券投资损益Q3普遍转负，评估板块盈利务必看扣非口径。</li>
-    </ul>
-  </div>
-
-  <!-- 7 现金流与风险 -->
-  <div class="card">
-    <h2><span class="num">7</span>现金流与风险提示</h2>
-    <h3>现金流结构（2026年前三季度）</h3>
-    <table>
-      <thead><tr><th>项目</th><th>2026年1-9月</th><th>解读</th></tr></thead>
-      <tbody>
-        <tr class="hl-row"><td>经营现金流净额</td><td class="hl-cell">101.24亿</td><td>同比+463.8%，销售回款驱动；Q3单季40.76亿连续两季40亿+</td></tr>
-        <tr><td>投资现金流净额</td><td>-73.27亿</td><td>投资支付65.06亿（证券投资为主）+ 购建长期资产14.04亿</td></tr>
-        <tr><td>筹资现金流净额</td><td>+33.71亿</td><td>H股上市募资（吸收投资51.06亿），分红支付5.26亿</td></tr>
-        <tr><td>期末现金及等价物</td><td>149.62亿</td><td>货币资金188.60亿（含受限/理财部分），占总资产21.5%</td></tr>
-        <tr><td>资产负债率</td><td>12.0%</td><td>Q2末11.5%，仍处极低水平</td></tr>
-      </tbody>
-    </table>
-    <h3>风险提示</h3>
-    <ul class="pts">
-      <li>⚡ <b>证券投资波动</b>：Q3单季公允价值变动-3.50亿直接拖累归母环比-22%；其他权益工具投资517.65亿（长鑫科技等）占总资产59%，其波动虽走其他综合收益（前三季度+429亿推高净资产），但利润表内金融资产敞口同样可观，利润波动被显著放大。</li>
-      <li>⚡ <b>高库存水位</b>：存货62.92亿（同比+145.1%）创历史新高、单季净增21.08亿，约为应收账款10.5倍；若存储景气见顶，高价库存面临跌价/减值风险（当前减值损失尚温和）。</li>
-      <li>⚡ <b>存储周期依赖</b>：Q3高增核心仍是行业供给紧张下的量价齐升；模组商（佰维）Q3环比已明显走弱，若原厂环节景气随之见顶，营收与70.3%的毛利率均有回撤风险。</li>
-      <li>⚡ <b>递延税负与汇率</b>：递延所得税负债50.47亿（年初0.94亿），主要对应证券投资浮盈，未来处置/回落时将回冲；财务费用前三季度3.31亿（上年同期为净收益1.68亿），汇兑扰动持续。</li>
-      <li>⚡ <b>股东结构变化</b>：H股上市后股本增至7.04亿股，HKSCC NOMINEES持股4.72%；总股本摊薄下EPS增速（+865%）低于归母增速（+921.5%）。</li>
-    </ul>
-  </div>
-
-  <!-- 8 综合研判 -->
-  <div class="card">
-    <h2><span class="num">8</span>综合研判</h2>
-    <ul class="pts">
-      <li>📍 <b>成长性</b>：营收连续3季环比创新高（41.88→73.78→87.32亿），Q3扣非环比+31.1%再加速；合同负债环比+173%、存货单季净增21亿、长鑫采购（券商预测）下半年加速，三重信号指向Q4收入有强支撑，全年归母有望触及一致预期区间上限（~153亿+）。</li>
-      <li>📍 <b>盈利质量</b>：毛利率70.3%历史新高、单季扣非净利率52.1%；<b>归母环比-22%是证券投资摆动的"数字假摔"，主业真实趋势看扣非——在加速</b>。评估估值应剔除公允价值损益，以扣非为基准。</li>
-      <li>📍 <b>财务健康</b>：货币资金188.60亿、经营现金流连续两季40亿+、资产负债率12.0%，H股募资+429亿其他综合收益增厚下资产负债表极为雄厚，支撑高研发与逆周期备货。</li>
-      <li>📍 <b>行业位置</b>：Q3原厂与模组商进一步分化——原厂（兆易+18.3%、君正+31.2%、东芯+76.3%、普冉+21.4%、澜起+10.9%）营收继续环比增长，模组商全面走弱（佰维营收-29.9%、扣非-52%，江波龙归母-44.2%、扣非-31.8%）；兆易单季扣非45.51亿居板块首位（次之江波龙41.63亿），累计归母110.66亿在芯片原厂口径中居首，原厂龙头地位强化。</li>
-      <li>📍 <b>估值视角</b>：现价275.99元对应前三季年化EPS约12.7x动态PE、2026E一致预期中值约16x，处于业绩兑现期的偏低水平；券商目标价640~730元隐含132%~164%空间。但需清醒：低估值部分反映市场对存储周期见顶与证券投资波动的担忧。</li>
-      <li>📍 <b>结论</b>：<b>Q3是一份"主业超预期、表观利润失真"的财报</b>——扣非环比+31%加速、毛利率70.3%新高、订单/备货指向Q4继续强劲；归母环比下滑纯属证券投资摆动，不改变基本面趋势。核心跟踪变量：存储价格走势、Q4毛利率能否守住70%、存货去化节奏、以及三季报后券商上调幅度。</li>
-    </ul>
-    <div class="src">数据来源：①兆易创新《2026年第三季度报告》（2026-10-29披露，未经审计）；②《2026年半年度报告》《2026年第一季度报告》《2025年半年度报告》（正式财报）；③可比公司（澜起科技、普冉股份、北京君正、东芯股份、聚辰股份、佰维存储、江波龙、德明利）2026年三季报数据为同花顺问财（公开财报）口径；④预期对比采用券商研报（同花顺问财研报库：野村东方国际、华泰证券、国盛证券、华兴证券）。Q3单季由前三季度−上半年推算，均为正式财报口径。</div>
-  </div>
+  <div class="footer">Financial Reports · GitHub Pages 报告库 ｜ 新报告将在此持续更新</div>
 
 </div>
+
+<script>
+// ===== 报告清单（新增报告时在此追加一条即可，无需改动页面结构） =====
+const REPORTS = [
+  {
+    company: "兆易创新",
+    code: "603986.SH",
+    type: "2026年三季报",
+    date: "2026-10-29",
+    url: "zhaoyi_2026q3_report_20261029.html",
+    isNew: true,
+    desc: "Q3单季营收87.32亿、扣非45.51亿、毛利率70.3%均创历史新高；归母环比-22%为证券投资摆动（扣非环比+31%加速）；存货62.92亿、合同负债环比+173%；澜起/普冉/江波龙三季报已全对比。"
+  },
+  {
+    company: "存储三傻·存货对比",
+    code: "江波龙/德明利/佰维",
+    type: "2026年中报存货对比",
+    date: "2026-09-10",
+    url: "storage_three_inventory_2026mid_report_20260910.html",
+    isNew: false,
+    desc: "江波龙、德明利、佰维存储 2026年中报存货横向对比：期末存货均超半年营收、周转天数全线恶化、现金流转负+高杠杆，德明利最激进、江波龙规模最大但现金流缺口最小、佰维相对克制。"
+  },
+  {
+    company: "佰维存储",
+    code: "688525.SH",
+    type: "2026年中报",
+    date: "2026-09-10",
+    url: "baiwei_2026mid_report_20260910.html",
+    isNew: false,
+    desc: "存储模组/嵌入式+企业级+先进封测，营收 +298.10%、归母扭亏为盈至 71.66 亿、ROE 78.69%；含存货分析模块，同行业对比涵盖德明利/江波龙/兆易/朗科；Q2 归母环比 +47.2%、毛利率升至 55.98%。"
+  },
+  {
+    company: "德明利",
+    code: "001309.SZ",
+    type: "2026年中报",
+    date: "2026-09-10",
+    url: "demingli_2026mid_report_20260910.html",
+    isNew: false,
+    desc: "存储模组与品牌商，营收 +311.55%、归母扭亏为盈至 60.17 亿、H1 ROE 95.11% 居同业之首；含存货分析模块，同行业对比涵盖江波龙/佰维/兆易/朗科；Q2 归母环比 -20.2%、高库存高杠杆需关注。"
+  },
+  {
+    company: "江波龙",
+    code: "301308.SZ",
+    type: "2026年中报",
+    date: "2026-09-03",
+    url: "jiangbolong_2026mid_report_20260903.html",
+    isNew: false,
+    desc: "存储模组龙头，营收 +136.3%、归母扭亏为盈至 105.77 亿居同业之首；含存货分析模块，同行业对比涵盖兆易/北京君正/佰维/德明利/普冉。"
+  },
+  {
+    company: "兆易创新",
+    code: "603986.SH",
+    type: "2026年中报",
+    date: "2026-09-03",
+    url: "zhaoyi_2026mid_report_20260903.html",
+    isNew: false,
+    desc: "存储量价齐升，归母 +1091.5%；含存货分析模块，同行业对比涵盖普冉/佰维/江波龙/德明利/北京君正。"
+  },
+  {
+    company: "澜起科技",
+    code: "688008.SH",
+    type: "2026年中报",
+    date: "2026-09-01",
+    url: "lanqi_2026mid_report_20260901.html",
+    isNew: false,
+    desc: "AI 互连龙头，归母 +72.3% 创新高；同行业对比涵盖兆易创新、聚辰、东芯，并补充毛利率/ROE 维度。"
+  },
+  {
+    company: "鼎龙股份",
+    code: "300054.SZ",
+    type: "2026年中报",
+    date: "2026-08-30",
+    url: "dinglong_2026mid_report_20260830.html",
+    isNew: false,
+    desc: "半导体材料平台型公司，剔除出表业务后的可比口径营收/净利环比分析。"
+  }
+];
+
+// 渲染
+const grid = document.getElementById('reportGrid');
+grid.innerHTML = REPORTS.map(r =>
+  `<div class="rep">
+     <div><span class="ctg ctg-mid">${r.type}</span>${r.isNew ? '<span class="ctg ctg-new">最新</span>' : ''}</div>
+     <h3>${r.company}</h3>
+     <div class="co">${r.code} · ${r.date}</div>
+     <div class="desc">${r.desc}</div>
+     <a class="link" href="${r.url}" target="_blank">查看报告 →</a>
+   </div>`
+).join('');
+</script>
 </body>
 </html>
