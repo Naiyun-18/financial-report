@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中微公司2026年三季报深度分析</title>
+<style>
+  :root{
+    --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
+    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
+    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+  .wrap{max-width:980px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .hero h1{font-size:26px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{margin-top:8px;font-size:13.5px;opacity:.92}
+  .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
+  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .kpi .val{font-size:18px;font-weight:700}
+  .kpi .delta{font-size:12px;margin-top:4px}
+  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fbfe}
+  .hl-cell{color:var(--blue);font-weight:700}
+  tr.hl-row{background:#eef5ff}
+  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
+  .tag-best{background:var(--green);color:#fff}
+  .tag-ok{background:var(--blue-soft);color:var(--blue)}
+  .tag-warn{background:#fff4e5;color:#b26a00}
+  .verdict{background:linear-gradient(135deg,#f0fff9,#e6f7ff);border:1px solid #cfe9dd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .verdict h2{font-size:18px;color:#0c7a57;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .cls{margin:9px 0;padding:10px 14px;background:rgba(255,255,255,.62);border-radius:10px;border:1px solid #e2efe7}
+  .cls-h{display:inline-block;margin-bottom:6px;font-size:13px;font-weight:700}
+  .cls .cls-ul{margin:2px 0 0 20px}
+  .cls .cls-ul li{margin:4px 0;font-size:13px}
+  ul.pts{margin:8px 0 0 20px}
+  ul.pts li{margin:7px 0;font-size:14px}
+  .note{font-size:12px;color:var(--sub);margin-top:10px}
+  .note.warn{color:#b26a00;background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:8px 12px}
+  .foot{ text-align:center;font-size:12px;color:var(--sub);margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <h1>中微公司（688012.SH）2026年三季报深度分析</h1>
+  <div class="sub">刻蚀龙头营收首破百亿 · 表观利润含25亿非经常需剥离看主业 ｜ 报告期：2026年前三季度（Q1+半年报+Q3三份财报交叉）｜ 生成日期：2026-11-04</div>
+</div>
+
+<!-- 一句话结论 -->
+<div class="verdict">
+  <h2>🎯 一句话结论</h2>
+  <p style="font-size:15px"><b>中微公司2026年前三季度营收103.26亿（+28.08%，历史首次前三季破百亿），归母41.34亿（+241.31%）——但其中25.11亿为非经常性损益（出售拓荆科技股票9.53亿+对外股权投资公允价值变动19.40亿），<span style="color:#b26a00">扣非16.23亿（+83.01%）才是真实主业增速</span>；毛利率40.41%（+1.31pct）连续改善、Q3单季41.65%（同比+3.76pct），刻蚀+薄膜双引擎驱动平台化逻辑扎实兑现；需关注非经常收益退坡后的2027年利润基数、应收+86%与合同负债-25.6%的信号。</b></p>
+  <div class="cls"><span class="cls-h" style="color:var(--green)">✅ 大幅增长 / 领先：</span>
+    <ul class="cls-ul">
+      <li>前三季营收<b>103.26亿（+28.08%）</b>，历史首次前三季破百亿；过去14年营收年均增长&gt;35%</li>
+      <li>扣非归母<b>16.23亿（+83.01%）</b>，增速居五大设备公司之首（北方华创+5%/华海清科+22%/拓荆/盛美）</li>
+      <li>Q3单季毛利率<b>41.65%（同比+3.76pct、环比+2.03pct）</b>；ROE 16.41%（+10.54pct）</li>
+      <li>累计<b>9300+反应台</b>在220余条产线量产（Q1末8300+→Q3末9300+，半年净增约1000台）</li>
+    </ul>
+  </div>
+  <div class="cls"><span class="cls-h" style="color:var(--blue)">➖ 表现平淡 / 需甄别：</span>
+    <ul class="cls-ul">
+      <li>Q3营收环比-3.7%、扣非环比-22.5%（研发与费用投入加码所致，同比仍+43.77%）</li>
+      <li>合同负债22.64亿（较年初<b>-25.62%</b>）：收入确认加速消耗预收，新签订单节奏需跟踪</li>
+    </ul>
+  </div>
+  <div class="cls"><span class="cls-h" style="color:var(--red)">⚠️ 劣势 / 风险项：</span>
+    <ul class="cls-ul">
+      <li>归母41.34亿中<b>非经常性损益25.11亿占61%</b>（拓荆出售+公允价值变动），均不可持续</li>
+      <li>应收账款36.96亿（<b>+86.0%</b>）增速远超营收；前三季经营现金流-1.05亿（Q3单季-7.90亿）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 1 财务总览 -->
+<div class="card">
+  <h2><span class="num">1</span>财务总览（2026年前三季度）</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="label">营业收入</div><div class="val">103.26亿</div><div class="delta up">同比 +28.08%</div></div>
+    <div class="kpi"><div class="label">归母净利润</div><div class="val">41.34亿</div><div class="delta up">同比 +241.31%<br><span style="font-size:11px">（含非经常25.11亿）</span></div></div>
+    <div class="kpi"><div class="label">扣非归母净利润</div><div class="val">16.23亿</div><div class="delta up">同比 +83.01%</div></div>
+    <div class="kpi"><div class="label">毛利率</div><div class="val">40.41%</div><div class="delta up">同比 +1.31pct</div></div>
+  </div>
+  <div class="kpi-row" style="margin-top:12px">
+    <div class="kpi"><div class="label">销售净利率</div><div class="val">39.49%</div><div class="delta up">同比 +24.84pct（含非经常）</div></div>
+    <div class="kpi"><div class="label">加权ROE</div><div class="val">16.41%</div><div class="delta up">同比 +10.54pct</div></div>
+    <div class="kpi"><div class="label">研发投入</div><div class="val">32.22亿</div><div class="delta up">同比 +27.70%（占营收31.20%）</div></div>
+    <div class="kpi"><div class="label">基本EPS</div><div class="val">6.34元</div><div class="delta up">同比 +226.80%</div></div>
+  </div>
+  <table style="margin-top:16px">
+    <thead><tr><th>资产负债项</th><th>Q3末</th><th>上年度末</th><th>变动</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>总资产</td><td>403.85亿</td><td>298.46亿</td><td class="up">+35.31%</td><td>对外投资+存货增加</td></tr>
+      <tr><td>归母所有者权益</td><td>314.08亿</td><td>226.95亿</td><td class="up">+38.39%</td><td>利润积累+吸收投资</td></tr>
+      <tr><td>存货</td><td>90.84亿</td><td>71.70亿</td><td class="up">+26.70%</td><td>备产备货</td></tr>
+      <tr><td>应收账款</td><td>36.96亿</td><td>19.87亿</td><td class="up">+86.00%</td><td>销售规模扩大</td></tr>
+      <tr><td>合同负债</td><td>22.64亿</td><td>30.44亿</td><td class="down">-25.62%</td><td>收入确认消耗预收</td></tr>
+      <tr><td>应付账款</td><td>36.00亿</td><td>18.56亿</td><td class="up">+93.94%</td><td>采购增加</td></tr>
+      <tr><td>货币资金</td><td>83.55亿</td><td>79.51亿</td><td class="up">+5.08%</td><td>资金充裕</td></tr>
+    </tbody>
+  </table>
+  <p class="note">股东总数79,193户；公司2026年完成对杭州众硅（CMP设备）的收购布局（研报提示整合风险）。</p>
+</div>
+
+<!-- 2 季度总览 -->
+<div class="card">
+  <h2><span class="num">2</span>季度总览（环比口径）</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="label">Q1 营收</div><div class="val">29.15亿</div><div class="delta flat">—</div></div>
+    <div class="kpi"><div class="label">Q2 营收</div><div class="val">37.76亿</div><div class="delta up">环比 +29.5%</div></div>
+    <div class="kpi"><div class="label">Q3 营收</div><div class="val">36.35亿</div><div class="delta down">环比 -3.7%</div></div>
+    <div class="kpi"><div class="label">Q3 扣非</div><div class="val">5.00亿</div><div class="delta down">环比 -22.5%</div></div>
+  </div>
+  <table style="margin-top:16px">
+    <thead><tr><th>单季</th><th>营收</th><th>环比</th><th>归母净利</th><th>环比</th><th>扣非净利</th><th>环比</th><th>单季毛利率</th></tr></thead>
+    <tbody>
+      <tr><td>2026Q1</td><td>29.15亿</td><td>—</td><td>9.30亿</td><td>—</td><td>4.78亿</td><td>—</td><td>—</td></tr>
+      <tr class="hl-row"><td>2026Q2</td><td>37.76亿</td><td class="up">+29.5%</td><td class="hl-cell">18.95亿</td><td class="up">+103.7%</td><td>6.45亿</td><td class="up">+35.0%</td><td>≈39.7%（H1口径）</td></tr>
+      <tr><td>2026Q3</td><td>36.35亿</td><td class="down">-3.7%</td><td>13.09亿</td><td class="down">-30.9%</td><td>5.00亿</td><td class="down">-22.5%</td><td>41.65%</td></tr>
+    </tbody>
+  </table>
+  <h3>同比对照表（独立口径）</h3>
+  <table>
+    <thead><tr><th>单季</th><th>营收同比</th><th>归母同比</th><th>扣非同比</th></tr></thead>
+    <tbody>
+      <tr><td>2026Q1</td><td class="up">+34.13%</td><td class="up">+197.20%</td><td class="up">+60.09%</td></tr>
+      <tr><td>2026Q3</td><td class="up">+17.18%</td><td class="up">+159.02%</td><td class="up">+43.77%</td></tr>
+      <tr><td>2026前三季</td><td class="up">+28.08%</td><td class="up">+241.31%</td><td class="up">+83.01%</td></tr>
+    </tbody>
+  </table>
+  <h3>Q2归母环比+103.7%的归因拆解（环比异常归因）</h3>
+  <ul class="pts">
+    <li><b>非经常性损益是主因</b>：Q2单季非经常性损益约12.51亿（H1累计17.03亿-Q1的4.52亿），构成：①H1投资收益10.86亿，其中出售拓荆科技股票收益9.91亿（Q1税后3.97亿→Q2约6亿）；②H1公允价值变动收益9.92亿（对外股权投资评估增值，Q1仅0.54亿→Q2约9.4亿）。</li>
+    <li><b>主业扣非链条</b>：Q1 4.78亿 → Q2 6.45亿（环比+35.0%，真实加速）→ Q3 5.00亿（环比-22.5%）。<b>剔除投资收益波动后，Q2主业加速、Q3小幅回落</b>，Q3回落主因营收环比微降（-3.7%）叠加研发与销售管理费用环比加码，毛利率环比+2.03pct部分对冲。</li>
+    <li><b>结论</b>：表观归母的"Q2暴增→Q3回落"大起大落几乎全部由投资收益与公允价值变动驱动，主业利润曲线远比表观平滑。</li>
+  </ul>
+  <p class="note">Q2单季数据由三季报累计数减半年报/一季报计算；单季毛利率由累计营业成本差额推算，Q3单季41.65%与券商研报口径一致（同比+3.76pct、环比+2.03pct）。</p>
+</div>
+
+<!-- 3 业务板块 -->
+<div class="card">
+  <h2><span class="num">3</span>业务板块财务分析</h2>
+  <h3>3.1 分板块毛利率（口径说明）</h3>
+  <table>
+    <thead><tr><th>口径</th><th>收入</th><th>毛利率</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>2025年年报（分产品）</td><td>123.85亿</td><td>39.2%</td><td>问财口径仅返回"半导体设备相关产品"单一分类，2025年报未细分披露</td></tr>
+      <tr><td>2026H1（整体）</td><td>66.91亿</td><td>39.7%</td><td>营业成本40.32亿推算，同比持平</td></tr>
+      <tr class="hl-row"><td><b>2026前三季（整体）</b></td><td class="hl-cell">103.26亿</td><td class="hl-cell">40.41%（+1.31pct）</td><td><b>Q3单季41.65%（同比+3.76pct），连续改善</b></td></tr>
+    </tbody>
+  </table>
+  <p class="note">口径说明：中微2025年报/2026半年报均未披露细分产品毛利率，以整体毛利率为基准；毛利率改善主因刻蚀高端产品占比提升+薄膜设备规模效应（2025年薄膜营收+224%后摊薄成本）。</p>
+  <h3>3.2 各产品线经营进展（财报披露）</h3>
+  <ul class="pts">
+    <li><b>刻蚀设备（基本盘，26种）</b>：CCP+ICP覆盖<b>95%以上刻蚀应用需求</b>；先进存储超高深宽比刻蚀300+反应器大规模量产；下一代<b>90:1</b>超高深宽比低温刻蚀设备已付运客户端验证；ICP新品Primo Angnova在3D DRAM实现<b>140:1</b>高深宽刻蚀并付运国内领先存储客户认证；化学气相刻蚀Primo Domingo实现<b>&gt;700:1</b>业界领先SiGe/Si选择比（GAA与3D DRAM关键工艺）；双反应台ICP刻蚀达0.2纳米单原子水平。</li>
+    <li><b>薄膜设备（第二引擎，24种）</b>：2025年营收同比<b>+224.23%</b>成为业绩增长新引擎；LPCVD/ALD/EPI/PVD CuBS/PECVD十多款进入市场；金属栅ALD性能国际领先；减压EPI已在成熟制程验证成功并付运先进制程客户端、部分先进工艺进入量产验证；常压外延完成开发进入晶圆验证。</li>
+    <li><b>MOCVD（现金牛）</b>：全球氮化镓基LED MOCVD市场领先；4款新品（SiC/GaN功率器件、Micro-LED GaN、红黄光GaAs）进入客户验证且部分获批量订货。</li>
+    <li><b>量检测/CMP（新布局）</b>：全面布局光学和电子束量检测设备；CMP湿法设备多种应用研发和客户验证中；收购杭州众硅强化CMP布局。</li>
+    <li><b>研发效率</b>：同时推进六大类、超20款新设备研发，<b>新产品开发周期从3-5年缩短至2年以内</b>；研发投入32.22亿占营收31.20%，远高于科创板均值，为板块最高研发强度。</li>
+  </ul>
+</div>
+
+<!-- 4 存货分析 -->
+<div class="card">
+  <h2><span class="num">4</span>存货分析</h2>
+  <table>
+    <thead><tr><th>指标</th><th>数值</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>Q3末存货余额</td><td class="hl-cell">90.84亿</td><td>较上年度末71.70亿 <b>+26.70%</b></td></tr>
+      <tr><td>存货/前三季营收</td><td>88.0%</td><td>设备公司备产特征，低于华海清科（148.7%）</td></tr>
+      <tr><td>订单信号（背离）</td><td>合同负债22.64亿（-25.62%）</td><td>存货增（备产）与合同负债降（预收确认）背离</td></tr>
+      <tr><td>应收质量</td><td>应收账款36.96亿（+86.0%）</td><td>增速远超营收（+28%），信用减值损失-0.62亿（上年-0.29亿）</td></tr>
+      <tr><td>减值计提</td><td>资产减值损失-0.09亿</td><td>上年同期-0.25亿，改善</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>解读</b>：存货+26.7%属温和备产（对比华海清科+55.9%），与应付账款+93.9%同步，指向按订单排产。<b>合同负债-25.6%需辩证看</b>：一方面收入确认加速消耗存量预收（前三季营收+28%），另一方面若新签预收持续放缓则影响2027年收入弹性——券商研报表述"订单同比高增"与合同负债下降的口径差异，建议以年报新签订单披露为准。</li>
+    <li><b>风险提示</b>：应收+86%叠加信用减值翻倍，客户回款周期拉长；90亿存货在行业波动期存在跌价风险（当前计提温和）。</li>
+  </ul>
+</div>
+
+<!-- 5 预期对比 -->
+<div class="card">
+  <h2><span class="num">5</span>预期对比（券商研报 vs 实际业绩）</h2>
+  <table>
+    <thead><tr><th>券商预测（2026E归母）</th><th>预测值</th><th>前三季实际</th><th>隐含Q4</th><th>评级</th></tr></thead>
+    <tbody>
+      <tr><td>东吴证券（11-03，上调）</td><td>50.1亿（原40.4亿）</td><td>41.34亿</td><td>8.76亿</td><td>买入（PE 41X）</td></tr>
+      <tr><td>华泰证券（11-02）</td><td>50.42亿</td><td>41.34亿</td><td>9.08亿</td><td>买入</td></tr>
+      <tr><td>华西证券（11-02，上调）</td><td>47.63亿（原41.66亿）</td><td>41.34亿</td><td>6.29亿</td><td>增持（PE 43X）</td></tr>
+      <tr><td>14家机构一致预期</td><td>均值42.38亿（+100.74%）</td><td>41.34亿</td><td>1.04亿</td><td>目标价均值410.98元</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>完成度陷阱</b>：前三季归母41.34亿已达一致预期42.38亿的<b>97.5%</b>，但其中25.11亿为非经常性损益——<b>以表观归母对照预期会严重高估达成质量</b>；东吴/华泰的50亿级预测隐含Q4归母8.8-9.1亿（Q4需再现投资收益或扣非大幅放量）。</li>
+    <li><b>2027年高基数风险</b>：拓荆股票已出售（收益不可重复）、公允价值变动收益19.40亿依赖股权投资估值——华西预测2027归母54.31亿仅+14.0%，隐含非经常退坡后利润增速大幅回落；东吴2027预测75.4亿则假设主业持续高增，分歧显著。</li>
+    <li><b>估值锚</b>：10/30收盘213.69元，对应2026E PE约41-43倍；机构目标价区间401.96-420元（均值410.98元）。</li>
+  </ul>
+  <p class="note">研报来源：中财网/新浪财经研报库（东吴2026-11-03、华泰2026-11-02、华西2026-11-02三季报点评）；机构一致预期为同花顺近6个月14家汇总。预期为券商观点，非本报告预测。</p>
+</div>
+
+<!-- 6 同行业对比 -->
+<div class="card">
+  <h2><span class="num">6</span>同行业对比（2026年三季报，五大半导体设备公司）</h2>
+  <table>
+    <thead><tr><th>公司</th><th>主营</th><th>营收</th><th>同比</th><th>归母</th><th>同比</th><th>扣非</th><th>扣非增速</th></tr></thead>
+    <tbody>
+      <tr><td>北方华创</td><td>刻蚀/薄膜/炉管/清洗平台型龙头</td><td>314.67亿</td><td class="up">+15.3%</td><td>53.92亿</td><td class="up">+5.1%</td><td>53.21亿</td><td class="flat">约+5%</td></tr>
+      <tr class="hl-row"><td><b>中微公司</b></td><td><b>刻蚀+薄膜+MOCVD+量检测</b></td><td class="hl-cell">103.26亿</td><td class="up">+28.1%</td><td class="hl-cell">41.34亿</td><td class="up">+241.3%<br><span style="font-size:11px;color:var(--sub)">（含非经常25.1亿）</span></td><td class="hl-cell">16.23亿</td><td class="hl-cell">+83.0% <span class="tag tag-best">板块第一</span></td></tr>
+      <tr><td>拓荆科技</td><td>薄膜沉积（PECVD/ALD/SACVD）</td><td>52.20亿</td><td class="up">+23.7%</td><td>24.31亿</td><td class="up">+336.8%</td><td>9.29亿</td><td>—</td></tr>
+      <tr><td>盛美上海</td><td>清洗/电镀/炉管</td><td>57.42亿</td><td class="up">+11.6%</td><td>10.70亿</td><td class="down">-15.4%</td><td>8.75亿</td><td>—</td></tr>
+      <tr><td>华海清科</td><td>CMP/减薄/离子注入/晶圆再生</td><td>41.82亿</td><td class="up">+31.0%</td><td>10.02亿</td><td class="up">+26.6%</td><td>8.85亿</td><td class="up">+22.4%</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>扣非增速+83%居板块第一</b>：剔除各家非经常性损益后，中微主业增速显著领先（北方华创约+5%、华海清科+22.4%），是五大设备公司中主业加速最明确的。</li>
+    <li><b>营收增速+28.1%居第二</b>（仅次于华海清科+31.0%），且首次前三季破百亿，体量跨入新台阶。</li>
+    <li><b>研发强度断层领先</b>：研发投入32.22亿、占营收31.20%，为板块最高（北方华创/华海清科约10-12%）——高研发换长期产品线宽度（54种设备），短期压制扣非利润率，长期构筑壁垒。</li>
+    <li><b>环比口径</b>：Q3营收环比-3.7%（Q2高基数后自然回落）；Q3扣非环比-22.5%但同比+43.77%，趋势健康。</li>
+    <li><b>卡位差异</b>：中微是A股<b>刻蚀设备绝对龙头</b>（CCP+ICP覆盖95%应用），直接受益存储扩产（90:1/140:1超高深宽比）与GAA/3D DRAM迭代，薄膜第二曲线（+224%）对标拓荆主业。</li>
+  </ul>
+  <p class="note">可比公司数据来源：问财（2026年三季报，20260930口径）；中微扣非增速为财报披露值。</p>
+</div>
+
+<!-- 7 现金流与风险 -->
+<div class="card">
+  <h2><span class="num">7</span>现金流与风险</h2>
+  <h3>7.1 现金流拆解</h3>
+  <table>
+    <thead><tr><th>指标</th><th>数值</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>Q1经营现金流净额</td><td class="down">-1.59亿</td><td>上年同期+3.77亿（-142.12%）</td></tr>
+      <tr><td>H1经营现金流净额</td><td class="up">+6.85亿</td><td>同比+237.39%（Q2单季约+8.44亿回补）</td></tr>
+      <tr><td>前三季经营现金流净额</td><td class="down">-1.05亿</td><td>Q3单季-7.90亿（备货+应收增加）</td></tr>
+      <tr><td>H1筹资现金流净额</td><td class="up">+21.55亿</td><td>吸收投资增加（+884.98%）</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>现金流波动大</b>：Q2回款高峰（+8.44亿）与Q3备货支出（-7.90亿）形成大幅摆动，全年口径需看Q4回款；货币资金83.55亿+交易性金融资产，流动性无虞。</li>
+    <li><b>投资收益依赖</b>：H1投资收益10.86亿（拓荆出售9.91亿）+公允价值变动9.92亿均计入非经常，公司自身明确提示"该收益不具有可持续性"。</li>
+  </ul>
+  <h3>7.2 风险因素</h3>
+  <ul class="pts">
+    <li><b>非经常收益退坡</b>：拓荆股票出售收益不可重复，公允价值变动依赖股权估值，2027年归母面临高基数回落（华西预测2027仅+14%）。</li>
+    <li><b>应收质量</b>：应收账款+86%远超营收增速，信用减值损失-0.62亿（同比翻倍）。</li>
+    <li><b>合同负债下降</b>：-25.62%，若持续则预示新签订单预收放缓，影响2027年收入弹性。</li>
+    <li><b>研发费用高企</b>：研发投入占营收31.2%，若收入增速放缓将显著侵蚀利润率。</li>
+    <li><b>整合风险</b>：收购杭州众硅后的CMP业务整合进度存在不确定性（券商共同提示）。</li>
+    <li><b>行业风险</b>：下游扩产节奏不及预期、新品研发&产业化不及预期、行业竞争加剧。</li>
+  </ul>
+</div>
+
+<!-- 8 综合研判 -->
+<div class="card">
+  <h2><span class="num">8</span>综合研判</h2>
+  <ul class="pts">
+    <li><b>主业判断：刻蚀绝对龙头+薄膜第二引擎，主业加速最明确的设备公司</b>。扣非+83%板块第一、毛利率连续三季改善（Q3达41.65%）、9300+反应台半年净增千台、薄膜设备2025年+224%后持续放量、新产品开发周期缩至2年以内——平台化（刻蚀+薄膜+MOCVD+量检测+CMP）的广度与速度均为A股设备板块之最。</li>
+    <li><b>核心矛盾：表观利润与主业利润的巨大剪刀差</b>。归母41.34亿（+241%）中61%来自出售拓荆股票与公允价值变动，均不可持续；<b>看中微必须看扣非（16.23亿，+83%）</b>。2027年表观增速大幅回落是确定性事件（华西预测仅+14%），届时市场情绪与估值锚将切换至主业口径。</li>
+    <li><b>前瞻指标</b>：①合同负债-25.6%与存货+26.7%的背离需在年报新签订单数据中验证；②应收+86%与信用减值翻倍是扩张期的质量隐忧；③90:1/140:1超高深宽比刻蚀与GAA/3D DRAM工艺卡位，直接受益存储超级周期；④EPI设备量产验证与众硅CMP整合是2027年增量。</li>
+    <li><b>估值与预期</b>：现价213.69元对应2026E约41-43倍PE（一致预期42.38亿）；机构目标价均值410.98元隐含翻倍空间，但该预期部分建立在投资收益与高研发换来的长期壁垒上——<b>短期看Q4扣非兑现（东吴50亿级预测隐含Q4归母8.8亿+），长期看非经常退坡后2027年主业增速能否接棒</b>。</li>
+    <li><b>一句话</b>：<b>营收破百亿、扣非+83%、毛利率三连升——中微的主业比表观241%的暴增更真实也更健康；剥离25亿投资收益后，这是一家正在加速的平台型刻蚀龙头，唯一需要适应的是2027年利润表观增速的"高台跳水"。</b></li>
+  </ul>
+</div>
+
+<div class="foot">
+  数据来源：中微公司2026年第一季度报告、半年度报告、第三季度报告（用户提供正式财报）；2025年报分产品毛利率（问财）；可比公司数据（问财2026三季报口径）；券商盈利预测（中财网/新浪财经研报库：东吴、华泰、华西三季报点评）。Q2单季及部分推算数据由累计数差额计算，已在正文标注口径。本报告仅供参考，不构成投资建议。
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>半导体五标的对比报告·数据核实确认书</title>
+<style>
+:root{--bg:#eef3f8;--card:#fff;--ink:#1c2733;--sub:#5b6b7b;--green:#1d9d74;--red:#e5533d;--blue:#2f6fed;--line:#e3eaf2;--shadow:0 4px 18px rgba(31,55,90,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+.wrap{max-width:1000px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0c7a57,#1d9d74);color:#fff;border-radius:16px;padding:26px 30px;margin-bottom:20px;box-shadow:var(--shadow)}
+.hero h1{font-size:24px}
+.hero .sub{margin-top:8px;font-size:13.5px;opacity:.95}
+.card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:8px 9px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:#f2f7fd;font-weight:600;text-align:right}
+th:first-child,td:first-child{text-align:left}
+.ok{color:var(--green);font-weight:700}
+ul{margin:8px 0 0 20px}ul li{margin:6px 0;font-size:14px}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-weight:700}
+.badge-pass{background:#e6f7ef;color:#0c7a57}
+.foot{text-align:center;font-size:12px;color:var(--sub);margin-top:26px}
+.warn{background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:10px 14px;font-size:13px;color:#8a6100}
+</style>
+</head>
+<body><div class="wrap">
+<div class="hero">
+<h1>《半导体五标的投资质量对比报告》数据核实确认书</h1>
+<div class="sub">核实对象：semi_equip_5stocks_comparison_20261104_v4.html ｜ 核实方式：①原始PDF财报提取底表 ②问财API独立披露值交叉验证 ③同比/环比/真实经营成果全部手工复算 ｜ 2026-11-04</div>
+</div>
+
+<div class="card">
+<h2>✅ 核实总体结论</h2>
+<p style="font-size:15px"><b>对比报告（v4）全部财务数据与正式财报核对一致，全部同比/环比计算正确。</b>此前唯一错误——<b>中微单季营收拆分</b>（误写为35.24/38.91）——已在v4修正为正确的 <b>37.76/36.35亿</b>，并已与PDF原始值（Q1 29.15亿、H1 66.91亿、前三季103.26亿）完成三重交叉校验。</p>
+</div>
+
+<div class="card">
+<h2>1️⃣ 单季营收/扣非核实（对比报告1.1表）</h2>
+<table>
+<thead><tr><th>标的</th><th>Q2营收(亿)</th><th>Q3营收(亿)</th><th>Q2环比</th><th>Q3环比</th><th>Q2扣非(亿)</th><th>Q3扣非(亿)</th><th>Q2扣非环比</th><th>Q3扣非环比</th><th>校验</th></tr></thead>
+<tbody>
+<tr><td>北方华创</td><td>98.38</td><td>113.06</td><td>-4.7%</td><td>+14.9%</td><td>17.14</td><td>19.80</td><td>+5.4%</td><td>+15.5%</td><td class="ok">✓</td></tr>
+<tr><td>中微公司</td><td>37.76</td><td>36.35</td><td>+29.5%</td><td>-3.7%</td><td>6.45</td><td>5.00</td><td>+35.0%</td><td>-22.5%</td><td class="ok">✓ v4修正</td></tr>
+<tr><td>拓荆科技</td><td>18.00</td><td>23.07</td><td>+61.7%</td><td>+28.2%</td><td>2.66</td><td>5.61</td><td>+160.4%</td><td>+110.9%</td><td class="ok">✓</td></tr>
+<tr><td>盛美上海</td><td>22.42</td><td>20.24</td><td>+51.9%</td><td>-9.7%</td><td>4.65</td><td>3.04</td><td>+338%</td><td>-34.6%</td><td class="ok">✓</td></tr>
+<tr><td>华海清科</td><td>14.42</td><td>15.39</td><td>+20.1%</td><td>+6.7%</td><td>2.91</td><td>3.69</td><td>+29.3%</td><td>+26.8%</td><td class="ok">✓</td></tr>
+</tbody>
+</table>
+<p style="font-size:12px;color:var(--sub);margin-top:8px">单季拆分口径：Q1=一季报披露值；Q2=半年报累计−一季报；Q3=三季报累计−半年报累计。三条等式逐家通过（如中微 Q1 29.15 + Q2 37.76 + Q3 36.35 = 103.26亿 = 三季报披露值）。</p>
+</div>
+
+<div class="card">
+<h2>2️⃣ 前三季累计值核实（问财API独立披露值交叉验证）</h2>
+<table>
+<thead><tr><th>标的</th><th>前三季营收(亿)</th><th>营收同比</th><th>前三季归母(亿)</th><th>归母同比</th><th>前三季扣非(亿)</th><th>扣非同比</th><th>校验</th></tr></thead>
+<tbody>
+<tr><td>北方华创</td><td>314.67</td><td>+15.3%</td><td>53.92</td><td>+5.1%</td><td>53.21</td><td>+4.3%</td><td class="ok">✓</td></tr>
+<tr><td>中微公司</td><td>103.26</td><td>+28.1%</td><td>41.34</td><td>+241.3%</td><td>16.23</td><td>+83.0%</td><td class="ok">✓</td></tr>
+<tr><td>拓荆科技</td><td>52.20</td><td>+23.7%</td><td>24.31</td><td>+336.8%</td><td>9.29</td><td>+102.7%</td><td class="ok">✓</td></tr>
+<tr><td>盛美上海</td><td>57.42</td><td>+11.6%</td><td>10.70</td><td>-15.4%</td><td>8.75</td><td>-21.0%</td><td class="ok">✓</td></tr>
+<tr><td>华海清科</td><td>41.82</td><td>+31.0%</td><td>10.02</td><td>+26.6%</td><td>8.85</td><td>+22.4%</td><td class="ok">✓</td></tr>
+</tbody>
+</table>
+<p style="font-size:12px;color:var(--sub);margin-top:8px">同比=问财披露的2025前三季 vs 2026前三季精确计算（如盛美扣非 11.07→8.75亿 = -21.02%；拓荆 4.58→9.29亿 = +102.66%；北方华创 51.02→53.21亿 = +4.28%）。</p>
+</div>
+
+<div class="card">
+<h2>3️⃣ 真实经营成果复算（对比报告1.2表）</h2>
+<table>
+<thead><tr><th>标的</th><th>Q2真实经营成果(亿)</th><th>Q3真实经营成果(亿)</th><th>Q3构成说明</th><th>复算校验</th></tr></thead>
+<tbody>
+<tr><td>北方华创</td><td>26.71</td><td>23.82</td><td>19.80+4.21-0.19，扣非占83.1%</td><td class="ok">✓</td></tr>
+<tr><td>中微公司</td><td>10.56</td><td>6.30</td><td>5.00+6.38-5.08</td><td class="ok">✓</td></tr>
+<tr><td>拓荆科技</td><td>2.92</td><td>-1.09*</td><td>5.61-0.57-6.13（合同负债口径）</td><td class="ok">✓</td></tr>
+<tr><td>盛美上海</td><td>7.40</td><td>10.87</td><td>3.04+6.38+1.45</td><td class="ok">✓</td></tr>
+<tr><td>华海清科</td><td>7.33</td><td>10.58</td><td>3.69+3.52+3.37</td><td class="ok">✓</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<h2>4️⃣ 营运资金 / 毛利率 / 现金流核实</h2>
+<table>
+<thead><tr><th>标的</th><th>应收(Q1末/Q2末/Q3末)</th><th>合同负债(Q1/Q2/Q3末)</th><th>应付(Q1/Q2/Q3末)</th><th>前三季毛利率</th><th>经营现金流(亿)</th><th>校验</th></tr></thead>
+<tbody>
+<tr><td>北方华创</td><td>87.80/86.20/90.41</td><td>42.03/53.20/53.01</td><td>126.26/147.83/180.19</td><td>39.44%</td><td>+55.91</td><td class="ok">✓</td></tr>
+<tr><td>中微公司</td><td>25.66/30.58/36.96</td><td>28.53/27.72/22.64</td><td>20.77/24.57/36.00</td><td>40.3%</td><td>-1.05</td><td class="ok">✓</td></tr>
+<tr><td>拓荆科技</td><td>14.15/11.87/11.30</td><td>48.77/51.31/45.18</td><td>17.50/22.66/25.95</td><td>41.6%</td><td>-0.36</td><td class="ok">✓</td></tr>
+<tr><td>盛美上海</td><td>33.08/35.62/42.00</td><td>6.83/7.04/8.49</td><td>20.81/21.34/25.70</td><td>45.8%</td><td>-2.70</td><td class="ok">✓</td></tr>
+<tr><td>华海清科</td><td>12.44/14.57/18.09</td><td>18.33/20.62/23.99</td><td>20.33/24.56/31.99</td><td>42.4%</td><td>-0.88</td><td class="ok">✓</td></tr>
+</tbody>
+</table>
+<p style="font-size:12px;color:var(--sub);margin-top:8px">应收/前三季营收占比复算：北方28.7%、中微35.8%、拓荆21.6%、盛美73.1%、华海43.3%（全部一致）；应付周转率口径=前三季营业成本/Q3末应付，五家复算一致。</p>
+</div>
+
+<div class="card">
+<h2>5️⃣ 数据来源总清单</h2>
+<ul>
+<li><b>单季营收/扣非/毛利率/资产负债表（应收·合同负债·应付·存货）</b>：各公司正式财报PDF（一季报/半年报/三季报）提取（中微、拓荆、盛美、北方华创原始PDF均在本次核实中重新打开确认；华海PDF已清理，以其个股报告底表+问财披露值双链核实）</li>
+<li><b>前三季累计营收/归母/扣非及同比</b>：问财API独立披露值（2025 vs 2026精确计算）</li>
+<li><b>估值（PE/PB/市值/ROE/股息率）</b>：问财API实时快照（2026-11-04收盘）</li>
+<li><b>五年PE Z值/分位</b>：问财API历史PE日频序列计算</li>
+<li><b>券商目标价/盈利预测</b>：问财研报数据库（2026-10-30~11-03）</li>
+<li><b>真实经营成果</b>：自建口径（单季扣非+应收变动+合同负债变动），本次全部手工复算</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>6️⃣ 核实结论与数据纪律</h2>
+<p><b>结论：对比报告v4全部财务数据与正式财报一致，全部同比/环比计算正确。</b>唯一曾出现的错误（中微单季营收）已在v4修正并通过PDF原文+三重等式校验。</p>
+<div class="warn" style="margin-top:12px"><b>🚫 数据纪律红线：严禁编造财务数据，绝对禁止！</b>任何财报/对比报告的数字必须溯源到正式财报PDF或权威数据源；单季拆分必须通过"Q1=一季报披露值、Q1+Q2=半年报披露值、Q1+Q2+Q3=三季报披露值"三重校验；凡不能溯源的数字一律标注"待核实"，不得凭空填入。本次中微错误根源即"凭上下文记忆重写未复用的单季拆分"——该行为已被列为禁止事项并沉淀至财报分析skill。</div>
+</div>
+
+<div class="foot">半导体五标的对比报告·数据核实确认书 ｜ 核实基准：各公司2026年一季报/半年报/三季报（PDF）+ 问财API披露值 ｜ 2026-11-04</div>
+</div></body></html>

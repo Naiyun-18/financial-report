@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>盛美上海2026年三季报深度分析</title>
+<style>
+  :root{
+    --bg:#eef3f8; --card:#ffffff; --ink:#1c2733; --sub:#5b6b7b;
+    --blue:#2f6fed; --blue-soft:#e7f0ff; --red:#e5533d; --green:#1d9d74;
+    --line:#e3eaf2; --shadow:0 4px 18px rgba(31,55,90,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;padding:24px 16px}
+  .wrap{max-width:980px;margin:0 auto}
+  .hero{background:linear-gradient(135deg,#2f6fed,#1b4fd0);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:var(--shadow)}
+  .hero h1{font-size:26px;font-weight:700;letter-spacing:.5px}
+  .hero .sub{margin-top:8px;font-size:13.5px;opacity:.92}
+  .card{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .card h2{font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+  .card h2 .num{display:inline-flex;width:24px;height:24px;border-radius:7px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:13px;flex:none}
+  .card h3{font-size:15px;font-weight:600;margin:18px 0 10px;color:var(--blue)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .kpi .label{font-size:12px;color:var(--sub);margin-bottom:6px}
+  .kpi .val{font-size:18px;font-weight:700}
+  .kpi .delta{font-size:12px;margin-top:4px}
+  .up{color:var(--red)}.down{color:var(--green)}.flat{color:var(--sub)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:#f2f7fd;color:var(--ink);font-weight:600;text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr:hover{background:#f8fbfe}
+  .hl-cell{color:var(--blue);font-weight:700}
+  tr.hl-row{background:#eef5ff}
+  .tag{display:inline-block;padding:2px 9px;border-radius:12px;font-size:12px;font-weight:600}
+  .tag-best{background:var(--green);color:#fff}
+  .tag-ok{background:var(--blue-soft);color:var(--blue)}
+  .tag-warn{background:#fff4e5;color:#b26a00}
+  .verdict{background:linear-gradient(135deg,#f0fff9,#e6f7ff);border:1px solid #cfe9dd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .verdict h2{font-size:18px;color:#0c7a57;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .cls{margin:9px 0;padding:10px 14px;background:rgba(255,255,255,.62);border-radius:10px;border:1px solid #e2efe7}
+  .cls-h{display:inline-block;margin-bottom:6px;font-size:13px;font-weight:700}
+  .cls .cls-ul{margin:2px 0 0 20px}
+  .cls .cls-ul li{margin:4px 0;font-size:13px}
+  ul.pts{margin:8px 0 0 20px}
+  ul.pts li{margin:7px 0;font-size:14px}
+  .note{font-size:12px;color:var(--sub);margin-top:10px}
+  .note.warn{color:#b26a00;background:#fff8ef;border:1px solid #f0deb8;border-radius:8px;padding:8px 12px}
+  .foot{text-align:center;font-size:12px;color:var(--sub);margin-top:26px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <h1>盛美上海（688082.SH）2026年三季报深度分析</h1>
+  <div class="sub">清洗设备龙头 · 平台化扩张期的"利润表观失真"与真实经营扩张 ｜ 报告期：2026年前三季度（Q1+半年报+Q3三份财报交叉）｜ 生成日期：2026-11-04</div>
+</div>
+
+<!-- 一句话结论 -->
+<div class="verdict">
+  <h2>🎯 一句话结论</h2>
+  <p style="font-size:15px"><b>盛美上海2026年前三季度营收57.42亿（+11.57%）、归母10.70亿（-15.45%）、扣非8.75亿（-21.02%）——五大设备公司中唯一"营收个位数增长+利润双降"；但表观利润的失真远大于经营恶化：Q2归母8.85亿中4.2亿是非经常损益、Q3归母0.82亿被公允价值变动-2.67亿砸出深坑，扣非链条1.06→4.65→3.04亿；真实经营成果（扣非+应收变动+合同负债变动）Q3达10.87亿创年内新高，合同负债连续两季回升，平台化（电镀/炉管/Track/PECVD）+H股上市推进中。核心软肋：毛利率45.8%（-3.7pct，五家唯一下滑）、应收/营收73.1%（五家回款最慢）、汇兑损失1.65亿。</b></p>
+  <div class="cls"><span class="cls-h" style="color:var(--green)">✅ 领先 / 亮点：</span>
+    <ul class="cls-ul">
+      <li>真实经营成果Q3达<b>10.87亿创年内新高</b>（Q1 2.01→Q2 7.40→Q3 10.87亿），连续两季大幅回升</li>
+      <li>合同负债8.49亿（较年初+15.2%），Q2/Q3连续回升（6.83→7.04→8.49亿），新签订单预收回暖</li>
+      <li>Q2扣非4.65亿（环比+338%）、Q3扣非3.04亿仍处历史高位区间；研发投入10.48亿（+20.7%）持续加码</li>
+      <li>平台化布局最全：清洗+电镀+炉管+Track+PECVD+无应力抛光+先进封装+硅材料设备，差异化国际竞争（SAPS/TEBO兆声波全球独创）</li>
+    </ul>
+  </div>
+  <div class="cls"><span class="cls-h" style="color:var(--blue)">➖ 表观平淡 / 需甄别：</span>
+    <ul class="cls-ul">
+      <li>归母10.70亿（-15.45%）中含非经常+1.96亿（公允价值+2.05亿、投资收益0.90亿）；Q2/Q3归母大起大落（8.85亿→0.82亿）几乎全由公允价值变动驱动</li>
+      <li>营收+11.57%为五家最低（北方华创+15.3%/中微+28.1%/拓荆+23.7%/华海+31.0%），清洗主业基数大、增速换挡</li>
+      <li>财务费用1.65亿（上年同期-0.35亿），汇兑损失拖累约2亿利润——美元计价销售的汇率敞口</li>
+    </ul>
+  </div>
+  <div class="cls"><span class="cls-h" style="color:var(--red)">⚠️ 劣势 / 风险项：</span>
+    <ul class="cls-ul">
+      <li>毛利率45.83%（同比<b>-3.7pct</b>），五家中唯一下滑（其余四家均提升），Q3单季44.0%环比再降</li>
+      <li>应收账款42.00亿（较年初+32.9%），<b>应收/前三季营收73.1%为五家最慢</b>；信用减值-0.61亿+资产减值-1.21亿</li>
+      <li>经营现金流-2.70亿（Q3单季-3.58亿）；存货57.44亿创新高（+19.1%）</li>
+      <li>盛美韩国海关处罚事项上诉中；估值PE TTM 77.2x为五家最高档</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 1 财务总览 -->
+<div class="card">
+  <h2><span class="num">1</span>财务总览（2026年前三季度）</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="label">营业收入</div><div class="val">57.42亿</div><div class="delta up">同比 +11.57%</div></div>
+    <div class="kpi"><div class="label">归母净利润</div><div class="val">10.70亿</div><div class="delta down">同比 -15.45%</div></div>
+    <div class="kpi"><div class="label">扣非归母净利润</div><div class="val">8.75亿</div><div class="delta down">同比 -21.02%</div></div>
+    <div class="kpi"><div class="label">毛利率</div><div class="val">45.83%</div><div class="delta down">同比 -3.7pct</div></div>
+  </div>
+  <div class="kpi-row" style="margin-top:12px">
+    <div class="kpi"><div class="label">净利率（归母口径）</div><div class="val">18.6%</div><div class="delta down">同比 -5.9pct</div></div>
+    <div class="kpi"><div class="label">加权ROE</div><div class="val">7.63%</div><div class="delta down">同比 -7.62pct</div></div>
+    <div class="kpi"><div class="label">研发投入</div><div class="val">10.48亿</div><div class="delta up">同比 +20.71%（占营收18.25%）</div></div>
+    <div class="kpi"><div class="label">基本EPS</div><div class="val">2.23元</div><div class="delta down">同比 -22.30%</div></div>
+  </div>
+  <table style="margin-top:16px">
+    <thead><tr><th>资产负债项</th><th>Q3末</th><th>上年度末</th><th>变动</th><th>主因</th></tr></thead>
+    <tbody>
+      <tr><td>总资产</td><td>213.34亿</td><td>188.95亿</td><td class="up">+12.91%</td><td>备货扩产+盈利积累</td></tr>
+      <tr><td>归母所有者权益</td><td>147.61亿</td><td>134.70亿</td><td class="up">+9.59%</td><td>盈利积累</td></tr>
+      <tr><td>存货</td><td>57.44亿</td><td>48.22亿</td><td class="up">+19.12%</td><td>订单增长带动原材料备货</td></tr>
+      <tr><td>应收账款</td><td>42.00亿</td><td>31.59亿</td><td class="up">+32.94%</td><td>销售规模扩大（回款慢于确认）</td></tr>
+      <tr><td>合同负债</td><td>8.49亿</td><td>7.37亿</td><td class="up">+15.15%</td><td>预收订单款回升</td></tr>
+      <tr><td>应付账款</td><td>25.70亿</td><td>22.37亿</td><td class="up">+14.88%</td><td>采购备货增加</td></tr>
+    </tbody>
+  </table>
+  <p class="note">注：ROE大幅下降主因：①归母净利润同比下降；②2025年H股发行筹备后净资产加权平均数同比大增。研发投入占营收18.25%（+1.38pct），为五家设备公司中研发强度最高。</p>
+</div>
+
+<!-- 2 季度总览 -->
+<div class="card">
+  <h2><span class="num">2</span>季度总览（环比口径）</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="label">Q1 营收</div><div class="val">14.76亿</div><div class="delta flat">同比 +13.1%</div></div>
+    <div class="kpi"><div class="label">Q2 营收</div><div class="val">22.42亿</div><div class="delta up">环比 +51.9%</div></div>
+    <div class="kpi"><div class="label">Q3 营收</div><div class="val">20.24亿</div><div class="delta down">环比 -9.7%</div></div>
+    <div class="kpi"><div class="label">前三季累计</div><div class="val">57.42亿</div><div class="delta up">同比 +11.6%</div></div>
+  </div>
+  <div class="kpi-row" style="margin-top:12px">
+    <div class="kpi"><div class="label">Q1 扣非</div><div class="val">1.06亿</div><div class="delta down">同比 -57.2%</div></div>
+    <div class="kpi"><div class="label">Q2 扣非</div><div class="val">4.65亿</div><div class="delta up">环比 +338%</div></div>
+    <div class="kpi"><div class="label">Q3 扣非</div><div class="val">3.04亿</div><div class="delta down">环比 -34.6%</div></div>
+    <div class="kpi"><div class="label">Q3 归母</div><div class="val">0.82亿</div><div class="delta down">同比 -85.7%</div></div>
+  </div>
+  <table style="margin-top:16px">
+    <thead><tr><th>单季指标</th><th>2026Q1</th><th>2026Q2</th><th>2026Q3</th><th>趋势</th></tr></thead>
+    <tbody>
+      <tr><td>营业收入</td><td>14.76亿</td><td>22.42亿</td><td>20.24亿</td><td>Q2放量后Q3小幅回落</td></tr>
+      <tr><td>归母净利润</td><td>1.04亿</td><td class="hl-cell">8.85亿</td><td>0.82亿</td><td>大起大落（公允价值驱动）</td></tr>
+      <tr><td>扣非归母</td><td>1.06亿</td><td>4.65亿</td><td>3.04亿</td><td>Q2跳升后高位回落</td></tr>
+      <tr><td>单季毛利率</td><td>45.6%</td><td>47.7%</td><td>44.0%</td><td class="down">Q3环比-3.7pct</td></tr>
+      <tr><td>经营现金流</td><td>-1.44亿</td><td>+2.32亿</td><td>-3.58亿</td><td>备货与回款节奏波动</td></tr>
+    </tbody>
+  </table>
+  <h3>Q2归母8.85亿 vs Q3归母0.82亿的归因拆解</h3>
+  <ul class="pts">
+    <li><b>Q2的"暴增"是公允价值幻影</b>：H1非经常性损益+4.18亿（公允价值变动收益+2.06亿、投资收益+联营收益等），Q2归母8.85亿中约一半来自非主业——扣非口径Q2实为4.65亿。</li>
+    <li><b>Q3的"暴跌"同样是公允价值砸坑</b>：Q3单季公允价值变动损益<b>-2.67亿</b>（对外投资估值回落），叠加政府补助等，Q3非经常合计-2.22亿——归母0.82亿被砸出深坑，但<b>扣非3.04亿（同比-29.9%）才是真实主业水平</b>。</li>
+    <li><b>主业真实曲线</b>：扣非1.06→4.65→3.04亿，Q2跳升主因收入放量（+51.9%）+毛利率环比+2.1pct；Q3回落主因毛利率环比-3.7pct至44.0%+汇兑损失延续。</li>
+    <li><b>结论</b>：表观归母的"Q2暴增→Q3暴跌"几乎全部由金融资产公允价值变动驱动，主业利润虽同比承压（前三季扣非-21.0%）但环比中枢已从Q1的1亿级抬升至3-5亿级。</li>
+  </ul>
+  <h3>营运资金季度环比（应收账款 / 合同负债 / 应付账款 / 应付周转率）</h3>
+  <table>
+    <thead><tr><th>指标</th><th>2026Q1末</th><th>2026Q2末</th><th>2026Q3末</th><th>趋势解读</th></tr></thead>
+    <tbody>
+      <tr><td>应收账款</td><td>33.08亿</td><td>35.62亿<br><span class="up">环比+7.7%</span></td><td>42.00亿<br><span class="up">环比+17.9%</span></td><td>逐季攀升，Q3末较年初+32.9%</td></tr>
+      <tr><td>合同负债</td><td>6.83亿</td><td>7.04亿<br><span class="up">环比+3.1%</span></td><td>8.49亿<br><span class="up">环比+20.6%</span></td><td class="hl-cell">连续两季回升，Q3加速</td></tr>
+      <tr><td>应收账款/单季营收</td><td>224.1%</td><td>158.9%</td><td class="up">207.5%</td><td>五家最高档，回款压力最大</td></tr>
+      <tr><td>应付账款</td><td>20.81亿</td><td>21.34亿<br><span class="up">环比+2.5%</span></td><td>25.70亿<br><span class="up">环比+20.4%</span></td><td>Q3扩张，较年初+14.9%</td></tr>
+      <tr><td>应付周转率（年化）</td><td>1.49次</td><td>2.23次</td><td>1.93次</td><td>Q3回落，备货占用上游资金增加</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>应收端是盛美最大软肋</b>：应收/单季营收Q3回升至207.5%（Q2 158.9%），42亿应收对应单季营收仅20亿——收入确认与回款周期错配在五家中最严重（对比拓荆49.0%、中微101.7%）。</li>
+    <li><b>合同负债连续两季回升（6.83→7.04→8.49亿）</b>：Q3环比+20.6%加速，新签订单预收回暖——但绝对规模仅8.49亿（对比拓荆45.18亿、华海23.99亿），订单蓄水池在五家中最浅，收入前瞻性弱于同行。</li>
+    <li><b>应付端Q3扩张</b>：应付周转率从Q2的2.23次回落至1.93次，应付单季+4.36亿——与存货Q3大增（50.76→57.44亿）同步，指向Q3激进备货备产。</li>
+  </ul>
+  <h3>真实经营成果（扣非+应收变动+合同负债变动）季度变化</h3>
+  <div class="note" style="margin-bottom:10px">口径：真实经营成果（代理）＝当季扣非 ＋ 当季应收账款变动额（账面已赚、未来收回的钱）＋ 当季合同负债变动额（已到手、未来才确认收入的预收款）。</div>
+  <table>
+    <thead><tr><th>项目（亿元）</th><th>2026Q1</th><th>2026Q2</th><th>2026Q3</th><th>Q3环比</th></tr></thead>
+    <tbody>
+      <tr><td>扣非归母净利</td><td>1.06</td><td>4.65</td><td>3.04</td><td class="down">-34.6%</td></tr>
+      <tr><td>＋ 应收账款变动额</td><td>+1.49</td><td>+2.54</td><td>+6.38</td><td class="up">+151%</td></tr>
+      <tr><td>＋ 合同负债变动额</td><td>-0.54</td><td>+0.21</td><td>+1.45</td><td class="up">连续两季为正</td></tr>
+      <tr class="hl-row"><td><b>＝ 真实经营成果</b></td><td class="hl-cell">2.01</td><td class="hl-cell">7.40</td><td class="hl-cell">10.87</td><td class="up">+46.9%</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>Q3真实经营成果10.87亿创年内新高、环比+46.9%</b>：与华海清科（10.58亿）同为连续两季高增——但盛美的构成中应收+6.38亿占主导（华海为合同负债+3.37亿订单预收主导），<b>含金量弱于华海</b>：盛美的"真实"更多是账面应收扩张，华海是订单预收实收。</li>
+    <li><b>辨析</b>：真实经营成果连续抬升说明Q3经营确实在扩张（收入确认+备货+新订单预收齐动），但扣非本身环比回落34.6%——扩张的"量"在涨、赚钱的"质"（利润率）在降，典型平台化扩张期特征。</li>
+  </ul>
+  <p class="note">Q2/Q3单季数据由三季报累计数减半年报/一季报计算；单季毛利率由累计营业成本差额推算。应付周转率（年化）=单季营业成本×4÷平均应付账款（(期初+期末)/2）；应收/单季营收=季度末应收账款÷当季营收。</p>
+</div>
+
+<!-- 3 业务板块 -->
+<div class="card">
+  <h2><span class="num">3</span>业务板块财务分析</h2>
+  <p class="note warn">口径说明：盛美2026年半年报未披露分产品收入明细（披露简化），以下以2025年年报分产品数据为基准，结合2026H1整体毛利率45.61%（主营业务口径）与前三季45.83%推算趋势。</p>
+  <table>
+    <thead><tr><th>业务板块（2025年报基准）</th><th>收入</th><th>占比</th><th>毛利率</th><th>2026年推算趋势</th></tr></thead>
+    <tbody>
+      <tr class="hl-row"><td><b>清洗设备（SAPS/TEBO兆声波、槽式、Tahoe、高温SPM）</b></td><td class="hl-cell">45.06亿</td><td class="hl-cell">66.4%</td><td>44.5%</td><td>基本盘：DRAM 70+步应用、逻辑FinFET 20步；增速换挡至个位数，毛利率承压主源</td></tr>
+      <tr><td>其他半导体设备（电镀、立式炉管、无应力抛光、Track、PECVD）</td><td>16.61亿</td><td>24.5%</td><td class="hl-cell">60.0%</td><td>第二曲线：毛利率最高，平台化放量主力；炉管/Track/PECVD对标国际巨头国产替代</td></tr>
+      <tr><td>先进封装湿法设备</td><td>3.37亿</td><td>5.0%</td><td>24.9%</td><td>AI驱动增量：晶圆级/面板级封装，毛利率最低但增速最快方向</td></tr>
+      <tr><td>其他业务</td><td>2.83亿</td><td>4.2%</td><td>67.6%</td><td>配件与服务</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>毛利率下滑3.7pct的结构性归因</b>：清洗主业（占比66%）毛利率44.5%本就低于公司均值，2026年竞争加剧+首台/重复订单价差拉低整体；高毛利的"其他设备"（60%）占比尚不足以对冲——对比中微（+1.3pct）、拓荆（+8.4pct）、华海（-2.0pct），盛美是五家中毛利率下滑幅度最大的。</li>
+    <li><b>平台化是估值叙事的核心</b>：公司是五家中产品线最全的（清洗+电镀+炉管+涂胶显影Track+PECVD+无应力抛光+先进封装+硅材料），且差异化国际竞争（SAPS/TEBO全球知识产权），美国ACMR控股、H股上市推进中——国际化程度五家最高。</li>
+    <li><b>研发强度五家第一</b>：研发投入10.48亿、占营收18.25%（对比中微约15%、拓荆约12%），高研发投入短期压制利润，是平台化扩张的必要成本。</li>
+  </ul>
+</div>
+
+<!-- 4 存货分析 -->
+<div class="card">
+  <h2><span class="num">4</span>存货分析</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="label">存货（Q3末）</div><div class="val">57.44亿</div><div class="delta up">较年初 +19.1%</div></div>
+    <div class="kpi"><div class="label">存货/前三季营收</div><div class="val">100.0%</div><div class="delta flat">五家中位</div></div>
+    <div class="kpi"><div class="label">发出商品（H1末）</div><div class="val">13.54亿</div><div class="delta down">较年初 -12.5%</div></div>
+    <div class="kpi"><div class="label">跌价准备余额（H1末）</div><div class="val">2.21亿</div><div class="delta up">较年初 +53.8%</div></div>
+  </div>
+  <table style="margin-top:16px">
+    <thead><tr><th>存货结构（H1末 vs 年初）</th><th>H1末</th><th>年初</th><th>变动</th><th>解读</th></tr></thead>
+    <tbody>
+      <tr><td>原材料</td><td>27.67亿</td><td>24.49亿</td><td class="up">+13.0%</td><td>订单增长带动备料</td></tr>
+      <tr><td>在产品</td><td>5.77亿</td><td>4.31亿</td><td class="up">+33.8%</td><td>排产提速</td></tr>
+      <tr><td>库存商品</td><td>3.79亿</td><td>3.94亿</td><td class="down">-3.8%</td><td>产销衔接良好</td></tr>
+      <tr><td>发出商品</td><td>13.54亿</td><td>15.48亿</td><td class="down">-12.5%</td><td>待验收设备，验收转收入中</td></tr>
+      <tr class="hl-row"><td><b>合计</b></td><td class="hl-cell">50.76亿</td><td class="hl-cell">48.22亿</td><td class="up">+5.3%</td><td>Q3进一步增至57.44亿</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>存货Q3加速堆积</b>：H1末仅+5.3%，Q3末+19.1%（单季+6.68亿）——与应付账款Q3+4.36亿同步，指向Q3集中备货备产，为Q4及2027年交付做准备。</li>
+    <li><b>发出商品13.54亿是"准收入"蓄水池</b>：设备发出后需客户安装调试验收才确认收入，H1末13.54亿发出商品（占存货26.7%）将在后续季度逐步转收入——但验收周期拉长也是应收高企的根源。</li>
+    <li><b>跌价准备计提加大</b>：H1计提1.34亿（转回0.56亿），余额2.21亿较年初+53.8%——资产减值损失前三季-1.21亿（同比翻倍），存货跌价与应收减值双升，是利润的隐性拖累项。</li>
+  </ul>
+</div>
+
+<!-- 5 预期对比 -->
+<div class="card">
+  <h2><span class="num">5</span>预期对比（券商研报口径）</h2>
+  <table>
+    <thead><tr><th>机构</th><th>日期</th><th>评级</th><th>2026E归母</th><th>目标价</th><th>核心观点</th></tr></thead>
+    <tbody>
+      <tr><td>野村东方国际</td><td>2026-10-30</td><td>增持（维持）</td><td>16.81亿</td><td>210.00元</td><td>饱满订单支撑营收扩张，盈利能力短期承压</td></tr>
+      <tr><td>东吴证券</td><td>2026-10-30</td><td>增持（维持）</td><td>16.81亿</td><td>—</td><td>营收稳步增长，平台化布局加速落地</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>2026E归母16.81亿 vs 前三季10.70亿</b>：隐含Q4单季6.11亿（环比+646%）——Q4须无大额公允价值损失且主业放量才能达成，<b>预期偏乐观</b>；若按扣非口径（前三季8.75亿），Q4需扣非约3-4亿属合理区间。</li>
+    <li><b>目标价210元 vs 现价191元</b>：隐含空间约+10%；现价对应2026E PE约55x（927亿市值÷16.81亿），估值不便宜，安全边际有限。</li>
+  </ul>
+  <p class="note">来源：同花顺研报数据库（野村东方国际证券·戴洁、东吴证券·周尔双，均为2026-10-30三季报点评）。预期数据为券商观点，非公司指引。</p>
+</div>
+
+<!-- 6 同行业对比 -->
+<div class="card">
+  <h2><span class="num">6</span>同行业对比（2026年前三季度）</h2>
+  <table>
+    <thead><tr><th>公司</th><th>主营</th><th>营收</th><th>同比</th><th>归母</th><th>同比</th><th>扣非</th><th>扣非增速</th><th>应收/<br>前三季营收</th><th>应付周转率<br>(前三季)</th></tr></thead>
+    <tbody>
+      <tr><td>北方华创</td><td>刻蚀/薄膜/炉管/清洗平台型龙头</td><td>314.67亿</td><td class="up">+15.3%</td><td>53.92亿</td><td class="up">+5.1%</td><td>53.21亿</td><td class="flat">约+5%</td><td>28.7%</td><td>1.06次</td></tr>
+      <tr><td>中微公司</td><td>刻蚀+薄膜+MOCVD+量检测</td><td>103.26亿</td><td class="up">+28.1%</td><td>41.34亿</td><td class="up">+241.3%<br><span style="font-size:11px;color:var(--sub)">（含大额非经常）</span></td><td>16.23亿</td><td class="up">+83.0%</td><td>35.8%</td><td class="hl-cell">1.71次</td></tr>
+      <tr><td>拓荆科技</td><td>薄膜沉积（PECVD/ALD/SACVD）</td><td>52.20亿</td><td class="up">+23.7%</td><td>24.31亿</td><td class="up">+336.8%</td><td>9.29亿</td><td class="up">+102.7%</td><td class="hl-cell">21.6% <span class="tag tag-best">最优</span></td><td>1.17次</td></tr>
+      <tr class="hl-row"><td><b>盛美上海</b></td><td><b>清洗+电镀+炉管+Track+PECVD平台</b></td><td class="hl-cell">57.42亿</td><td class="down">+11.6% <span class="tag tag-warn">五家最低</span></td><td class="hl-cell">10.70亿</td><td class="down">-15.4% <span class="tag tag-warn">五家唯一下降</span></td><td class="hl-cell">8.75亿</td><td class="down">-21.0%</td><td class="down">73.1% <span class="tag tag-warn">最慢</span></td><td>1.21次</td></tr>
+      <tr><td>华海清科</td><td>CMP/减薄/离子注入/晶圆再生</td><td>41.82亿</td><td class="up">+31.0%</td><td>10.02亿</td><td class="up">+26.6%</td><td>8.85亿</td><td class="up">+22.4%</td><td>43.3%</td><td>0.76次</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>盛美是五家中唯一"营收增速垫底+利润双降"</b>：营收+11.6%（其余四家+15~31%）、归母-15.4%/扣非-21.0%（其余四家全部正增长）——清洗主业成熟期+平台化新品爬坡期的典型换挡阵痛。</li>
+    <li><b>营运资金效率对比</b>：应收/前三季营收——拓荆21.6%最优 &lt; 北方华创28.7% &lt; 中微35.8% &lt; 华海43.3% &lt; <b>盛美73.1%（回款最慢）</b>；应付周转率（前三季营业成本÷Q3末应付账款，越低=占用上游资金越多）——华海0.76次 &lt; 北方华创1.06次 &lt; 拓荆1.17次 &lt; 盛美1.21次 &lt; 中微1.71次。盛美"回款最慢+付款适中"，营运资金结构五家最吃力。</li>
+    <li><b>差异化优势在国际化与产品广度</b>：盛美是五家中唯一以海外收入为主、控股股东为美国上市公司（ACMR）的标的，SAPS/TEBO兆声波清洗为全球独创技术；平台化产品线数量五家第一。</li>
+    <li><b>估值五家最高档</b>：PE TTM 77.2x（中微43.7x、华海74.1x、拓荆50.1x），动态PE 64.9x——市场为平台化+国际化+H股上市预期支付了最高溢价。</li>
+  </ul>
+</div>
+
+<!-- 7 现金流风险 -->
+<div class="card">
+  <h2><span class="num">7</span>现金流与风险</h2>
+  <div class="kpi-row">
+    <div class="kpi"><div class="label">经营现金流（前三季）</div><div class="val">-2.70亿</div><div class="delta down">Q3单季-3.58亿</div></div>
+    <div class="kpi"><div class="label">信用减值损失</div><div class="val">-0.61亿</div><div class="delta down">同比扩大</div></div>
+    <div class="kpi"><div class="label">资产减值损失</div><div class="val">-1.21亿</div><div class="delta down">同比+105.8%</div></div>
+    <div class="kpi"><div class="label">财务费用</div><div class="val">1.65亿</div><div class="delta down">上年同期-0.35亿</div></div>
+  </div>
+  <ul class="pts">
+    <li><b>经营现金流连续为负的根源是"备货+应收"双占款</b>：Q3单季-3.58亿（存货+6.68亿、应收+6.38亿同时扩张）——公司解释为"订单增长带来生产需求，原材料采购和备货规模同步增加"。若Q4验收回款跟上可转正，否则全年现金流承压。</li>
+    <li><b>汇兑损失是2026年特有的拖累</b>：H1汇兑损失1.46亿（人民币对美元波动），财务费用前三季1.65亿 vs 上年同期-0.35亿，同比恶化约2亿——占扣非降幅（-2.32亿）的绝大部分。<b>剔除汇兑影响，主业利润实际接近持平</b>。</li>
+    <li><b>减值双升</b>：信用减值-0.61亿（应收42亿基数扩大）+资产减值-1.21亿（存货跌价计提加大），合计-1.82亿，同比接近翻倍。</li>
+    <li><b>其他风险</b>：盛美韩国海关处罚上诉中（公司称不构成重大影响）；中美两地监管差异（ACMR控股）；客户集中度较高。</li>
+  </ul>
+</div>
+
+<!-- 8 综合研判 -->
+<div class="card">
+  <h2><span class="num">8</span>综合研判</h2>
+  <table>
+    <thead><tr><th>维度</th><th>评价</th><th>依据</th></tr></thead>
+    <tbody>
+      <tr><td>成长性</td><td class="down">★★☆☆☆（五家最弱）</td><td>营收+11.6%垫底、扣非-21.0%唯一下降；但真实经营成果Q3创新高、合同负债连续回升</td></tr>
+      <tr><td>盈利质量</td><td class="down">★★☆☆☆</td><td>毛利率-3.7pct五家唯一下滑；归母含公允价值扰动大；汇兑+减值拖累约3.8亿</td></tr>
+      <tr><td>营运资金</td><td class="down">★★☆☆☆（五家最吃力）</td><td>应收/营收73.1%最慢、合同负债8.49亿蓄水池最浅、经营现金流-2.70亿</td></tr>
+      <tr><td>平台化/赛道</td><td class="up">★★★★☆</td><td>产品线五家最全+国际化唯一+研发强度18.25%第一；清洗全球独创技术壁垒</td></tr>
+      <tr><td>估值</td><td class="down">★★☆☆☆（五家最贵）</td><td>PE TTM 77.2x/动态64.9x，目标价210元隐含空间仅+10%</td></tr>
+    </tbody>
+  </table>
+  <ul class="pts">
+    <li><b>定位：五强中的"转型阵痛股"</b>——表观利润双降+估值最高，看似最差组合；但拆解后：①利润下滑主因汇兑（约2亿）+减值（1.8亿）+毛利率结构（清洗占比高），非经营恶化；②真实经营成果10.87亿创新高、合同负债连续回升、发出商品13.5亿待验收——经营扩张在继续，只是"质"（利润率）暂时让位于"量"（规模）。</li>
+    <li><b>与同行的关键差异</b>：拓荆/中微是"利润加速+估值消化"（扣非+103%/+83%），华海是"订单利润正循环"，盛美是"规模扩张+利润率承压"——在设备板块普涨行情中弹性最弱，但平台化+国际化+H股上市的期权价值未被充分定价。</li>
+    <li><b>跟踪要点</b>：①Q4毛利率能否企稳回升（44%是关键位）；②应收42亿的回款进度与减值；③汇兑损益方向（人民币贬值则受益）；④H股上市进展；⑤2027年合同负债能否从8.5亿量级上台阶（当前蓄水池太浅是最大隐忧）。</li>
+  </ul>
+  <p class="note warn">风险提示：本报告基于公开财报与券商研报数据，不构成投资建议。半导体设备行业周期波动、验收节奏、汇率与地缘政治风险可能使实际结果显著偏离预期。</p>
+</div>
+
+<div class="foot">盛美上海（688082.SH）2026年三季报深度分析 ｜ 数据来源：公司2026年一季报/半年度报告/第三季度报告（未经审计）、同花顺iFinD、券商研报 ｜ 生成：2026-11-04</div>
+</div>
+</body>
+</html>
